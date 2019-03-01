@@ -20,7 +20,7 @@
     {% if site.baseurl %}
     {%   set url_prefix = '/' + site.baseurl %}
     {% endif %}
-    <link href="{{url_prefix + '/css/site.css'}}" rel="stylesheet" media="screen">
+    <link href="{{url_prefix + '/css/style.css'}}" rel="stylesheet" media="screen">
     <link href="{{url_prefix + '/css/syntax.css'}}" rel="stylesheet" media="screen">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,7 +31,7 @@
     <![endif]-->
     {% include 'analytics.html' %}
     {% block head_addon %}
-    {% endblock %} 
+    {% endblock %}
   </head>
 
   <body>
@@ -83,7 +83,7 @@
 
           <form class="navbar-form navbar-left" action="/search.html" role="search">
             <div class="form-group">
-              <input type="text" required name="q" id="tipue_search_input" class="form-control" placeholder="Search"> 
+              <input type="text" required name="q" id="tipue_search_input" class="form-control" placeholder="Search">
             </div>
           </form>
 
@@ -121,7 +121,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/{{bootstrap}}/js/bootstrap.min.js"></script>
     {% block body_addon %}
-    {% endblock %} 
+    {% endblock %}
 
   </body>
 </html>
