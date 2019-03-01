@@ -1,0 +1,14 @@
+name: urubu
+channels:
+    - conda-forge
+dependencies:
+    - python=3.6
+    - pip
+    # Install Urubu's requirements from conda
+    - jinja2>=2.7
+    - beautifulsoup4
+    - markdown
+    - pygments
+    - pyyaml
+    - pip:
+        - https://github.com/jandecaluwe/urubu/archive/master.zip
