@@ -74,7 +74,7 @@ code {
 
 /* heading scrolling */
 
-h2[id]:before, 
+h2[id]:before,
 h3[id]:before{
   content: "";
   display: block;
@@ -92,7 +92,7 @@ h3[id]:before{
   .sidebar.affix,
   .sidebar.affix-bottom {
     width: 213px;
-  } 
+  }
   .sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
     top: 80px;
@@ -111,3 +111,13 @@ h3[id]:before{
 }
 
 
+/*Custom styling*/
+
+.jumbotron-background {
+    background-image: url("../assets/banner.jpg");
+    background-size: cover;
+    /*color: white;*/
+    /*min-height: 400px;*/
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
