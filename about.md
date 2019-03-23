@@ -2,6 +2,9 @@
 title: About me
 layout: page
 pager: false
+
+navitem: true
+homeitem: true
 summary:
     image: assets/about.jpg
     alignment: right

@@ -18,7 +18,9 @@
 </div>
 
 {%- for category in this.content -%}
-    {{ home_element(category) }}
+    {%- if category.homeitem -%}
+        {{ home_element(category) }}
+    {%- endif -%}
 {%- endfor -%}
 
 
