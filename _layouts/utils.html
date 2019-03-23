@@ -23,23 +23,19 @@
     {# Create element #}
     <div class="row">
         {%- if alignment == "left" -%}
-            {{ _home_element_image(category.summary.image) }}
-            {{ _home_element_text(category.summary.text) }}
+            <div class="col-md-2", align="center">
+                <img src="{{ category.summary.image }}" class="img-responsive img-circle">
+            </div>
+            <div class="col-md-10", align="left">
+                {{ category.summary.text }}
+            </div>
         {%- elif alignment == "right" -%}
-            {{ _home_element_text(category.summary.text) }}
-            {{ _home_element_image(category.summary.image) }}
+            <div class="col-md-10", align="left">
+                {{ category.summary.text }}
+            </div>
+            <div class="col-md-2", align="center">
+                <img src="{{ category.summary.image }}" class="img-responsive img-circle">
+            </div>
         {%- endif -%}
-    </div>
-{%- endmacro -%}
-
-{%- macro _home_element_text(text) -%}
-    <div class="col-md-10", align="left">
-        {{ text }}
-    </div>
-{%- endmacro -%}
-
-{%- macro _home_element_image(image, style="img-circle") -%}
-    <div class="col-md-2", align="center">
-        <img src="{{ image }}" class="img-responsive {{ style }}">
     </div>
 {%- endmacro -%}
