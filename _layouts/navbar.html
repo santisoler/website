@@ -1,0 +1,39 @@
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{url_prefix + '/'}}">{{site.brand}}</a>
+    </div>
+    <div class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav navbar-left">
+        <!--Add link to each element in content.-->
+        <!--If this elements has its own content, then will be added as a dropdown menu.-->
+        {% block home %}
+        {% endblock %}
+        {% for item in site.reflinks['/'].content %}
+			{%- if item.navitem -%}
+				<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+			{%- endif -%}
+        {% endfor %}
+      </ul>
+
+      <!--Add menuicons on the right navbar-->
+      <ul class="nav navbar-nav navbar-right">
+        {% for icon in site.navicons %}
+        <li>
+          <a href="{{ icon.url }}"> <i class="{{ icon.icon }}" title="{{ icon.title }}"></i>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
