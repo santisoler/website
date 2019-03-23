@@ -18,7 +18,7 @@
 </div>
 
 {%- for category in this.content -%}
-    {%- if category.homeitem -%}
+    {%- if category.show_on_home -%}
         {{ home_element(category) }}
     {%- endif -%}
 {%- endfor -%}

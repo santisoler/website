@@ -16,8 +16,8 @@
 
 {%- macro _home_element_row(category) -%}
     {# Define alignment #}
-    {%- if category.summary.alignment is defined -%}
-        {% set alignment = category.summary.alignment %}
+    {%- if category.thumbnail_alignment is defined -%}
+        {% set alignment = category.thumbnail_alignment %}
     {%- else -%}
         {% set alignment = "left" %}
     {%- endif -%}
@@ -25,17 +25,17 @@
     <div class="row">
         {%- if alignment == "left" -%}
             <div class="col-md-2", align="center">
-                <img src="{{ category.summary.image }}" class="img-responsive img-circle">
+                <img src="{{ category.thumbnail }}" class="img-responsive img-circle">
             </div>
             <div class="col-md-10", align="left">
-                {{ category.summary.text }}
+                {{ category.summary }}
             </div>
         {%- elif alignment == "right" -%}
             <div class="col-md-10", align="left">
-                {{ category.summary.text }}
+                {{ category.summary }}
             </div>
             <div class="col-md-2", align="center">
-                <img src="{{ category.summary.image }}" class="img-responsive img-circle">
+                <img src="{{ category.thumbnail }}" class="img-responsive img-circle">
             </div>
         {%- endif -%}
     </div>

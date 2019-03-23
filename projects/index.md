@@ -3,7 +3,7 @@ title: Projects
 layout: page
 
 navitem: false
-homeitem: true
+show_on_home: true
 content:
     - fatiando
 ---
