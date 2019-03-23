@@ -3,36 +3,33 @@
 {%- macro home_element(category) -%}
     <div class="container">
         <h3 class="text-center">{{ category.title }}</h3>
-        {%- if "content" in category -%}
+        {%- if category.content is defined -%}
             {%- for subcategory in category.content -%}
-                <div class="row">
-                    {{ _home_subelement(subcategory) }}
-                </div>
+                {{ _home_element_row(subcategory) }}
             {%- endfor -%}
         {%- else -%}
-            <div class="row">
-                {{ _home_subelement(category) }}
-            </div>
+            {{ _home_element_row(category) }}
         {%- endif -%}
     </div>
 {%- endmacro -%}
 
-{%- macro _home_subelement(category) -%}
+{%- macro _home_element_row(category) -%}
     {# Define alignment #}
     {%- if alignment in category.summary -%}
-        {% set alignment = left %}
+        {% set alignment = "left" %}
     {%- else -%}
         {% set alignment = category.summary.alignment %}
     {%- endif -%}
     {# Create element #}
-    {%- if alignment == left -%}
-        {{ _home_element_image(category.summary.image) }}
-        {{ _home_element_text(category.summary.text) }}
-    {%- endif -%}
-    {%- if alignment == right -%}
-        {{ _home_element_text(category.summary.text) }}
-        {{ _home_element_image(category.summary.image) }}
-    {%- endif -%}
+    <div class="row">
+        {%- if alignment == "left" -%}
+            {{ _home_element_image(category.summary.image) }}
+            {{ _home_element_text(category.summary.text) }}
+        {%- elif alignment == "right" -%}
+            {{ _home_element_text(category.summary.text) }}
+            {{ _home_element_image(category.summary.image) }}
+        {%- endif -%}
+    </div>
 {%- endmacro -%}
 
 {%- macro _home_element_text(text) -%}
@@ -41,7 +38,7 @@
     </div>
 {%- endmacro -%}
 
-{%- macro _home_element_image(image, style="image-circle") -%}
+{%- macro _home_element_image(image, style="img-circle") -%}
     <div class="col-md-2", align="center">
         <img src="{{ image }}" class="img-responsive {{ style }}">
     </div>
