@@ -25,7 +25,7 @@
     <div class="row">
         {%- if alignment == "left" -%}
             <div class="col-md-2", align="center">
-                <img src="{{ category.thumbnail }}" class="img-responsive img-circle">
+				{{ _home_thumbnail(category) }}
             </div>
             <div class="col-md-10", align="left">
                 {{ _home_summary(category, show_title) }}
@@ -35,7 +35,7 @@
                 {{ _home_summary(category, show_title) }}
             </div>
             <div class="col-md-2", align="center">
-                <img src="{{ category.thumbnail }}" class="img-responsive img-circle">
+				{{ _home_thumbnail(category) }}
             </div>
         {%- endif -%}
     </div>
@@ -44,9 +44,26 @@
 
 {%- macro _home_summary(category, show_title) -%}
 	{%- if show_title -%}
+		{%- if category.summary_url -%}
+			<a href={{ category.summary_url }}>
+		{%- endif -%}
 		<h4>{{ category.title }}</h4>
+		{%- if category.summary_url -%}
+			</a>
+		{%- endif -%}
 	{%- endif -%}
 	{{ category.summary }}
+{%- endmacro -%}
+
+
+{%- macro _home_thumbnail(category) -%}
+	{%- if category.summary_url -%}
+		<a href={{ category.summary_url }}>
+	{%- endif -%}
+	<img src="{{ category.thumbnail }}" class="img-responsive img-circle">
+	{%- if category.summary_url -%}
+		</a>
+	{%- endif -%}
 {%- endmacro -%}
 
 
