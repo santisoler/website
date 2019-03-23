@@ -48,3 +48,10 @@ fa_icons:
         style: fab
         title: GitHub
         url: https://www.github.com/santisoler
+
+authors:
+    me: Santiago R. Soler
+    agustina: Agustina Pesce
+    guido: Guido M. Gianni
+    mario: Mario E. Giménez
+    leo: Leonardo Uieda

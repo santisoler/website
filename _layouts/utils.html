@@ -80,3 +80,16 @@
 		</a>
 	{%- endif -%}
 {%- endmacro -%}
+
+
+{%- macro get_authors(article, site, fancy=true) -%}
+    {# Make the author list by expanding the stubs into full names from "site.authors" #}
+    {%- for author in article.author.split(', ') -%}
+        {%- if fancy and author == "me" -%}
+            {% set author_name = "<strong>" + site.authors[author] + "</strong>" -%}
+        {%- else -%}
+            {% set author_name = site.authors[author] -%}
+        {%- endif -%}
+        {{ author_name }}{% if not loop.last %}, {% endif %}
+    {%- endfor -%}
+{%- endmacro -%}
