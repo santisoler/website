@@ -4,7 +4,7 @@ date: 2018-12-29
 author: me, agustina, mario, leo
 repository: pinga-lab/tesseroid-variable-density
 journal: Gephysical Journal International
-thumbnail: soler2018.jpg
+thumbnail: soler2018-thumbnail.jpg
 inreview: true
 layout: page
 ---
