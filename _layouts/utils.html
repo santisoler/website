@@ -5,7 +5,7 @@
         <h3 class="text-center">{{ category.title }}</h3>
         {%- if category.content is defined -%}
             {%- for subcategory in category.content -%}
-                {{ _home_element_row(subcategory) }}
+                {{ _home_element_row(subcategory, show_title=true) }}
             {%- endfor -%}
         {%- else -%}
             {{ _home_element_row(category) }}
@@ -14,7 +14,7 @@
 {%- endmacro -%}
 
 
-{%- macro _home_element_row(category) -%}
+{%- macro _home_element_row(category, show_title=false) -%}
     {# Define alignment #}
     {%- if category.thumbnail_alignment is defined -%}
         {% set alignment = category.thumbnail_alignment %}
@@ -28,17 +28,25 @@
                 <img src="{{ category.thumbnail }}" class="img-responsive img-circle">
             </div>
             <div class="col-md-10", align="left">
-                {{ category.summary }}
+                {{ _home_summary(category, show_title) }}
             </div>
         {%- elif alignment == "right" -%}
             <div class="col-md-10", align="left">
-                {{ category.summary }}
+                {{ _home_summary(category, show_title) }}
             </div>
             <div class="col-md-2", align="center">
                 <img src="{{ category.thumbnail }}" class="img-responsive img-circle">
             </div>
         {%- endif -%}
     </div>
+{%- endmacro -%}
+
+
+{%- macro _home_summary(category, show_title) -%}
+	{%- if show_title -%}
+		<h4>{{ category.title }}</h4>
+	{%- endif -%}
+	{{ category.summary }}
 {%- endmacro -%}
 
 
