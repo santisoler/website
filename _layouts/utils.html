@@ -1,0 +1,48 @@
+{# Functions for templates #}
+
+{%- macro home_element(category) -%}
+    <div class="container">
+        <h3 class="text-center">{{ category.title }}</h3>
+        {%- if "content" in category -%}
+            {%- for subcategory in category.content -%}
+                <div class="row">
+                    {{ _home_subelement(subcategory) }}
+                </div>
+            {%- endfor -%}
+        {%- else -%}
+            <div class="row">
+                {{ _home_subelement(category) }}
+            </div>
+        {%- endif -%}
+    </div>
+{%- endmacro -%}
+
+{%- macro _home_subelement(category) -%}
+    {# Define alignment #}
+    {%- if alignment in category.summary -%}
+        {% set alignment = left %}
+    {%- else -%}
+        {% set alignment = category.summary.alignment %}
+    {%- endif -%}
+    {# Create element #}
+    {%- if alignment == left -%}
+        {{ _home_element_image(category.summary.image) }}
+        {{ _home_element_text(category.summary.text) }}
+    {%- endif -%}
+    {%- if alignment == right -%}
+        {{ _home_element_text(category.summary.text) }}
+        {{ _home_element_image(category.summary.image) }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro _home_element_text(text) -%}
+    <div class="col-md-10", align="left">
+        {{ text }}
+    </div>
+{%- endmacro -%}
+
+{%- macro _home_element_image(image, style="image-circle") -%}
+    <div class="col-md-2", align="center">
+        <img src="{{ image }}" class="img-responsive {{ style }}">
+    </div>
+{%- endmacro -%}

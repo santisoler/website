@@ -5,6 +5,8 @@ navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 0
 
+assets: assets
+
 # Fill out your Google Analytics ID here
 google_analytics: UA-48968311-4
 

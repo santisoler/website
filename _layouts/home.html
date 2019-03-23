@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% from "utils.html" import home_element %}
 
 {% block home %}
 {% endblock %}
@@ -16,43 +17,9 @@
  </div>
 </div>
 
+{%- for category in this.content -%}
+    {{ home_element(category) }}
+{%- endfor -%}
 
-<div class="container">
-    <h3 class="text-center">{{this.about.title}}</h3>
-    <div class="col-md-10", align="left">
-        <p>
-        {{this.about.text}}
-        </p>
-    </div>
-    <div class="col-md-2", align="center">
-        <img src={{this.about.image}} class="img-responsive img-circle">
-    </div>
-</div>
-
-<div class="container">
-    <h3 class="text-center">{{this.projects.title}}</h3>
-    <div class="col-md-2", align="center">
-        <img src={{this.projects.fatiando.image}} class="img-responsive img-circle">
-    </div>
-    <div class="col-md-10", align="left">
-        <h4>{{this.projects.fatiando.title}}</h4>
-        <p>
-        {{this.projects.fatiando.text}}
-        </p>
-    </div>
-</div>
-
-<div class="container">
-    <h3 class="text-center">{{this.projects.title}}</h3>
-    <div class="col-md-2", align="center">
-        <img src={{this.projects.fatiando.image}} class="img-responsive img-circle">
-    </div>
-    <div class="col-md-10", align="left">
-        <h4>{{this.projects.fatiando.title}}</h4>
-        <p>
-        {{this.projects.fatiando.text}}
-        </p>
-    </div>
-</div>
 
 {% endblock %}
