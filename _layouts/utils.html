@@ -13,6 +13,7 @@
     </div>
 {%- endmacro -%}
 
+
 {%- macro _home_element_row(category) -%}
     {# Define alignment #}
     {%- if category.summary.alignment is defined -%}
@@ -38,4 +39,15 @@
             </div>
         {%- endif -%}
     </div>
+{%- endmacro -%}
+
+
+{%- macro fa(name, class='', title='', url='') -%}
+	{%- if url != '' -%}
+		<a href="{{ url }}">
+	{%- endif -%}
+	<i class="fab fa-{{name}} {{class}}" title="{{ title }}"></i>
+	{%- if url != '' -%}
+		</a>
+	{%- endif -%}
 {%- endmacro -%}

@@ -10,6 +10,12 @@ assets: assets
 # Fill out your Google Analytics ID here
 google_analytics: UA-48968311-4
 
+navicons:
+    github:
+        icon: github
+        class: fa-lg
+        title: GitHub
+        url: https://www.github.com/santisoler
 
 reflinks:
     urubu:

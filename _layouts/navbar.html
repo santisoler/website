@@ -1,3 +1,5 @@
+{% from "utils.html" import fa %}
+
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -25,12 +27,9 @@
 
       <!--Add menuicons on the right navbar-->
       <ul class="nav navbar-nav navbar-right">
-        {% for icon in site.navicons %}
-        <li>
-          <a href="{{ icon.url }}"> <i class="{{ icon.icon }}" title="{{ icon.title }}"></i>
-          </a>
-        </li>
-        {% endfor %}
+		{% for name, icon in site.navicons.items() %}
+			<li> {{ fa(icon.icon, class=icon.class, title=icon.title, url=icon.url) }} </li>
+		{% endfor %}
       </ul>
 
     </div><!--/.nav-collapse -->
