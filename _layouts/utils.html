@@ -15,10 +15,10 @@
 
 {%- macro _home_element_row(category) -%}
     {# Define alignment #}
-    {%- if alignment in category.summary -%}
-        {% set alignment = "left" %}
-    {%- else -%}
+    {%- if category.summary.alignment is defined -%}
         {% set alignment = category.summary.alignment %}
+    {%- else -%}
+        {% set alignment = "left" %}
     {%- endif -%}
     {# Create element #}
     <div class="row">
