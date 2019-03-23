@@ -19,7 +19,7 @@
         {% block home %}
         {% endblock %}
         {% for item in site.reflinks['/'].content %}
-			{%- if item.navitem -%}
+			{%- if item.show_on_navbar -%}
 				<li><a href="{{ item.url }}">{{ item.title }}</a></li>
 			{%- endif -%}
         {% endfor %}

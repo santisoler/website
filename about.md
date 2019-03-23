@@ -3,7 +3,7 @@ title: About me
 layout: page
 pager: false
 
-navitem: true
+show_on_navbar: true
 show_on_home: true
 thumbnail: assets/about.jpg
 thumbnail_alignment: right
