@@ -6,55 +6,49 @@
 {%- macro home_section(category, site, thumbnail_width=-1) -%}
     {# Create home section #}
     <div class="container">
-        <h3 class="text-center">{{ category.title }}</h3>
+        <a href={{ category.url }}><h3 class="text-center">{{ category.title }}</h3></a>
         {%- if category.content is defined -%}
-            {%- for subcategory in category.content -%}
-                {{ item(subcategory, site, thumbnail_width=thumbnail_width, show_title=true) }}
+            {%- for page in category.content -%}
+                {{ item(page, site, thumbnail_width=thumbnail_width) }}
             {%- endfor -%}
         {%- else -%}
-            {{ item(category, site, thumbnail_width=thumbnail_width) }}
+            {{ item(category, site, thumbnail_width=thumbnail_width, show_title=false) }}
         {%- endif -%}
     </div>
 {%- endmacro -%}
 
 
-{%- macro item(category, site, thumbnail_width=-1, show_title=false) -%}
+{%- macro item(page, site, thumbnail_width=-1, show_title=true) -%}
     {# Define alignment #}
-    {%- if category.thumbnail_alignment is defined -%}
-        {% set alignment = category.thumbnail_alignment %}
+    {%- if page.thumbnail_alignment is defined -%}
+        {% set alignment = page.thumbnail_alignment %}
     {%- else -%}
         {% set alignment = "left" %}
     {%- endif -%}
     {# Create item #}
     <div class="row">
         {%- if alignment == "left" -%}
-            {{ thumbnail(category, thumbnail_width=thumbnail_width) }}
+            {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
-        {%- if category.layout == 'publication' -%}
-            {{ publication_text(category, site) }}
+        {%- if page.layout == 'publication' -%}
+            {{ publication_text(page, site) }}
         {%- else -%}
-            {{ item_text(category, show_title) }}
+            {{ item_text(page, show_title) }}
         {%- endif -%}
         {%- if alignment == "right" -%}
-            {{ thumbnail(category, thumbnail_width=thumbnail_width) }}
+            {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
     </div>
 {%- endmacro -%}
 
 
-{%- macro item_text(category, show_title) -%}
+{%- macro item_text(page, show_title=true) -%}
     {# Create text for a regular home item #}
     <div class="col-md-10">
         {%- if show_title -%}
-            {%- if category.summary_url -%}
-                <a href={{ category.summary_url }}>
-            {%- endif -%}
-            <h4>{{ category.title }}</h4>
-            {%- if category.summary_url -%}
-                </a>
-            {%- endif -%}
+            <a href={{ page.url }}> <h4>{{ page.title }}</h4> </a>
         {%- endif -%}
-        {{ category.summary }}
+        {{ page.summary }}
     </div>
 {%- endmacro -%}
 
@@ -77,20 +71,16 @@
 {%- endmacro -%}
 
 
-{%- macro thumbnail(category, thumbnail_width=-1) -%}
+{%- macro thumbnail(page, thumbnail_width=-1) -%}
     {# Create thumbnail for home item #}
     <div class="col-md-2">
-        {%- if category.summary_url -%}
-            <a href={{ category.summary_url }}>
-        {%- endif -%}
+        <a href={{ page.url }}>
         {%- if thumbnail_width > 0 -%}
-            <img src="/assets/{{ category.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle">
+            <img src="/assets/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle">
         {%- else -%}
-            <img src="/assets/{{ category.thumbnail }}" class="img-responsive img-circle">
+            <img src="/assets/{{ page.thumbnail }}" class="img-responsive img-circle">
         {%- endif -%}
-        {%- if category.summary_url -%}
-            </a>
-        {%- endif -%}
+        </a>
     </div>
 {%- endmacro -%}
 
