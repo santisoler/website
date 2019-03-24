@@ -1,5 +1,5 @@
 {% extends "_base.html" %}
-{% from "utils.html" import home_element, home_publication %}
+{% from "utils.html" import home_section %}
 
 {% block home %}
 {% endblock %}
@@ -18,28 +18,7 @@
 </div>
 
 {%- for category in this.content -%}
-    {%- if category.show_on_home -%}
-        {{ home_element(category, thumbnail_width=200) }}
-    {%- endif -%}
+    {{ home_section(category, site, thumbnail_width=200) }}
 {%- endfor -%}
-
-
-<!--Publications-->
-
-{% for category in this.content if category.fn == 'publications' %}
-    <div class="container">
-        <h3 class="text-center">{{ category.title }}</h3>
-        {%- for article in category.content -%}
-            <div class="row">
-                <div class="col-md-2">
-                    <img src=assets/{{ article.thumbnail }} class="img-circle img-responsive">
-                </div>
-                <div class="col-md-10">
-                    {{ home_publication(article, site) }}
-                </div>
-            </div>
-        {%- endfor -%}
-    </div>
-{% endfor %}
 
 {% endblock %}

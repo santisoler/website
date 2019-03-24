@@ -6,5 +6,5 @@ repository: pinga-lab/tesseroid-variable-density
 journal: Gephysical Journal International
 thumbnail: soler2018-thumbnail.jpg
 inreview: true
-layout: page
+layout: publication
 ---

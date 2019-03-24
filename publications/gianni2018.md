@@ -7,5 +7,5 @@ repository: santisoler/paper-plate-contraction-patagonia
 journal: Journal of Geodynamics
 thumbnail: gianni2018-thumbnail.jpg
 inreview: false
-layout: page
+layout: publication
 ---

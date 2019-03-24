@@ -1,7 +1,7 @@
 ---
 title: Fatiando a Terra
 layout: page
-thumbnail: assets/fatiando.png
+thumbnail: fatiando.png
 summary_url: https://www.fatiando.org
 summary.md: |
     Open-source tools for geophysics.<br>

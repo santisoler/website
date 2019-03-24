@@ -1,20 +1,21 @@
 {# Functions for templates #}
 
-{%- macro home_element(category, thumbnail_width=-1) -%}
+{%- macro home_section(category, site, thumbnail_width=-1) -%}
+    {# Create home section #}
     <div class="container">
         <h3 class="text-center">{{ category.title }}</h3>
         {%- if category.content is defined -%}
             {%- for subcategory in category.content -%}
-                {{ _home_element_row(subcategory, thumbnail_width=thumbnail_width, show_title=true) }}
+                {{ home_section_item(subcategory, site, thumbnail_width=thumbnail_width, show_title=true) }}
             {%- endfor -%}
         {%- else -%}
-            {{ _home_element_row(category, thumbnail_width=thumbnail_width) }}
+            {{ home_section_item(category, site, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
     </div>
 {%- endmacro -%}
 
 
-{%- macro _home_element_row(category, thumbnail_width=-1, show_title=false) -%}
+{%- macro home_section_item(category, site, thumbnail_width=-1, show_title=false) -%}
     {# Define alignment #}
     {%- if category.thumbnail_alignment is defined -%}
         {% set alignment = category.thumbnail_alignment %}
@@ -25,24 +26,27 @@
     <div class="row">
         {%- if alignment == "left" -%}
             <div class="col-md-2", align="center">
-				{{ _home_thumbnail(category, thumbnail_width=thumbnail_width) }}
+				{{ item_thumbnail(category, thumbnail_width=thumbnail_width) }}
             </div>
-            <div class="col-md-10", align="left">
-                {{ _home_summary(category, show_title) }}
-            </div>
-        {%- elif alignment == "right" -%}
-            <div class="col-md-10", align="left">
-                {{ _home_summary(category, show_title) }}
-            </div>
+        {%- endif -%}
+        <div class="col-md-10", align="left">
+            {%- if category.layout == 'publication' -%}
+                {{ publication_item(category, site) }}
+            {%- else -%}
+                {{ regular_item(category, show_title) }}
+            {%- endif -%}
+        </div>
+        {%- if alignment == "right" -%}
             <div class="col-md-2", align="center">
-				{{ _home_thumbnail(category, thumbnail_width=thumbnail_width) }}
+				{{ item_thumbnail(category, thumbnail_width=thumbnail_width) }}
             </div>
         {%- endif -%}
     </div>
 {%- endmacro -%}
 
 
-{%- macro _home_summary(category, show_title) -%}
+{%- macro regular_item(category, show_title) -%}
+    {# Create text for a regular home item #}
 	{%- if show_title -%}
 		{%- if category.summary_url -%}
 			<a href={{ category.summary_url }}>
@@ -56,34 +60,24 @@
 {%- endmacro -%}
 
 
-{%- macro _home_thumbnail(category, thumbnail_width=-1) -%}
+{%- macro item_thumbnail(category, thumbnail_width=-1) -%}
+    {# Create thumbnail for home item #}
 	{%- if category.summary_url -%}
 		<a href={{ category.summary_url }}>
 	{%- endif -%}
 	{%- if thumbnail_width > 0 -%}
-		<img src="{{ category.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle">
+		<img src="/assets/{{ category.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle">
 	{%- else -%}
-		<img src="{{ category.thumbnail }}" class="img-responsive img-circle">
+		<img src="/assets/{{ category.thumbnail }}" class="img-responsive img-circle">
 	{%- endif -%}
 	{%- if category.summary_url -%}
 		</a>
 	{%- endif -%}
 {%- endmacro -%}
 
-{%- macro fa(icon, site, size='') -%}
-    {%- set icon = site.fa_icons[icon] -%}
-	{%- if icon.url -%}
-		<a href="{{ icon.url }}">
-	{%- endif -%}
-    <i class="{{ icon.style }} fa-{{ icon.icon }} {{ size }}" title="{{ icon.title }}"></i>
-	{%- if url != '' -%}
-		</a>
-	{%- endif -%}
-{%- endmacro -%}
 
-
-{%- macro home_publication(article, site, fancy=true) -%}
-    {# Build publication text for home #}
+{%- macro publication_item(article, site, fancy=true) -%}
+    {# Create text for a publication home item #}
     <h4>{{ article.title }}</h4>
     <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
     <p>
@@ -108,4 +102,16 @@
         {%- endif -%}
         {{ author_name }}{% if not loop.last %}, {% endif %}
     {%- endfor -%}
+{%- endmacro -%}
+
+
+{%- macro fa(icon, site, size='') -%}
+    {%- set icon = site.fa_icons[icon] -%}
+	{%- if icon.url -%}
+		<a href="{{ icon.url }}">
+	{%- endif -%}
+    <i class="{{ icon.style }} fa-{{ icon.icon }} {{ size }}" title="{{ icon.title }}"></i>
+	{%- if url != '' -%}
+		</a>
+	{%- endif -%}
 {%- endmacro -%}
