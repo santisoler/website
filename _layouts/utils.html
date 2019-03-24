@@ -1,4 +1,7 @@
 {# Functions for templates #}
+{# ----------------------- #}
+
+{# Functions for home sections #}
 
 {%- macro home_section(category, site, thumbnail_width=-1) -%}
     {# Create home section #}
@@ -6,91 +9,95 @@
         <h3 class="text-center">{{ category.title }}</h3>
         {%- if category.content is defined -%}
             {%- for subcategory in category.content -%}
-                {{ home_section_item(subcategory, site, thumbnail_width=thumbnail_width, show_title=true) }}
+                {{ item(subcategory, site, thumbnail_width=thumbnail_width, show_title=true) }}
             {%- endfor -%}
         {%- else -%}
-            {{ home_section_item(category, site, thumbnail_width=thumbnail_width) }}
+            {{ item(category, site, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
     </div>
 {%- endmacro -%}
 
 
-{%- macro home_section_item(category, site, thumbnail_width=-1, show_title=false) -%}
+{%- macro item(category, site, thumbnail_width=-1, show_title=false) -%}
     {# Define alignment #}
     {%- if category.thumbnail_alignment is defined -%}
         {% set alignment = category.thumbnail_alignment %}
     {%- else -%}
         {% set alignment = "left" %}
     {%- endif -%}
-    {# Create element #}
+    {# Create item #}
     <div class="row">
         {%- if alignment == "left" -%}
-            <div class="col-md-2", align="center">
-				{{ item_thumbnail(category, thumbnail_width=thumbnail_width) }}
-            </div>
+            {{ thumbnail(category, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
-        <div class="col-md-10", align="left">
-            {%- if category.layout == 'publication' -%}
-                {{ publication_item(category, site) }}
-            {%- else -%}
-                {{ regular_item(category, show_title) }}
-            {%- endif -%}
-        </div>
+        {%- if category.layout == 'publication' -%}
+            {{ publication_text(category, site) }}
+        {%- else -%}
+            {{ item_text(category, show_title) }}
+        {%- endif -%}
         {%- if alignment == "right" -%}
-            <div class="col-md-2", align="center">
-				{{ item_thumbnail(category, thumbnail_width=thumbnail_width) }}
-            </div>
+            {{ thumbnail(category, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
     </div>
 {%- endmacro -%}
 
 
-{%- macro regular_item(category, show_title) -%}
+{%- macro item_text(category, show_title) -%}
     {# Create text for a regular home item #}
-	{%- if show_title -%}
-		{%- if category.summary_url -%}
-			<a href={{ category.summary_url }}>
-		{%- endif -%}
-		<h4>{{ category.title }}</h4>
-		{%- if category.summary_url -%}
-			</a>
-		{%- endif -%}
-	{%- endif -%}
-	{{ category.summary }}
-{%- endmacro -%}
-
-
-{%- macro item_thumbnail(category, thumbnail_width=-1) -%}
-    {# Create thumbnail for home item #}
-	{%- if category.summary_url -%}
-		<a href={{ category.summary_url }}>
-	{%- endif -%}
-	{%- if thumbnail_width > 0 -%}
-		<img src="/assets/{{ category.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle">
-	{%- else -%}
-		<img src="/assets/{{ category.thumbnail }}" class="img-responsive img-circle">
-	{%- endif -%}
-	{%- if category.summary_url -%}
-		</a>
-	{%- endif -%}
-{%- endmacro -%}
-
-
-{%- macro publication_item(article, site, fancy=true) -%}
-    {# Create text for a publication home item #}
-    <h4>{{ article.title }}</h4>
-    <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
-    <p>
-        <em>{{ article.journal }}</em>
-        {%- if article.doi is defined -%}
-            . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
+    <div class="col-md-10">
+        {%- if show_title -%}
+            {%- if category.summary_url -%}
+                <a href={{ category.summary_url }}>
+            {%- endif -%}
+            <h4>{{ category.title }}</h4>
+            {%- if category.summary_url -%}
+                </a>
+            {%- endif -%}
         {%- endif -%}
-    {%- if article.inreview -%}
-        . <strong>This article is under peer-review.</strong>
-    {%- endif -%}
-    </p>
+        {{ category.summary }}
+    </div>
 {%- endmacro -%}
 
+
+{%- macro publication_text(article, site, thumbnail_loc='left', fancy=true) -%}
+    {# Create text for a publication home item #}
+    <div class="col-md-10">
+        <h4>{{ article.title }}</h4>
+        <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
+        <p>
+            <em>{{ article.journal }}</em>
+            {%- if article.doi is defined -%}
+                . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
+            {%- endif -%}
+            {%- if article.inreview -%}
+                . <strong>This article is under peer-review.</strong>
+            {%- endif -%}
+        </p>
+    </div>
+{%- endmacro -%}
+
+
+{%- macro thumbnail(category, thumbnail_width=-1) -%}
+    {# Create thumbnail for home item #}
+    <div class="col-md-2">
+        {%- if category.summary_url -%}
+            <a href={{ category.summary_url }}>
+        {%- endif -%}
+        {%- if thumbnail_width > 0 -%}
+            <img src="/assets/{{ category.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle">
+        {%- else -%}
+            <img src="/assets/{{ category.thumbnail }}" class="img-responsive img-circle">
+        {%- endif -%}
+        {%- if category.summary_url -%}
+            </a>
+        {%- endif -%}
+    </div>
+{%- endmacro -%}
+
+
+{# ------------------------------------------------------- ------------------------- #}
+
+{# Other functions #}
 
 {%- macro get_authors(article, site, fancy=true) -%}
     {# Make the author list by expanding the stubs into full names from "site.authors" #}
