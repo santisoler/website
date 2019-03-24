@@ -6,4 +6,5 @@ tagline:
 content:
     - about
     - projects
+    - publications
 ---

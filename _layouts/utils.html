@@ -82,6 +82,22 @@
 {%- endmacro -%}
 
 
+{%- macro home_publication(article, site, fancy=true) -%}
+    {# Build publication text for home #}
+    <h4>{{ article.title }}</h4>
+    <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
+    <p>
+        <em>{{ article.journal }}</em>
+        {%- if article.doi is defined -%}
+            . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
+        {%- endif -%}
+    {%- if article.inreview -%}
+        . <strong>This article is under peer-review.</strong>
+    {%- endif -%}
+    </p>
+{%- endmacro -%}
+
+
 {%- macro get_authors(article, site, fancy=true) -%}
     {# Make the author list by expanding the stubs into full names from "site.authors" #}
     {%- for author in article.author.split(', ') -%}
