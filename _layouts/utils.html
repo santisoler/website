@@ -31,7 +31,7 @@
         {%- if page.layout == 'publication' -%}
             {{ publication_text(page, site, alignment=alignment) }}
         {%- else -%}
-            {{ item_text(page, show_title, alignment=alignment) }}
+            {{ item_text(page, show_title) }}
         {%- endif -%}
         {%- if alignment == "right" -%}
             {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
@@ -44,9 +44,9 @@
     {# Create text for a regular home item #}
     <div class="col-md-10">
         {%- if show_title -%}
-            <a href={{ page.url }}> <h4 class="text-{{ alignment }}">{{ page.title }}</h4> </a>
+            <a href={{ page.url }}> <h4>{{ page.title }}</h4> </a>
         {%- endif -%}
-        <p class="text-{{ alignment }}">{{ page.summary }}</p>
+        {{ page.summary }}
     </div>
 {%- endmacro -%}
 
