@@ -1,9 +1,14 @@
 brand: Santiago Soler
 
+author:
+    name: Santiago R. Soler
+    url: https://santisoler.github.io/
+
 bootswatch: yeti # flatly, yeti, lumen, paper, cyborg, readable, simplex
 navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 0
+
 
 # Fill out your Google Analytics ID here
 google_analytics: UA-48968311-4
@@ -39,6 +44,15 @@ reflinks:
     bootswatch:
         url: http://bootswatch.com
         title: Bootswatch
+    website_repo:
+        url: https://www.github.com/santisoler/website
+        title: santisoler/website
+    license:
+        title: Creative Commons Attribution 4.0 International License
+        url: https://creativecommons.org/licenses/by/4.0/
+    font_awesome:
+        title: Font Awesome
+        url: https://fontawesome.com
 
 fa_icons:
     github:
