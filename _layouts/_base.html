@@ -42,6 +42,25 @@
 
     {% include 'navbar.html' %}
 
+    {%- if this.banner is defined -%}
+        <div class="banner"
+             title="{{ this.banner.img_description }}"
+            style="background-image: url({{ this.banner.img }}); background-position: center center;">
+
+            {%- if this.banner.title is defined -%}
+                <div class="banner-title" title="{{ this.banner.img_description }}">
+                    {{ this.banner.title }}
+                </div>
+            {%- endif -%}
+
+            {%- if this.banner.text is defined -%}
+                <div class="banner-text" title="{{ this.banner.img_description }}">
+                    {{ this.banner.text }}
+                </div>
+            {%- endif -%}
+        </div>
+    {%- endif -%}
+
     {% block body %}
     {% endblock %}
 
