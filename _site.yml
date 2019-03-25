@@ -1,6 +1,6 @@
 brand: Santiago Soler
 
-bootswatch: paper # flatly, yeti, lumen, paper, cyborg, readable, simplex
+bootswatch: yeti # flatly, yeti, lumen, paper, cyborg, readable, simplex
 navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 0
