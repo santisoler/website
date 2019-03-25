@@ -5,8 +5,8 @@
 
 {%- macro home_section(category, site, thumbnail_width=-1) -%}
     {# Create home section #}
-    <div class="container">
-        <a href={{ category.url }}><h3 class="text-center">{{ category.title }}</h3></a>
+    <div class="container-fluid home-section">
+        <a href={{ category.url }}><h3 class="title">{{ category.title }}</h3></a>
         {%- if category.content is defined -%}
             {%- for page in category.content -%}
                 {{ item(page, site, thumbnail_width=thumbnail_width) }}
@@ -54,7 +54,7 @@
 {%- macro publication_text(article, site) -%}
     {# Create text for a publication home item #}
     <div class="col-md-10">
-        <h4>{{ article.title }}</h4>
+        <a href={{ article.url }}><h4>{{ article.title }}</h4></a>
         <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
         <p>
             <em>{{ article.journal }}</em>
@@ -71,10 +71,10 @@
 
 {%- macro thumbnail(page, thumbnail_width=-1) -%}
     {# Create thumbnail for home item #}
-    <div class="col-md-2">
+    <div class="col-md-2 align-middle">
         <a href={{ page.url }}>
         {%- if thumbnail_width > 0 -%}
-            <img src="/assets/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle">
+            <img src="/assets/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle center-block">
         {%- else -%}
             <img src="/assets/{{ page.thumbnail }}" class="img-responsive img-circle">
         {%- endif -%}
