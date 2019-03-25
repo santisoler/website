@@ -5,7 +5,7 @@ pager: false
 
 show_on_navbar: true
 thumbnail: about.jpg
-thumbnail_alignment: right
+home_alignment: right
 summary.md: |
     I'm a Lic in Physics graduated at the Universidad Nacional de Rosario and
     now PhD Student in Geophysics at the

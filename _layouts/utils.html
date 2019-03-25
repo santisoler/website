@@ -9,7 +9,7 @@
         <a href={{ category.url }}><h3 class="text-center">{{ category.title }}</h3></a>
         {%- if category.content is defined -%}
             {%- for page in category.content -%}
-                {{ item(page, site, thumbnail_width=thumbnail_width) }}
+                {{ item(page, site, alignment=loop.cycle('left', 'right'), thumbnail_width=thumbnail_width) }}
             {%- endfor -%}
         {%- else -%}
             {{ item(category, site, thumbnail_width=thumbnail_width, show_title=false) }}
@@ -18,12 +18,10 @@
 {%- endmacro -%}
 
 
-{%- macro item(page, site, thumbnail_width=-1, show_title=true) -%}
-    {# Define alignment #}
-    {%- if page.thumbnail_alignment is defined -%}
-        {% set alignment = page.thumbnail_alignment %}
-    {%- else -%}
-        {% set alignment = "left" %}
+{%- macro item(page, site, alignment='left', thumbnail_width=-1, show_title=true) -%}
+    {# Override alignment if "home_alignment" exist in "page" #}
+    {%- if page.home_alignment is defined -%}
+        {% set alignment = page.home_alignment %}
     {%- endif -%}
     {# Create item #}
     <div class="row">
