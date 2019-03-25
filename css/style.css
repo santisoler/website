@@ -125,3 +125,7 @@ h3[id]:before{
 .home-row {
     margin-top: 30px;
 }
+
+.home-section {
+    max-width: 950px;
+}
