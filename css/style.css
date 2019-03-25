@@ -122,10 +122,17 @@ h3[id]:before{
     padding-bottom: 8%;
 }
 
-.home-row {
-    margin-top: 30px;
-}
-
 .home-section {
     max-width: 950px;
+}
+
+.home-section .title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.home-section .row {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
