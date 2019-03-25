@@ -130,6 +130,7 @@ h3[id]:before{
     margin-top: 40px;
     margin-bottom: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 .home-section .row {
