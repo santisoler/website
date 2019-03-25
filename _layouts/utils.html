@@ -54,7 +54,7 @@
 {%- macro publication_text(article, site) -%}
     {# Create text for a publication home item #}
     <div class="col-md-10">
-        <h4>{{ article.title }}</h4>
+        <a href={{ article.url }}><h4>{{ article.title }}</h4></a>
         <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
         <p>
             <em>{{ article.journal }}</em>
