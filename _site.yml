@@ -3,6 +3,7 @@ brand: Santiago Soler
 author:
     name: Santiago R. Soler
     url: https://santisoler.github.io/
+    github: https://www.github.com/santisoler
 
 bootswatch: yeti # flatly, yeti, lumen, paper, cyborg, readable, simplex
 navbar_inverse: false
@@ -53,6 +54,18 @@ reflinks:
     font_awesome:
         title: Font Awesome
         url: https://fontawesome.com
+    conicet:
+        title: CONICET
+        url: https://www.conicet.gov.ar/
+    igsv:
+        title: Instituto Geofísico-Sismológico Volponi
+        url: http://igsv.unsj.edu.ar/
+    unsj:
+        title: Universidad Nacional de San Juan
+        url: http://www.unsj.edu.ar/
+    fatiando:
+        title: Fatiando a Terra
+        url: https://www.fatiando.org/
 
 fa_icons:
     github:
