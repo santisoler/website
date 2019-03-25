@@ -24,7 +24,7 @@
         {% set alignment = page.home_alignment %}
     {%- endif -%}
     {# Create item #}
-    <div class="row">
+    <div class="row home-row">
         {%- if alignment == "left" -%}
             {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
