@@ -153,15 +153,6 @@ h3[id]:before{
     text-shadow: 2px 2px 5px #222222;
 }
 
-.jumbotron-background {
-    background-image: url("../assets/banner.jpg");
-    background-size: cover;
-    /*color: white;*/
-    /*min-height: 400px;*/
-    padding-top: 8%;
-    padding-bottom: 8%;
-}
-
 .home-section {
     max-width: 950px;
 }
