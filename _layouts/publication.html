@@ -37,6 +37,12 @@
         <main>
             {{this.body}}
         </main>
+
+        {%- if this.citation is defined -%}
+            <h2>How to cite</h2>
+            {{ this.citation }}
+        {%- endif -%}
+
     {% endblock %}
 
 {% endblock %}

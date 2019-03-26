@@ -1,13 +1,18 @@
 ---
 title: "Transient plate contraction between two simultaneous slab windows: Insights from Paleogene tectonics of the Patagonian Andes"
 date: 2018-04-08
-doi: 10.1016/j.jog.2018.07.008
 author: guido, agustina, me
+layout: publication
+doi: 10.1016/j.jog.2018.07.008
 repository: santisoler/paper-plate-contraction-patagonia
 journal: Journal of Geodynamics
 thumbnail: gianni2018-thumbnail.jpg
 inreview: false
-layout: publication
+citation.md: |
+    Gianni, G.; Pesce, A. & Soler, S.
+    Transient plate contraction between two simultaneous slab windows: Insights from
+    Paleogene tectonics of the Patagonian Andes
+    *Journal of Geodynamics*, 2018, 121, 64-75
 ---
 {%- from "utils.html" import figure -%}
 
