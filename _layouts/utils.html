@@ -139,3 +139,13 @@
         </div>
     {% endif %}
 {%- endmacro -%}
+
+
+{%- macro figure(image, caption='') -%}
+	<figure>
+        <img src="/images/{{ image }}" class="img-responsive" alt="{{caption}}">
+        {%- if caption -%}
+			<figcaption class="text-left"><em>{{caption}}</em></figcaption>
+        {%- endif -%}
+	</figure>
+{%- endmacro -%}
