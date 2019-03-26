@@ -1,5 +1,5 @@
 {% extends "_base.html" %}
-{% from "utils.html" import make_breadcrums, make_toc %}
+{% from "utils.html" import make_breadcrums, make_toc, get_authors %}
 
 {% block body %}
 
@@ -9,34 +9,34 @@
       {{ make_breadcrums(this) }}
   {% endblock %}
 
-  <div class="page-header">
-    {% block title %}
-    <h1>{{this.title}}</h1>
-    {% endblock %}
-  </div>
-
-  <div class="row">
 
     {% block content %}
-    <div class="col-md-7 content" role="main">
-    <main>
-      {{this.body}}
-    </main>
-    {% if this.pager %}
-    <ul class="pager">
-      {% if this.prev %}
-      <li class="previous"><a href="{{this.prev.url}}">&larr; {{this.prev.title}}</a></li>
-      {% endif %}
-      {% if this.next %}
-      <li class="next"><a href="{{this.next.url}}">{{this.next.title}} &rarr;</a></li>
-      {% endif %}
-    </ul>
-    {% endif %}
-    </div>
+		<h1>{{ this.title }}</h1>
+		<p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
+
+        <h2>Information</h2>
+        <ul>
+            <li>Journal: <em>{{ this.journal }}</em></li>
+            {%- if this.repository is defined -%}
+                <li>Source code: <a href="https://www.github.com/{{ this.repository }}">{{ this.repository }}</a></li>
+            {%- endif -%}
+            {%- if this.doi is defined -%}
+                <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</li>
+            {%- endif -%}
+        </ul>
+        {%- if this.inreview -%}
+            <div class="alert alert-info">
+                This paper is currently under peer-review at {{ this.journal }}.
+            </div>
+        {%- endif -%}
+
+        {%- if this.pdf -%}
+			<a href="pdf/{{ this.pdf }}" class="btn btn-info" role="button">Download PDF</a>
+        {%- endif -%}
+
+        <main>
+            {{this.body}}
+        </main>
     {% endblock %}
-
-  </div>
-
-</div>
 
 {% endblock %}
