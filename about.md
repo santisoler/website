@@ -6,8 +6,9 @@ pager: false
 thumbnail: about.jpg
 home_alignment: right
 summary.md: |
-    I'm a Lic in Physics graduated at the Universidad Nacional de Rosario and
-    now PhD Student in Geophysics at the
+    I'm a Lic in Physics graduated at the
+    [Universidad Nacional de Rosario](https://www.unr.edu.ar)
+    and now PhD Student in Geophysics at the
     [Universidad Nacional de San Juan](https://www.unsj.edu.ar).
     I research on forward and inverse gravity models at the
     [Instituto Geofísico Sismológico Volponi](http://http://igsv.unsj.edu.ar/)
