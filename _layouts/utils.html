@@ -110,3 +110,32 @@
 		</a>
 	{%- endif -%}
 {%- endmacro -%}
+
+
+{%- macro make_breadcrums(page) -%}
+    {% if page.breadcrumbs %}
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            {% for bc in page.breadcrumbs[:-1] %}
+                <li><a href="{{bc.url}}">{{bc.title}}</a></li>
+            {% endfor %}
+            <li class="active">{{page.breadcrumbs[-1].title}}</li>
+        </ol>
+    {% endif %}
+{%- endmacro -%}
+
+
+{%- macro make_toc(page) -%}
+    {% if page.toc %}
+        <div class="col-md-3" role="complementary">
+            <nav class="hidden-print hidden-xs hidden-sm">
+                <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+                    <div class="well">
+                        <a href="#"><strong>{{page.title}}</strong></a>
+                        {{page.toc}}
+                    </div>
+                </div>
+            </nav>
+        </div>
+    {% endif %}
+{%- endmacro -%}
