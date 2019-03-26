@@ -100,13 +100,13 @@
 {%- endmacro -%}
 
 
-{%- macro fa(icon, site, size='') -%}
+{%- macro fa(icon, site, size='', url=false) -%}
     {%- set icon = site.fa_icons[icon] -%}
-	{%- if icon.url -%}
-		<a href="{{ icon.url }}">
+	{%- if url -%}
+		<a href="{{ url }}">
 	{%- endif -%}
     <i class="{{ icon.style }} fa-{{ icon.icon }} {{ size }}" title="{{ icon.title }}"></i>
-	{%- if url != '' -%}
+	{%- if url -%}
 		</a>
 	{%- endif -%}
 {%- endmacro -%}
