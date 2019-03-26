@@ -1,19 +1,12 @@
 {% extends "_base.html" %}
+{% from "utils.html" import make_breadcrums %}
 
 {% block body %}
 
 <div class="container">
 
   {% block breadcrumbs %}
-  {% if this.breadcrumbs %}
-  <ol class="breadcrumb">
-    <li><a href="{{url_prefix + '/'}}">Home</a></li>
-      {% for bc in this.breadcrumbs[:-1] %}
-      <li><a href="{{bc.url}}">{{bc.title}}</a></li>
-      {% endfor %}
-      <li class="active">{{this.breadcrumbs[-1].title}}</li>
-  </ol>
-  {% endif %}
+      {{ make_breadcrums(this) }}
   {% endblock %}
 
   <div class="page-header">

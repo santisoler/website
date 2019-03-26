@@ -110,3 +110,16 @@
 		</a>
 	{%- endif -%}
 {%- endmacro -%}
+
+
+{%- macro make_breadcrums(page) -%}
+    {% if page.breadcrumbs %}
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            {% for bc in page.breadcrumbs[:-1] %}
+                <li><a href="{{bc.url}}">{{bc.title}}</a></li>
+            {% endfor %}
+            <li class="active">{{page.breadcrumbs[-1].title}}</li>
+        </ol>
+    {% endif %}
+{%- endmacro -%}
