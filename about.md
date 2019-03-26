@@ -3,7 +3,6 @@ title: About me
 layout: page
 pager: false
 
-show_on_navbar: true
 thumbnail: about.jpg
 home_alignment: right
 summary.md: |

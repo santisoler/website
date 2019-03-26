@@ -77,3 +77,9 @@ authors:
     guido: Guido M. Gianni
     mario: Mario E. Giménez
     leo: Leonardo Uieda
+
+navbar_items: [
+    ["About", "/about.html"],
+    ["Projects", "/projects"],
+    ["Publications", "/publications"],
+    ]

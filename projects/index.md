@@ -2,7 +2,6 @@
 title: Projects
 layout: index
 
-show_on_navbar: false
 content:
     - fatiando
 

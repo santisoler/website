@@ -2,7 +2,6 @@
 title: Publications
 layout: index
 
-show_on_navbar: true
 content:
     - soler2018
     - gianni2018
