@@ -2,11 +2,16 @@ body {
   position: relative;
   padding-top: 50px;
   padding-bottom: 20px;
+  width=100%;
 }
 
 code {
   /* color: inherit; */
   background-color: transparent;
+}
+
+.container {
+    max-width: 950px;
 }
 
 .page-header {
@@ -153,18 +158,15 @@ h3[id]:before{
     text-shadow: 2px 2px 5px #222222;
 }
 
-.home-section {
-    max-width: 950px;
-}
 
-.home-section .title {
+.home-section-title {
     margin-top: 40px;
     margin-bottom: 10px;
     text-align: center;
     font-weight: bold;
 }
 
-.home-section .row {
+.home-section-row {
     margin-top: 20px;
     margin-bottom: 20px;
 }
