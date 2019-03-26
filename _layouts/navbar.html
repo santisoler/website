@@ -25,8 +25,8 @@
 
       <!--Add menuicons on the right navbar-->
       <ul class="nav navbar-nav navbar-right">
-		{% for icon_name, icon in site.fa_icons.items() %}
-            <li> {{ fa(icon_name, site, size='fa-lg') }} </li>
+		{% for icon_name, url in site.navbar_icons %}
+            <li> {{ fa(icon_name, site, size='fa-lg', url=url) }} </li>
 		{% endfor %}
       </ul>
 
