@@ -69,11 +69,11 @@ fa_icons:
         icon: github
         style: fab
         title: GitHub
-        url: https://www.github.com/santisoler
     mail:
         icon: envelope
         style: fas
-        title: e-mail
+        title: email
+
 
 authors:
     me: Santiago R. Soler
@@ -86,4 +86,9 @@ navbar_items: [
     ["About", "/about.html"],
     ["Projects", "/projects"],
     ["Publications", "/publications"],
+    ]
+
+navbar_icons: [
+    ["github", "https://www.github.com/santisoler"],
+    ["mail", "mailto:santiago.r.soler@gmail.com"],
     ]
