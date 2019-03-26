@@ -80,5 +80,6 @@ authors:
 
 navbar_items: [
     ["About", "/about.html"],
+    ["Projects", "/projects"],
     ["Publications", "/publications"],
     ]
