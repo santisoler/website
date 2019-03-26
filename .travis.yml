@@ -1,0 +1,30 @@
+sudo: false
+
+notifications:
+  email: false
+
+# Only build pushes from the website branch. PRs are always built.
+branches:
+  only:
+    - master
+
+env:
+  global:
+    # Github Token (GH_TOKEN)
+    - secure: ""
+
+before_install:
+  # Get Miniconda from Continuum
+  # Need to source the script to set the PATH variable in this environment
+  # (not the scripts environment)
+  - source ci/install-miniconda.sh
+
+install:
+  # Update conda itself
+  - conda update --yes conda
+  # Create a conda env based on environment.yml
+  - conda env create
+  - source activate urubu
+
+script:
+  - make
