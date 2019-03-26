@@ -18,17 +18,15 @@
         <!--If this elements has its own content, then will be added as a dropdown menu.-->
         {% block home %}
         {% endblock %}
-        {% for item in site.reflinks['/'].content %}
-			{%- if item.show_on_navbar -%}
-				<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-			{%- endif -%}
+        {% for title, url in site.navbar_items %}
+            <li><a href="{{ url }}">{{ title }}</a></li>
         {% endfor %}
       </ul>
 
       <!--Add menuicons on the right navbar-->
       <ul class="nav navbar-nav navbar-right">
-		{% for icon_name, icon in site.fa_icons.items() %}
-            <li> {{ fa(icon_name, site, size='fa-lg') }} </li>
+		{% for icon_name, url in site.navbar_icons %}
+            <li> {{ fa(icon_name, site, size='fa-lg', url=url) }} </li>
 		{% endfor %}
       </ul>
 
