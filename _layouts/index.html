@@ -13,6 +13,10 @@
         {%- for article in this.content -%}
             {{ item(article, site, thumbnail_width=200) }}
         {%- endfor -%}
-    </div>
 
+        <main>
+            {{ this.body }}
+        </main>
+
+    </div>
 {% endblock %}

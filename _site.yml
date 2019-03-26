@@ -70,6 +70,10 @@ fa_icons:
         style: fab
         title: GitHub
         url: https://www.github.com/santisoler
+    mail:
+        icon: envelope
+        style: fas
+        title: e-mail
 
 authors:
     me: Santiago R. Soler
