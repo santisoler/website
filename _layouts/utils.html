@@ -5,8 +5,8 @@
 
 {%- macro home_section(category, site, thumbnail_width=-1) -%}
     {# Create home section #}
-    <div class="container-fluid home-section">
-        <a href={{ category.url }}><h3 class="title">{{ category.title }}</h3></a>
+    <div class="container">
+        <a href={{ category.url }}><h3 class="home-section-title">{{ category.title }}</h3></a>
         {%- if category.content is defined -%}
             {%- for page in category.content -%}
                 {{ item(page, site, thumbnail_width=thumbnail_width) }}
@@ -24,7 +24,7 @@
         {% set alignment = page.home_alignment %}
     {%- endif -%}
     {# Create item #}
-    <div class="row">
+    <div class="row home-section-row">
         {%- if alignment == "left" -%}
             {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
