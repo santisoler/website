@@ -3,7 +3,7 @@ title: "Gravitational field calculation in spherical coordinates using variable 
 date: 2018-12-29
 author: me, agustina, mario, leo
 repository: pinga-lab/tesseroid-variable-density
-journal: Gephysical Journal International
+journal: Geophysical Journal International
 thumbnail: soler2018-thumbnail.jpg
 inreview: true
 layout: publication
