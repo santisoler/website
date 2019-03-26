@@ -18,10 +18,8 @@
         <!--If this elements has its own content, then will be added as a dropdown menu.-->
         {% block home %}
         {% endblock %}
-        {% for item in site.reflinks['/'].content %}
-			{%- if item.show_on_navbar -%}
-				<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-			{%- endif -%}
+        {% for title, url in site.navbar_items %}
+            <li><a href="{{ url }}">{{ title }}</a></li>
         {% endfor %}
       </ul>
 
