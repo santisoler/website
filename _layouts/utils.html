@@ -73,12 +73,12 @@
 
 {%- macro thumbnail(page, thumbnail_width=-1) -%}
     {# Create thumbnail for home item #}
-    <div class="col-md-2 align-middle">
+    <div class="col-md-2">
         <a href={{ page.url }}>
         {%- if thumbnail_width > 0 -%}
             <img src="/images/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle center-block">
         {%- else -%}
-            <img src="/images/{{ page.thumbnail }}" class="img-responsive img-circle">
+            <img src="/images/{{ page.thumbnail }}" class="img-responsive img-circle center-block">
         {%- endif -%}
         </a>
     </div>
