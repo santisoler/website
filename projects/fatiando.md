@@ -3,7 +3,7 @@ title: Fatiando a Terra
 layout: page
 thumbnail: fatiando.png
 project_url: https://www.fatiando.org
-summary.md: |
+summary:
     Open-source tools for geophysics.<br>
     A collection of open-source Python packages for processing data, forward and
     inverse modelling, interpolation, and more.
