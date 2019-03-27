@@ -6,7 +6,7 @@
 {%- macro home_section(category, site, thumbnail_width=-1, inner_shadow=false) -%}
     {# Create home section #}
     <div class="container-fluid home-section {{ "inner-shadow" if inner_shadow }}">
-        <a href={{ category.url }}><h2 class="home-section-title">{{ category.title }}</h2></a>
+        <a href={{ category.url }}><h1 class="home-section-title">{{ category.title }}</h1></a>
         {%- if category.content is defined -%}
             {%- for page in category.content -%}
                 {{ item(page, site, thumbnail_width=thumbnail_width) }}
@@ -44,7 +44,7 @@
     {# Create text for a regular home item #}
     <div class="col-md-10">
         {%- if show_title -%}
-            <a href={{ page.url }}> <h3 class="item">{{ page.title }}</h3> </a>
+            <a href={{ page.url }}> <h2 class="item">{{ page.title }}</h2> </a>
         {%- endif -%}
         <p class="item">{{ page.summary }}</p>
     </div>
@@ -54,7 +54,7 @@
 {%- macro publication_text(article, site) -%}
     {# Create text for a publication home item #}
     <div class="col-md-10">
-        <a href={{ article.url }}><h3 class="item">{{ article.title }}</h3></a>
+        <a href={{ article.url }}><h2 class="item">{{ article.title }}</h2></a>
         <p class="item">
             {{ get_authors(article, site) }} ({{ article.date.year }})
         </p>
