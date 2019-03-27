@@ -6,7 +6,7 @@ pager: false
 thumbnail: about.jpg
 home_alignment: right
 summary:
-    I'm a Lic in Physics graduated at the
+    I'm a Lic. in Physics graduated at the
     <a href="https://www.unr.edu.ar">Universidad Nacional de Rosario</a>
     and now PhD Student in Geophysics at the
     <a href="https://www.unsj.edu.ar">Universidad Nacional de San Juan</a>.
@@ -23,9 +23,9 @@ banner:
 {%- from "utils.html" import fa -%}
 
 
-I'm a Lic in Physics graduated at the
+I'm a Lic. in Physics graduated at the
 [Universidad Nacional de Rosario](https://www.unr.edu.ar)
-and now PhD Student in Geophysics at the
+and now a PhD Student in Geophysics at the
 [Universidad Nacional de San Juan](https://www.unsj.edu.ar).
 
 I research on forward and inverse gravity models at the
@@ -56,29 +56,16 @@ climbing, trekking and mountaineering, biking or kayaking.
 
 # Education
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Licenciate in Physics</h3>
-            <ul>
-                <li>March 2009 - August 2015</li>
-                <li><a href="https://www.unr.edu.ar">Universidad Nacional de Rosario</a></li>
-                <li>
-                    Thesis: <a href="https://github.com/santisoler/tesina-fisica">
-                    Métodos Espectrales para la Determinación de la Profundidad del Punto de Curie y el Espesor Elástico de la Corteza Terrestre
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <h3>Phd in Geophysics</h3>
-            <ul>
-                <li>April 2017 - Present</li>
-                <li><a href="https://www.unsj.edu.ar">Universidad Nacional de San Juan</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+## Phd in Geophysics
+
+- April 2017 - Present
+- [Universidad Nacional de San Juan](https://www.unsj.edu.ar)
+
+## Licentiate in Physics
+
+- March 2009 - August 2015
+- [Universidad Nacional de Rosario](https://www.unr.edu.ar)
+- Thesis: [Métodos Espectrales para la Determinación de la Profundidad del Punto de Curie y el Espesor Elástico de la Corteza Terrestre] (https://github.com/santisoler/tesina-fisica)
 
 
 # Contact
