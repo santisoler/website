@@ -155,8 +155,8 @@ h3[id]:before{
     text-align: center;
     font-size: 2em;
     line-height: 1.7em;
-    color: #333333;
-    text-shadow: 2px 2px 4px #666;
+    color: #ffffff;
+	text-shadow: 2px 2px 7px #444444;
 }
 
 .banner-title {
@@ -168,11 +168,11 @@ h3[id]:before{
     display: table;
     vertical-align: middle;
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: normal;
     line-height: 1.7em;
-    color: #333333;
-    text-shadow: 2px 2px 3px #666;
+    color: #ffffff;
+    text-shadow: 2px 2px 7px #444444;
 }
 
 
