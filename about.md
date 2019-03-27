@@ -70,9 +70,5 @@ climbing, trekking and mountaineering, biking or kayaking.
 
 # Contact
 
-<div class="container">
-    <ul>
-        <li>{{ fa("mail", site) }} <a href="mailto:santiago.r.soler@gmail.com">santiago.r.soler@gmail.com</a> </li>
-        <li>{{ fa("github", site) }} <a href="https://www.github.com/santisoler">santisoler</a> </li>
-    </ul>
-</div>
+- {{ fa("mail", site) }} [santiago.r.soler@gmail.com](mailto:santiago.r.soler@gmail.com)
+- {{ fa("github", site) }} [santisoler](https://www.github.com/santisoler)
