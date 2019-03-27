@@ -2,16 +2,13 @@ body {
   position: relative;
   padding-top: 50px;
   padding-bottom: 20px;
+  font-size: 1.6em;
+  line-height: 1.6em;
 }
 
 code {
   /* color: inherit; */
   background-color: transparent;
-}
-
-p {
-	font-size: 1.1em;
-	line-height: 1.5em;
 }
 
 .container {
