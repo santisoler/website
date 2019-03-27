@@ -23,6 +23,13 @@ h4 {
     margin-top: 0.9em;
 }
 
+.alert {
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    padding: 0.4em;
+}
+
 .container {
     max-width: 950px;
 }

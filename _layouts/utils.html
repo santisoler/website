@@ -64,7 +64,7 @@
                 . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
             {%- endif -%}
             {%- if article.inreview -%}
-                . <strong>This article is under peer-review.</strong>
+                .<span class="text-warning"> This article is <strong>under peer-review</strong>. </span>
             {%- endif -%}
         </p>
     </div>
