@@ -13,13 +13,13 @@
     </div>
     <div class="navbar-collapse collapse">
 
-      <ul class="nav navbar-nav navbar-left">
+      <ul class="nav navbar-nav navbar-center">
         <!--Add link to each element in content.-->
         <!--If this elements has its own content, then will be added as a dropdown menu.-->
         {% block home %}
         {% endblock %}
         {% for title, url in site.navbar_items %}
-            <li><a href="{{ url }}">{{ title }}</a></li>
+            <li class="navitem"><a href="{{ url }}">{{ title }}</a></li>
         {% endfor %}
       </ul>
 
