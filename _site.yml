@@ -10,6 +10,10 @@ navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 0
 
+keep_files: [".nojekyll"]
+
+ignore_patterns: ["README.md", "ci", "environment.yml",
+                  "search", "tipusearch", "LICENSE.md"]
 
 # Fill out your Google Analytics ID here
 google_analytics: UA-48968311-4
