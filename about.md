@@ -65,7 +65,7 @@ climbing, trekking and mountaineering, biking or kayaking.
 
 - March 2009 - August 2015
 - [Universidad Nacional de Rosario](https://www.unr.edu.ar)
-- Thesis: [Métodos Espectrales para la Determinación de la Profundidad del Punto de Curie y el Espesor Elástico de la Corteza Terrestre] (https://github.com/santisoler/tesina-fisica)
+- Thesis: [Métodos Espectrales para la Determinación de la Profundidad del Punto de Curie y el Espesor Elástico de la Corteza Terrestre](https://github.com/santisoler/tesina-fisica)
 
 
 # Contact
