@@ -37,4 +37,4 @@ early Paleogene times.  Finally, this work adds resolution to geodynamic
 processes in active margins where complex midocean ridge-trench interactions
 take place.
 
-{{ figure("gianni2018.jpg") }}
+{{ figure("gianni2018.jpg", site) }}
