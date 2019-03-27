@@ -3,9 +3,9 @@
 
 {# Functions for home sections #}
 
-{%- macro home_section(category, site, thumbnail_width=-1) -%}
+{%- macro home_section(category, site, thumbnail_width=-1, inner_shadow=false) -%}
     {# Create home section #}
-    <div class="container">
+    <div class="container-fluid home-section {{ "inner-shadow" if inner_shadow }}">
         <a href={{ category.url }}><h2 class="home-section-title">{{ category.title }}</h2></a>
         {%- if category.content is defined -%}
             {%- for page in category.content -%}
@@ -24,7 +24,7 @@
         {% set alignment = page.home_alignment %}
     {%- endif -%}
     {# Create item #}
-    <div class="row home-section-row">
+    <div class="row home-item">
         {%- if alignment == "left" -%}
             {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
@@ -44,9 +44,9 @@
     {# Create text for a regular home item #}
     <div class="col-md-10">
         {%- if show_title -%}
-            <a href={{ page.url }}> <h3>{{ page.title }}</h3> </a>
+            <a href={{ page.url }}> <h3 class="item">{{ page.title }}</h3> </a>
         {%- endif -%}
-        {{ page.summary }}
+        <p class="item">{{ page.summary }}</p>
     </div>
 {%- endmacro -%}
 
@@ -54,9 +54,11 @@
 {%- macro publication_text(article, site) -%}
     {# Create text for a publication home item #}
     <div class="col-md-10">
-        <a href={{ article.url }}><h3>{{ article.title }}</h3></a>
-        <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
-        <p>
+        <a href={{ article.url }}><h3 class="item">{{ article.title }}</h3></a>
+        <p class="item">
+            {{ get_authors(article, site) }} ({{ article.date.year }})
+        </p>
+        <p class="item">
             <em>{{ article.journal }}</em>
             {%- if article.doi is defined -%}
                 . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
