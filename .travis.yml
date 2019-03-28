@@ -11,7 +11,7 @@ branches:
 env:
   global:
     # Github Token (GH_TOKEN)
-    - secure: ""
+    - secure: "R+aFWGKxn6OznlZ1oUXVZ+3y1xvbsktjg9ayRR2p2smu32442r2T6M0O3j8gFn77nGYqLmyeSNx7aYfP67cf+bantptVnDL1uUFhPTZdZmsor2PMy1Elh9V6eObvQUQN345Ui1q4mnOHghRMASep2ZEMD6EuxoBY7NGqjJ43udMCbpi2Hu4y3tzFFlhV4qKSgJOuxgtZkbBIIm1KE4VncnELRgTvFCOgYDP9WyCfys1Eoixp682nVmeIj9Yuv9wFvxl5dLWlcsFjMfZD5obnYZMvS53jGnIV2ECwKL3e2HyZIhN7LLMxmbOgwEdH2vF/ARH2T0aL9mwx8RrlUuWBKoC+vtghul6qDsr4wbs8ewkUzmT0bqun9Y5QdV36+2BTNQHjnOFBRJyDxSztIRxsGGAPrC+ZUECI2w3IKbBGgUsZGy44gRRIUn/eQhErFpWJxWQVSEX8DaLwYmMI7gR8lLlZjOONdiARYaxY/xbFOnf/PBWDXajA8sDHZ35dbHbIzLPh6q02qXHpeIiUGUbpilpOnOGQFwCC0zu5aolwhB5+adoXkCJj7zmfdJ/QNDh/kDo7MzsZPFN1nNL3gwLuGa747kQoj2xOFcKlhiRb/0ksXaujZzJwEGU1mwfyt8kwQWJoRMifaY8AlK8TV92t78EDmnpKbTvjewwEtoiXGvY="
 
 before_install:
   # Get Miniconda from Continuum
@@ -28,3 +28,12 @@ install:
 
 script:
   - make
+
+deploy:
+  # Push the built HMTL to Github pages
+  - provider: script
+    script: bash ci/deploy-gh-pages.sh
+    skip_cleanup: true
+    on:
+      branch: master
+

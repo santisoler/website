@@ -10,6 +10,11 @@ navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 0
 
+keep_files: [".nojekyll"]
+
+ignore_patterns: ["README.md", "ci", "environment.yml",
+                  "search", "tipusearch", "LICENSE.md"]
+
 images_path: images
 banners_path: images/banners
 
