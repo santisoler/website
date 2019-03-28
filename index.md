@@ -6,7 +6,7 @@ content:
     - projects
     - publications
 banner:
-    text: Santiago Soler
+    title: Santiago Soler
     img: ansilta.jpg
     img_description: Ansilta mountain range, San Juan, Argentina.
 ---

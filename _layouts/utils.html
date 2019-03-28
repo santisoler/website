@@ -3,10 +3,10 @@
 
 {# Functions for home sections #}
 
-{%- macro home_section(category, site, thumbnail_width=-1) -%}
+{%- macro home_section(category, site, thumbnail_width=-1, inner_shadow=false) -%}
     {# Create home section #}
-    <div class="container">
-        <a href={{ category.url }}><h3 class="home-section-title">{{ category.title }}</h3></a>
+    <div class="container-fluid home-section {{ "inner-shadow" if inner_shadow }}">
+        <a href={{ category.url }}><h1 class="home-section-title">{{ category.title }}</h1></a>
         {%- if category.content is defined -%}
             {%- for page in category.content -%}
                 {{ item(page, site, thumbnail_width=thumbnail_width) }}
@@ -24,7 +24,7 @@
         {% set alignment = page.home_alignment %}
     {%- endif -%}
     {# Create item #}
-    <div class="row home-section-row">
+    <div class="row home-item">
         {%- if alignment == "left" -%}
             {{ thumbnail(page, site, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
@@ -44,9 +44,9 @@
     {# Create text for a regular home item #}
     <div class="col-md-10">
         {%- if show_title -%}
-            <a href={{ page.url }}> <h4>{{ page.title }}</h4> </a>
+            <a href={{ page.url }}> <h2 class="item">{{ page.title }}</h2> </a>
         {%- endif -%}
-        {{ page.summary }}
+        <p class="item">{{ page.summary }}</p>
     </div>
 {%- endmacro -%}
 
@@ -54,15 +54,17 @@
 {%- macro publication_text(article, site) -%}
     {# Create text for a publication home item #}
     <div class="col-md-10">
-        <a href={{ article.url }}><h4>{{ article.title }}</h4></a>
-        <p>{{ get_authors(article, site) }} ({{ article.date.year }})</p>
-        <p>
+        <a href={{ article.url }}><h2 class="item">{{ article.title }}</h2></a>
+        <p class="item">
+            {{ get_authors(article, site) }} ({{ article.date.year }})
+        </p>
+        <p class="item">
             <em>{{ article.journal }}</em>
             {%- if article.doi is defined -%}
                 . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
             {%- endif -%}
             {%- if article.inreview -%}
-                . <strong>This article is under peer-review.</strong>
+                .<span class="text-warning"> This article is <strong>under peer-review</strong>. </span>
             {%- endif -%}
         </p>
     </div>
@@ -71,7 +73,7 @@
 
 {%- macro thumbnail(page, site, thumbnail_width=-1) -%}
     {# Create thumbnail for home item #}
-    <div class="col-md-2 align-middle">
+    <div class="col-md-2">
         <a href={{ page.url }}>
         {%- if thumbnail_width > 0 -%}
             <img src="/{{ site.images_path }}/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle center-block">

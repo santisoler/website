@@ -2,13 +2,32 @@ body {
   position: relative;
   padding-top: 50px;
   padding-bottom: 20px;
-  font-size: 1.7em;
-  line-height: 1.7em;
+  font-size: 1.6em;
+  line-height: 1.6em;
 }
 
 code {
   /* color: inherit; */
   background-color: transparent;
+}
+
+h2 {
+    margin-top: 1.1em;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+h4 {
+    margin-top: 0.9em;
+}
+
+.alert {
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    padding: 0.4em;
 }
 
 .container {
@@ -49,7 +68,7 @@ code {
   padding-top: 16px;
   color: #777;
   border-top: 1px solid #eee;
-  font-size: 90%;
+  font-size: 70%;
   text-align: center;
 }
 
@@ -117,15 +136,20 @@ h3[id]:before{
 }
 
 
-/*Custom styling*/
+/* Banner */
 
 .banner {
     background-size: cover;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) inset;
     margin: 0px;
     margin-top: -5px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     width: 100%;
+    -moz-box-shadow:    inset  0  15px 15px -15px #333,
+                        inset  0 -15px 15px -15px #333;
+    -webkit-box-shadow: inset  0  15px 15px -15px #333,
+                        inset  0 -15px 15px -15px #333;
+     box-shadow:        inset  0  15px 15px -15px #333,
+                        inset  0 -15px 15px -15px #333;
 }
 
 .banner-text {
@@ -140,7 +164,7 @@ h3[id]:before{
     font-size: 2em;
     line-height: 1.7em;
     color: #ffffff;
-    text-shadow: 2px 2px 7px #444444;
+	text-shadow: 2px 2px 7px #444444;
 }
 
 .banner-title {
@@ -152,22 +176,66 @@ h3[id]:before{
     display: table;
     vertical-align: middle;
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: normal;
     line-height: 1.7em;
     color: #ffffff;
-    text-shadow: 2px 2px 5px #222222;
+    text-shadow: 2px 2px 7px #444444;
 }
 
 
-.home-section-title {
-    margin-top: 40px;
-    margin-bottom: 10px;
+/* Home sections and items */
+
+.container-fluid.home-section {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 40px 0px 40px 0px;
+}
+
+.inner-shadow {
+    background: #eee;
+    -moz-box-shadow:    inset  0  15px 15px -15px #333,
+                        inset  0 -15px 15px -15px #333;
+    -webkit-box-shadow: inset  0  15px 15px -15px #333,
+                        inset  0 -15px 15px -15px #333;
+     box-shadow:        inset  0  15px 15px -15px #333,
+                        inset  0 -15px 15px -15px #333;
+}
+
+.row.home-item {
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 30px;
+    max-width: 950px;
+}
+
+h1.home-section-title {
+    margin-top: 0;
+    margin-bottom: 30px;
     text-align: center;
-    font-weight: bold;
+	color: #222;
 }
 
-.home-section-row {
-    margin-top: 20px;
-    margin-bottom: 20px;
+h2.item {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+    font-weight: 400;
+	font-size: 1.5em;
+}
+
+p.item {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+}
+
+
+/* Navbar */
+
+.navbar-brand {
+	font-size: 1.4em;
+}
+
+li.navitem {
+	font-size: 1.2em;
 }
