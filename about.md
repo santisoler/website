@@ -13,6 +13,7 @@ summary:
     I research on forward and inverse gravity models at the
     <a href="https://igsv.unsj.edu.ar">Instituto Geofísico Sismológico Volponi</a>
     with the support of a <a href="https://www.conicet.gov.ar">CONICET</a> scholarship.
+    <br>
     I'm also commited to contribute on Free Software projects to
     improve science openness and reproducibility.
 banner:
