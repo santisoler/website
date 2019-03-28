@@ -26,7 +26,7 @@
     {# Create item #}
     <div class="row home-item">
         {%- if alignment == "left" -%}
-            {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
+            {{ thumbnail(page, site, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
         {%- if page.layout == 'publication' -%}
             {{ publication_text(page, site) }}
@@ -34,7 +34,7 @@
             {{ item_text(page, show_title) }}
         {%- endif -%}
         {%- if alignment == "right" -%}
-            {{ thumbnail(page, thumbnail_width=thumbnail_width) }}
+            {{ thumbnail(page, site, thumbnail_width=thumbnail_width) }}
         {%- endif -%}
     </div>
 {%- endmacro -%}
@@ -71,14 +71,14 @@
 {%- endmacro -%}
 
 
-{%- macro thumbnail(page, thumbnail_width=-1) -%}
+{%- macro thumbnail(page, site, thumbnail_width=-1) -%}
     {# Create thumbnail for home item #}
     <div class="col-md-2">
         <a href={{ page.url }}>
         {%- if thumbnail_width > 0 -%}
-            <img src="/images/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle center-block">
+            <img src="/{{ site.images_path }}/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle center-block">
         {%- else -%}
-            <img src="/images/{{ page.thumbnail }}" class="img-responsive img-circle center-block">
+            <img src="/{{ site.images_path }}/{{ page.thumbnail }}" class="img-responsive img-circle">
         {%- endif -%}
         </a>
     </div>
@@ -143,9 +143,9 @@
 {%- endmacro -%}
 
 
-{%- macro figure(image, caption='') -%}
+{%- macro figure(image, site, caption='') -%}
 	<figure>
-        <img src="/images/{{ image }}" class="img-responsive" alt="{{caption}}">
+        <img src="/{{ site.images_path }}/{{ image }}" class="img-responsive" alt="{{caption}}">
         {%- if caption -%}
 			<figcaption class="text-left"><em>{{caption}}</em></figcaption>
         {%- endif -%}

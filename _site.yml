@@ -15,6 +15,9 @@ keep_files: [".nojekyll"]
 ignore_patterns: ["README.md", "ci", "environment.yml",
                   "search", "tipusearch", "LICENSE.md"]
 
+images_path: images
+banners_path: images/banners
+
 # Fill out your Google Analytics ID here
 google_analytics: UA-48968311-4
 

@@ -36,7 +36,7 @@ we apply this new methodology to model the Neuquén Basin, a foreland basin in
 Argentina with a maximum depth of over 5000 m, using an exponential density
 function.
 
-{{ figure("soler2018.jpg", caption="Application of the methodology to the Neuquén Basin,
+{{ figure("soler2018.jpg", site, caption="Application of the methodology to the Neuquén Basin,
 a foreland basin in the southern Andes. (a) Topography of the Neuquén Basin and its
 location in South America. (b) Thickness of the sedimentary basin. Inset shows the
 exponential density profile used in the modeling. (c) Resulting vertical gravitational
