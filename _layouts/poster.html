@@ -1,0 +1,51 @@
+{% extends "_base.html" %}
+{% from "utils.html" import make_breadcrums, make_toc, get_authors %}
+
+{% block body %}
+
+<div class="container">
+
+  {% block breadcrumbs %}
+      {{ make_breadcrums(this) }}
+  {% endblock %}
+
+
+    {% block content %}
+		<h1>{{ this.title }}</h1>
+		<p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
+
+        <h2>Information</h2>
+        <ul>
+            <li>Presented at
+                {%- if this.meeting_url is defined -%}
+                    <a href="{{ this.meeting_url }}">
+                {%- endif -%}
+                {{ " " + this.meeting }}
+                {%- if this.meeting_url is defined -%}
+                    </a>
+                {%- endif -%}
+            </li>
+            {%- if this.repository is defined -%}
+                <li>Source code: <a href="https://www.github.com/{{ this.repository }}">{{ this.repository }}</a></li>
+            {%- endif -%}
+            {%- if this.doi is defined -%}
+                <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a></li>
+            {%- endif -%}
+        </ul>
+
+        {%- if this.pdf -%}
+			<a href="pdf/{{ this.pdf }}" class="btn btn-info" role="button">Download Poster</a>
+        {%- endif -%}
+
+        <main>
+            {{this.body}}
+        </main>
+
+        {%- if this.citation is defined -%}
+            <h2>How to cite</h2>
+            {{ this.citation }}
+        {%- endif -%}
+
+    {% endblock %}
+
+{% endblock %}

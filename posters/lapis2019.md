@@ -1,0 +1,10 @@
+---
+title: "Gravitational field of tesseroids with variable density"
+date: 2019-04-01
+author: me, agustina, mario, leo
+repository: santisoler/lapis2019
+meeting: LAPIS2019
+meeting_url: http://lapis2019.fcaglp.unlp.edu.ar/
+thumbnail: soler2018-thumbnail.jpg
+layout: poster
+---

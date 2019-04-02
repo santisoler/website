@@ -93,6 +93,7 @@ navbar_items: [
     ["About", "/about.html"],
     ["Projects", "/projects"],
     ["Publications", "/publications"],
+    ["Posters", "/posters"],
     ["Contact", "/about.html#contact"],
     ]
 

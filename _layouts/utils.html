@@ -30,6 +30,8 @@
         {%- endif -%}
         {%- if page.layout == 'publication' -%}
             {{ publication_text(page, site) }}
+        {%- elif page.layout == 'poster' -%}
+            {{ poster_text(page, site) }}
         {%- else -%}
             {{ item_text(page, show_title) }}
         {%- endif -%}
@@ -65,6 +67,27 @@
             {%- endif -%}
             {%- if article.inreview -%}
                 .<span class="text-warning"> This article is <strong>under peer-review</strong>. </span>
+            {%- endif -%}
+        </p>
+    </div>
+{%- endmacro -%}
+
+
+{%- macro poster_text(poster, site) -%}
+    {# Create text for a poster home item #}
+    <div class="col-md-10">
+        <a href={{ poster.url }}><h2 class="item">{{ poster.title }}</h2></a>
+        <p class="item">
+            {{ get_authors(poster, site) }} ({{ poster.date.year }})
+        </p>
+        <p class="item">
+            Presented at
+            {%- if poster.meeting_url is defined -%}
+                <a href="{{ poster.meeting_url }}">
+            {%- endif -%}
+            {{ " " + poster.meeting }}.
+            {%- if poster.meeting_url is defined -%}
+                </a>
             {%- endif -%}
         </p>
     </div>
