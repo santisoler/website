@@ -7,6 +7,6 @@ content:
 
 banner:
     title: Posters
-    img: ansilta.jpg
-    img_description: Ansilta mountain range, San Juan, Argentina.
+    img: serena.jpg
+    img_description: Beach at La Serena, Coquimbo, Chile.
 ---
