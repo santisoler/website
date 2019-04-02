@@ -37,6 +37,18 @@
             <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-info" role="button">Download Poster</a>
         {%- endif -%}
 
+        {%- if this.image -%}
+            {%- if this.pdf -%}
+                <a href="/{{ site.pdfs_path }}/{{ this.pdf }}">
+            {%- endif -%}
+            <figure>
+                <img src="/{{ site.images_path }}/{{ this.image }}" class="img-responsive">
+            </figure>
+            {%- if this.pdf -%}
+                </a>
+            {%- endif -%}
+        {%- endif -%}
+
         <main>
             {{this.body}}
         </main>

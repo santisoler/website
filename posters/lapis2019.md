@@ -10,6 +10,3 @@ pdf: lapis2019.pdf
 thumbnail: lapis2019-thumbnail.jpg
 layout: poster
 ---
-{%- from "utils.html" import figure -%}
-
-{{ figure(this.image, site) }}
