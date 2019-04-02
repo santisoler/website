@@ -18,8 +18,8 @@ summary:
     improve science openness and reproducibility.
 banner:
     title: About me
-    img: ansilta.jpg
-    img_description: Ansilta mountain range, San Juan, Argentina.
+    img: blanco.jpg
+    img_description: Climbing at Cerro Blanco, San Juan, Argentina.
 ---
 {%- from "utils.html" import fa -%}
 

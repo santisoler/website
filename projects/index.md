@@ -7,6 +7,6 @@ content:
 
 banner:
     title: Projects
-    img: ansilta.jpg
-    img_description: Ansilta mountain range, San Juan, Argentina.
+    img: guanaquitos.jpg
+    img_description: Water stream in La Ramada Range, San Juan, Argentina.
 ---
