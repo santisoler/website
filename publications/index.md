@@ -8,6 +8,6 @@ content:
 
 banner:
     title: Publications
-    img: ansilta.jpg
-    img_description: Ansilta mountain range, San Juan, Argentina.
+    img: guanaco.jpg
+    img_description: Guanaco in La Ramada Range, San Juan, Argentina.
 ---
