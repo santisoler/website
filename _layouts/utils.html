@@ -120,7 +120,14 @@
         {%- else -%}
             {% set author_name = site.authors[author] -%}
         {%- endif -%}
-        {{ author_name }}{% if not loop.last %}, {% endif %}
+        {{ author_name }}
+        {%- if not loop.last -%}
+            {%- if loop.revindex == 2 -%}
+                {{ " and " }}
+            {%- else -%}
+                {{ ", " }}
+            {%- endif -%}
+        {%- endif -%}
     {%- endfor -%}
 {%- endmacro -%}
 
