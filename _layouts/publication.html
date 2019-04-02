@@ -31,7 +31,7 @@
         {%- endif -%}
 
         {%- if this.pdf -%}
-			<a href="pdf/{{ this.pdf }}" class="btn btn-info" role="button">Download PDF</a>
+			<a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-info" role="button">Download PDF</a>
         {%- endif -%}
 
         <main>
