@@ -31,18 +31,22 @@
             {%- if this.doi is defined -%}
                 <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a></li>
             {%- endif -%}
+            {%- if this.pdf -%}
+                <li>
+                    <a href="/{{ site.pdfs_path }}/{{ this.pdf }}">
+                        <strong>Download the poster</strong>
+                    </a>
+                </li>
+            {%- endif -%}
         </ul>
 
-        {%- if this.pdf -%}
-            <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-info" role="button">Download Poster</a>
-        {%- endif -%}
-
+        <h2>Poster</h2>
         {%- if this.image -%}
             {%- if this.pdf -%}
                 <a href="/{{ site.pdfs_path }}/{{ this.pdf }}">
             {%- endif -%}
             <figure>
-                <img src="/{{ site.images_path }}/{{ this.image }}" class="img-responsive">
+                <img src="/{{ site.images_path }}/{{ this.image }}" class="img-responsive poster">
             </figure>
             {%- if this.pdf -%}
                 </a>
@@ -52,11 +56,6 @@
         <main>
             {{this.body}}
         </main>
-
-        {%- if this.citation is defined -%}
-            <h2>How to cite</h2>
-            {{ this.citation }}
-        {%- endif -%}
 
     {% endblock %}
 
