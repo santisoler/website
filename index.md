@@ -5,6 +5,7 @@ content:
     - about
     - projects
     - publications
+    - posters
 banner:
     title: Santiago Soler
     img: ansilta.jpg

@@ -240,3 +240,8 @@ p.item {
 li.navitem {
 	font-size: 1.2em;
 }
+
+img.poster {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
