@@ -5,6 +5,6 @@ author: me, agustina, mario, leo
 repository: santisoler/lapis2019
 meeting: LAPIS2019
 meeting_url: http://lapis2019.fcaglp.unlp.edu.ar/
-thumbnail: soler2018-thumbnail.jpg
+thumbnail: lapis2019-thumbnail.jpg
 layout: poster
 ---
