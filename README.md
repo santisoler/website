@@ -1,10 +1,10 @@
 # Source code to build my personal website
 
-[![Travis CI Status](https://travis-ci.org/santisoler/website.svg?branch=master&style=for-the-badge)](https://travis-ci.org/santisoler/website)
+[![Travis CI Status](https://img.shields.io/travis/santisoler/website/master.svg?style=for-the-badge)](https://travis-ci.org/santisoler/website)
 [![Powered by Urubu](https://img.shields.io/badge/powered_by-urubu-blue.svg?style=for-the-badge)](http://urubu.jandecaluwe.com/)
 
 This is the source code for
-[santisoler.github.io](https://santisoler.github.io)).
+[santisoler.github.io](https://santisoler.github.io).
 
 
 ## Dependencies
