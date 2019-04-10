@@ -43,15 +43,15 @@ build by Travis CI and deployed into
 [santisoler/santisoler.github.io](https://www.github.com/santisoler/santisoler.github.io).
 This is done through `.travis.yml` configuration file and the scripts inside `ci`. The
 latter have been written by [leouieda](https://www.leouieda.com).
-
 I'd like to thank him for spare me some work and a few headaches.
-**Personal reminder:** *never try to reinvent the wheel*.
+
+> **Personal reminder:** *never try to reinvent the wheel*.
 
 If you want to implement any Travis CI deployment, I heavily recommend reading the
 [Encription keys](https://docs.travis-ci.com/user/encryption-keys/) entry at Travis CI
 documentation.
 
-**Remember you need to use the repository *from* which the CI will be carried out when
+> **Remember you need to use the repository *from* which the CI will be carried out when
 creating encription keys**
 
 
