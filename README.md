@@ -51,7 +51,7 @@ If you want to implement any Travis CI deployment, I heavily recommend reading t
 [Encription keys](https://docs.travis-ci.com/user/encryption-keys/) entry at Travis CI
 documentation.
 
-> **Remember you need to use the repository *from* which the CI will be carried out when
+> **Remember to use the repository *from* which the CI will be carried out when
 creating encription keys**
 
 
