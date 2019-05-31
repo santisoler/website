@@ -38,12 +38,6 @@ improve science openness and reproducibility such as
 [Fatiando a Terra](https://www.fatiando.org/): a collection of open-source Python tools
 for forward and inverse modelling in geophysics.
 
-I currently teach Statistical Mechanics and Physics I for Astronomers and
-Geophysicists at the
-[Facultad de Ciencias Exactas, Físicas y Naturales](http://exactas.unsj.edu.ar/),
-[UNSJ](https://www.unsj.edu.ar).
-
-
 Longtime GNU/Linux user and Free Software supporter, I'm keen on:
 
 - Python programming language,
@@ -52,8 +46,9 @@ Longtime GNU/Linux user and Free Software supporter, I'm keen on:
 - Neovim text editor.
 
 
-When I'm not researching, teaching or coding I like to spend time outdoors doing rock
+When I'm not researching or coding I like to spend time outdoors doing rock
 climbing, trekking and mountaineering, biking or kayaking.
+I consider myself an amateur photographer as well.
 
 # Education
 
