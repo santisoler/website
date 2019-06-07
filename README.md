@@ -89,6 +89,37 @@ Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) *
 paths** to the files.
 
 
+## Adding a new poster
+
+When a new poster wants to be uploaded you have to create a Markdown file inside
+`posters` folder which should have the following format:
+
+```markdown
+---
+title: <title of the poster>
+date: <Presentation date in YYYY-MM-DD>
+author: <comma separated authors defined in _site.yml>
+layout: poster
+repository: <GitHub repository of the poster as username/repository>
+meeting: <name of the scientific meeting>
+meeting_url: <url of the scientific meeting>
+doi: <doi number of the poster, not the url>
+image: <light jpg version of the poster for fast web browsing>
+pdf: <full pdf version of the poster>
+thumbnail: <thumbnail filename located on /images>
+license: <license name defined on _site.yml>
+---
+
+## Abstract
+
+<insert-abstract>
+```
+
+Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) **are not
+paths** to the files.
+
+
+
 ## Acknowledgments
 
 The source code have been written by [santisoler](https://santisoler.github.io) based on
