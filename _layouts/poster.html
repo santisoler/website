@@ -35,14 +35,13 @@
             {%- if this.doi is defined -%}
                 <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a></li>
             {%- endif -%}
-            {%- if this.pdf -%}
-                <li>
-                    <a href="/{{ site.pdfs_path }}/{{ this.pdf }}">
-                        <strong>Download the poster</strong>
-                    </a>
-                </li>
-            {%- endif -%}
         </ul>
+
+        {%- if this.pdf -%}
+            <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
+                <strong>Download the poster</strong>
+            </a>
+        {%- endif -%}
 
         <h2>Poster</h2>
         {%- if this.image -%}
