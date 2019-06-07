@@ -72,15 +72,22 @@ reflinks:
         title: Universidad Nacional de San Juan
         url: http://www.unsj.edu.ar/
 
-fa_icons:
+icons:
     github:
         icon: github
+        family: fontawesome
         style: fab
         title: GitHub
     mail:
         icon: envelope
+        family: fontawesome
         style: fas
         title: email
+    orcid:
+        icon: orcid
+        family: academicons
+        style: ai
+        title: ORCID
 
 
 authors:
