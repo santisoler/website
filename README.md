@@ -55,6 +55,69 @@ documentation.
 creating encription keys**
 
 
+## Adding a new publication
+
+When a new publication wants to be uploaded you have to create a Markdown file inside
+`publications` folder which should have the following format:
+
+```markdown
+---
+title: "My article title"
+date: <Publication date in YYYY-MM-DD>
+author: <comma separated authors defined in _site.yml>
+layout: publication
+doi: <doi number (not url)>
+repository: <GitHub repository of the publication as username/repository>
+journal: <Journal>
+thumbnail: <thumbnail filename located on /images>
+pdf: <filename of pdf version of the article located on /pdf>
+inreview: <true or false if the article is undergoing a peer review process>
+figure: <filename of abstract figure inside /images>
+caption: |
+    <caption of the abstract figure, could be divided in several lines>
+citation.md: |
+    <citation in Markdown format, could be divided in several lines>
+---
+# Abstract
+
+<insert-abstract>
+```
+
+Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) **are not
+paths** to the files.
+
+
+## Adding a new poster
+
+When a new poster wants to be uploaded you have to create a Markdown file inside
+`posters` folder which should have the following format:
+
+```markdown
+---
+title: <title of the poster>
+date: <Presentation date in YYYY-MM-DD>
+author: <comma separated authors defined in _site.yml>
+layout: poster
+repository: <GitHub repository of the poster as username/repository>
+meeting: <name of the scientific meeting>
+meeting_url: <url of the scientific meeting>
+doi: <doi number of the poster, not the url>
+image: <light jpg version of the poster for fast web browsing>
+pdf: <full pdf version of the poster>
+thumbnail: <thumbnail filename located on /images>
+license: <license name defined on _site.yml>
+---
+
+## Abstract
+
+<insert-abstract>
+```
+
+Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) **are not
+paths** to the files.
+
+
+
 ## Acknowledgments
 
 The source code have been written by [santisoler](https://santisoler.github.io) based on
