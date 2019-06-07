@@ -30,7 +30,12 @@
                 <li>License: <a href="{{ license.url }}">{{ license.name }}</a></li>
             {%- endif -%}
             {%- if this.repository is defined -%}
-                <li>Repository: <a href="https://www.github.com/{{ this.repository }}">{{ this.repository }}</a></li>
+                <li>
+                    Repository:
+                    <a href="https://www.github.com/{{ this.repository }}">
+                        {{ this.repository }}
+                    </a>
+                </li>
             {%- endif -%}
             {%- if this.doi is defined -%}
                 <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a></li>
