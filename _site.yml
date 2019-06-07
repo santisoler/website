@@ -12,8 +12,14 @@ navbar_right_items: 0
 
 keep_files: [".nojekyll"]
 
-ignore_patterns: ["README.md", "ci", "environment.yml",
-                  "search", "tipusearch", "LICENSE.md"]
+ignore_patterns: [
+    "README.md",
+    "ci",
+    "environment.yml",
+    "search",
+    "tipusearch",
+    "LICENSE.md"
+]
 
 pdfs_path: pdfs
 images_path: images
@@ -72,15 +78,22 @@ reflinks:
         title: Universidad Nacional de San Juan
         url: http://www.unsj.edu.ar/
 
-fa_icons:
+icons:
     github:
         icon: github
+        family: fontawesome
         style: fab
         title: GitHub
     mail:
         icon: envelope
+        family: fontawesome
         style: fas
         title: email
+    orcid:
+        icon: orcid
+        family: academicons
+        style: ai
+        title: ORCID
 
 
 authors:
@@ -100,6 +113,7 @@ navbar_items: [
 
 navbar_icons: [
     ["github", "https://www.github.com/santisoler"],
+    ["orcid", "https://orcid.org/0000-0001-9202-5317"],
     ["mail", "mailto:santiago.r.soler@gmail.com"],
     ]
 

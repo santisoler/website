@@ -21,7 +21,7 @@ banner:
     img: blanco.jpg
     img_description: Climbing at Cerro Blanco, San Juan, Argentina.
 ---
-{%- from "utils.html" import fa -%}
+{%- from "utils.html" import draw_icon -%}
 
 
 I'm a Lic. in Physics graduated at the
@@ -66,5 +66,5 @@ I consider myself an amateur photographer as well.
 
 # Contact
 
-- {{ fa("mail", site) }} [santiago.r.soler@gmail.com](mailto:santiago.r.soler@gmail.com)
-- {{ fa("github", site) }} [santisoler](https://www.github.com/santisoler)
+- {{ draw_icon("mail", site) }} [santiago.r.soler@gmail.com](mailto:santiago.r.soler@gmail.com)
+- {{ draw_icon("github", site) }} [santisoler](https://www.github.com/santisoler)

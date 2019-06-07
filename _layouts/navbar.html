@@ -1,4 +1,4 @@
-{% from "utils.html" import fa %}
+{% from "utils.html" import draw_icon %}
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top">
@@ -26,7 +26,7 @@
       <!--Add menuicons on the right navbar-->
       <ul class="nav navbar-nav navbar-right">
 		{% for icon_name, url in site.navbar_icons %}
-            <li> {{ fa(icon_name, site, size='fa-lg', url=url) }} </li>
+            <li> {{ draw_icon(icon_name, site, size='fa-lg', url=url) }} </li>
 		{% endfor %}
       </ul>
 
