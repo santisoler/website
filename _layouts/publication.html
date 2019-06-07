@@ -1,5 +1,5 @@
 {% extends "_base.html" %}
-{% from "utils.html" import make_breadcrums, make_toc, get_authors %}
+{% from "utils.html" import make_breadcrums, make_toc, get_authors, figure %}
 
 {% block body %}
 
@@ -39,6 +39,14 @@
         <main>
             {{this.body}}
         </main>
+
+        {%- if this.figure -%}
+            {%- if this.caption -%}
+                {{ figure(this.figure, site, caption=this.caption) }}
+            {%- else -%}
+                {{ figure(this.figure, site) }}
+            {%- endif -%}
+        {%- endif -%}
 
         {%- if this.citation is defined -%}
             <h2>How to cite</h2>
