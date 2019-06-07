@@ -72,17 +72,15 @@ journal: <Journal>
 thumbnail: <thumbnail filename located on /images>
 pdf: <filename of pdf version of the article located on /pdf>
 inreview: <true or false if the article is undergoing a peer review process>
+figure: <filename of abstract figure inside /images>
+caption: |
+    <caption of the abstract figure, could be divided in several lines>
 citation.md: |
     <citation in Markdown format, could be divided in several lines>
 ---
-{%- from "utils.html" import figure -%}
-
 # Abstract
 
 <insert-abstract>
-
-
-{{ figure("<abstract figure filename located on /images>", site) }}
 ```
 
 Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) **are not
