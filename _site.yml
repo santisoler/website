@@ -12,8 +12,14 @@ navbar_right_items: 0
 
 keep_files: [".nojekyll"]
 
-ignore_patterns: ["README.md", "ci", "environment.yml",
-                  "search", "tipusearch", "LICENSE.md"]
+ignore_patterns: [
+    "README.md",
+    "ci",
+    "environment.yml",
+    "search",
+    "tipusearch",
+    "LICENSE.md"
+]
 
 pdfs_path: pdfs
 images_path: images
