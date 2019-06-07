@@ -6,11 +6,11 @@ pager: false
 thumbnail: about.jpg
 home_alignment: right
 summary:
-    I'm a Lic. in Physics graduated at the
+    I'm a Lic. in Physics graduated from the
     <a href="https://www.unr.edu.ar">Universidad Nacional de Rosario</a>
     and now PhD Student in Geophysics at the
     <a href="https://www.unsj.edu.ar">Universidad Nacional de San Juan</a>.
-    I research on forward and inverse gravity models at the
+    I research forward and inverse gravity models at the
     <a href="https://igsv.unsj.edu.ar">Instituto Geofísico Sismológico Volponi</a>
     with the support of a <a href="https://www.conicet.gov.ar">CONICET</a> scholarship.
     <br>
@@ -24,12 +24,12 @@ banner:
 {%- from "utils.html" import draw_icon -%}
 
 
-I'm a Lic. in Physics graduated at the
+I'm a Lic. in Physics graduated from the
 [Universidad Nacional de Rosario](https://www.unr.edu.ar)
 and now a PhD Student in Geophysics at the
 [Universidad Nacional de San Juan](https://www.unsj.edu.ar).
 
-I research on forward and inverse gravity models at the
+I research forward and inverse gravity models at the
 [Instituto Geofísico Sismológico Volponi](http://http://igsv.unsj.edu.ar/)
 with the support of a [CONICET](https://www.conicet.gov.ar) scholarship.
 
