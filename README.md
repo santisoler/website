@@ -55,6 +55,40 @@ documentation.
 creating encription keys**
 
 
+## Adding a new publication
+
+When a new publication wants to be uploaded you have to create a Markdown file inside
+`publications` folder which should have the following format:
+
+```markdown
+---
+title: "My article title"
+date: <Publication date in YYYY-MM-DD>
+author: <comma separated authors defined in _site.yml>
+layout: publication
+doi: <doi number (not url)>
+repository: <GitHub repository of the publication as username/repository>
+journal: <Journal>
+thumbnail: <thumbnail filename located on /images>
+pdf: <filename of pdf version of the article located on /pdf>
+inreview: <true or false if the article is undergoing a peer review process>
+citation.md: |
+    <citation in Markdown format, could be divided in several lines>
+---
+{%- from "utils.html" import figure -%}
+
+# Abstract
+
+<insert-abstract>
+
+
+{{ figure("<abstract figure filename located on /images>", site) }}
+```
+
+Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) **are not
+paths** to the files.
+
+
 ## Acknowledgments
 
 The source code have been written by [santisoler](https://santisoler.github.io) based on
