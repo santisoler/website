@@ -1,11 +1,8 @@
 ---
 title: Blog
-layout: index
+layout: blog_index
 order: date
 reverse: true
-
-content:
-    - how_to_release_publication
 
 banner:
     title: Blog

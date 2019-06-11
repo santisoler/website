@@ -1,6 +1,8 @@
 ---
 title: How to release a peer reviewed publication
-layout: page
+layout: blog
+date: 2019-06-11
+pager: true
 ---
 
 Recently, my [first publication][/publications/soler2018] (as first author) got accepted
