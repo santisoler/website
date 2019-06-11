@@ -142,7 +142,7 @@ We will call it the *publication DOI* in the future.
 
 EarthArxiv does not make special requests on the format of the manuscript, so you can
 freely change the format of the manuscript.
-For example, on the [tesseroid with variable density paper][/publications/soler2018.md]
+For example, on the [tesseroid with variable density paper][/publications/soler2018]
 we use the LaTeX article class for the version uploaded to EarthArxiv instead of the GJI
 class requested by Geophysical Journal International when submitting your work.
 
