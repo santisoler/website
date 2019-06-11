@@ -1,9 +1,11 @@
 ---
 title: Blog
-layout: blog
+layout: index
+order: date
+reverse: true
 
 content:
-    - gianni2018
+    - how_to_release_publication
 
 banner:
     title: Blog
