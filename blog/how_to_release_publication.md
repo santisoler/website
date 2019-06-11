@@ -18,6 +18,7 @@ This second goal was partially satisfied from the first submission date: we deve
 all the code and written the manuscript on a
 [GitHub repository](https://github.com/pinga-lab/tesseroid-variable-density).
 But, from our perspective there are a few things left to be done:
+
 - Assign a DOI (Digital Object Identifier) to a specific release of this GitHub
   repository.
 - Upload the manuscript to a preprint archive.
@@ -50,6 +51,7 @@ them?
 
 In order to follow the next steps, you will need to have your own profiles on the
 following websites:
+
 - [ORCID](https://orcid.org/)
 - [Zenodo](https://zenodo.org/) or [figshare](https://figshare.com)
 - [EarthArxiv](https://eartharxiv.org/)
