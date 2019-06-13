@@ -2,6 +2,7 @@
 title: Posters
 layout: index
 order: date
+reverse: true
 
 banner:
     title: Posters
