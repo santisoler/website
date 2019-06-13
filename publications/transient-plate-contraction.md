@@ -6,9 +6,9 @@ layout: publication
 doi: 10.1016/j.jog.2018.07.008
 repository: santisoler/paper-plate-contraction-patagonia
 journal: Journal of Geodynamics
-thumbnail: gianni2018-thumbnail.jpg
+thumbnail: transient-plate-contraction-thumbnail.jpg
 inreview: false
-figure: gianni2018.jpg
+figure: transient-plate-contraction.jpg
 citation.md: |
     Gianni, G.; Pesce, A. & Soler, S.
     Transient plate contraction between two simultaneous slab windows: Insights from
