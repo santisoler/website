@@ -9,8 +9,8 @@ supplement: 10.6084/m9.figshare.8239622
 preprint: 10.31223/osf.io/3548g
 doi: 10.1093/gji/ggz277
 citation: "Soler, S. R., Pesce, A., Gimenez, M. E., & Uieda, L., 2019. Gravitational field calculation in spherical coordinates using variable densities in depth, Geophysical Journal International, doi:10.1093/gji/ggz277"
-thumbnail: soler2018-thumbnail.jpg
-figure: soler2018.jpg
+thumbnail: tesseroid-variable-density-thumbnail.jpg
+figure: tesseroid-variable-density.jpg
 caption: |
     Application of the methodology to the Neuquén Basin, a foreland basin in the
     southern Andes. (a) Topography of the Neuquén Basin and its location in South
