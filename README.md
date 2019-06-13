@@ -66,7 +66,9 @@ title: "My article title"
 date: <Publication date in YYYY-MM-DD>
 author: <comma separated authors defined in _site.yml>
 layout: publication
-doi: <doi number (not url)>
+doi: <doi number of the version of record (not url)>
+preprint: <doi number of the preprint (not url)>
+supplement: <doi number of the supplement (not url)>
 repository: <GitHub repository of the publication as username/repository>
 journal: <Journal>
 thumbnail: <thumbnail filename located on /images>
