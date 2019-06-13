@@ -21,16 +21,41 @@
                 <li>Source code: <a href="https://www.github.com/{{ this.repository }}">{{ this.repository }}</a></li>
             {%- endif -%}
             {%- if this.doi is defined -%}
-                <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a></li>
+                <li>
+                    doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a>
+                </li>
+            {%- endif -%}
+            {%- if this.preprint is defined -%}
+                <li>
+                    Preprint (PDF):
+                    <a href="https://www.doi.org/{{ this.preprint }}">
+                        {{ this.preprint }}
+                    </a>
+                </li>
+            {%- endif -%}
+            {%- if this.supplement is defined -%}
+                <li>
+                    Supplement:
+                    <a href="https://www.doi.org/{{ this.supplement }}">
+                        {{ this.supplement }}
+                    </a>
+                </li>
             {%- endif -%}
         </ul>
+
+        <!-- Add download button --!>
+        <!-- Preprint DOI link will be prioritized over PDF stored on the website --!>
         {%- if this.inreview -%}
             <div class="alert alert-warning">
                 This paper is currently under peer-review at {{ this.journal }}.
             </div>
         {%- endif -%}
 
-        {%- if this.pdf -%}
+        {%- if this.preprint -%}
+            <a href="https://doi.org/{{ this.preprint }}" class="btn btn-primary" role="button">
+                <strong>Download article</strong>
+            </a>
+        {%- elif this.pdf -%}
             <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
                 <strong>Download article</strong>
             </a>
