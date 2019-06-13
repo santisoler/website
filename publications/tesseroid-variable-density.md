@@ -4,10 +4,10 @@ date: 2018-12-29
 author: me, agustina, mario, leo
 repository: pinga-lab/tesseroid-variable-density
 journal: Geophysical Journal International
-thumbnail: soler2018-thumbnail.jpg
+thumbnail: tesseroid-variable-density-thumbnail.jpg
 inreview: true
 layout: publication
-figure: soler2018.jpg
+figure: tesseroid-variable-density.jpg
 caption: |
     Application of the methodology to the Neuquén Basin, a foreland basin in the
     southern Andes. (a) Topography of the Neuquén Basin and its location in South
