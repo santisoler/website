@@ -61,12 +61,16 @@
             {{ get_authors(article, site) }} ({{ article.date.year }})
         </p>
         <p class="item">
-            <em>{{ article.journal }}</em>
+            <em>{{ article.journal }}.</em>
             {%- if article.doi is defined -%}
-                . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
+                {{ " doi: " }}
+                <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>.
             {%- endif -%}
             {%- if article.inreview -%}
-                .<span class="text-warning"> This article is <strong>under peer-review</strong>. </span>
+                {{ " " }}
+                <span class="text-warning">
+                    This article is <strong>under peer-review</strong>.
+                </span>
             {%- endif -%}
         </p>
     </div>
