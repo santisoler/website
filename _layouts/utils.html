@@ -89,6 +89,12 @@
             {%- if poster.meeting_url is defined -%}
                 </a>
             {%- endif -%}
+            {%- if poster.doi is defined -%}
+                {{ " doi: " }}
+                <a href="https://www.doi.org/{{ poster.doi }}">
+                    {{ poster.doi }}
+                </a>
+            {%- endif -%}
         </p>
     </div>
 {%- endmacro -%}
