@@ -149,17 +149,17 @@
 
 {%- macro draw_icon(icon, site, size='', url=false) -%}
     {%- set icon = site.icons[icon] -%}
-	{%- if url -%}
-		<a href="{{ url }}">
-	{%- endif -%}
+    {%- if url -%}
+        <a href="{{ url }}">
+    {%- endif -%}
     {%- if icon.family == "fontawesome" -%}
         <i class="{{ icon.style }} fa-{{ icon.icon }} {{ size }}" title="{{ icon.title }}"></i>
     {%- elif icon.family == "academicons" -%}
         <i class="{{ icon.style }} ai-{{ icon.icon }} {{ size }}" title="{{ icon.title }}"></i>
-	{%- endif -%}
-	{%- if url -%}
-		</a>
-	{%- endif -%}
+    {%- endif -%}
+    {%- if url -%}
+        </a>
+    {%- endif -%}
 {%- endmacro -%}
 
 
@@ -193,10 +193,10 @@
 
 
 {%- macro figure(image, site, caption='') -%}
-	<figure>
+    <figure>
         <img src="/{{ site.images_path }}/{{ image }}" class="img-responsive" alt="{{caption}}">
         {%- if caption -%}
-			<figcaption class="text-left"><em>{{caption}}</em></figcaption>
+            <figcaption class="text-left"><em>{{caption}}</em></figcaption>
         {%- endif -%}
-	</figure>
+    </figure>
 {%- endmacro -%}
