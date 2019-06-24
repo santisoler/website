@@ -2,46 +2,50 @@
 {% from "utils.html" import make_breadcrums, make_toc, get_authors, figure %}
 
 {% block body %}
-
 <div class="container">
 
-  {% block breadcrumbs %}
+    {% block breadcrumbs %}
       {{ make_breadcrums(this) }}
-  {% endblock %}
+    {% endblock %}
 
 
     {% block content %}
-		<h1>{{ this.title }}</h1>
-		<p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
+        <h1>{{ this.title }}</h1>
+        <p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
 
-        <h2>Information</h2>
-        <ul>
-            <li>Journal: <em>{{ this.journal }}</em></li>
-            {%- if this.repository is defined -%}
-                <li>Source code: <a href="https://www.github.com/{{ this.repository }}">{{ this.repository }}</a></li>
-            {%- endif -%}
-            {%- if this.doi is defined -%}
-                <li>
-                    doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a>
-                </li>
-            {%- endif -%}
-            {%- if this.preprint is defined -%}
-                <li>
-                    Preprint (PDF):
-                    <a href="https://www.doi.org/{{ this.preprint }}">
-                        {{ this.preprint }}
-                    </a>
-                </li>
-            {%- endif -%}
-            {%- if this.supplement is defined -%}
-                <li>
-                    Supplement:
-                    <a href="https://www.doi.org/{{ this.supplement }}">
-                        {{ this.supplement }}
-                    </a>
-                </li>
-            {%- endif -%}
-        </ul>
+    <h2>Information</h2>
+    <ul>
+        <li>Journal: <em>{{ this.journal }}</em></li>
+        {%- if this.repository is defined -%}
+            <li>
+                Source code:
+                <a href="https://www.github.com/{{ this.repository }}">
+                    {{ this.repository }}
+                </a>
+            </li>
+        {%- endif -%}
+        {%- if this.doi is defined -%}
+            <li>
+                doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a>
+            </li>
+        {%- endif -%}
+        {%- if this.preprint is defined -%}
+            <li>
+                Preprint (PDF):
+                <a href="https://www.doi.org/{{ this.preprint }}">
+                    {{ this.preprint }}
+                </a>
+            </li>
+        {%- endif -%}
+        {%- if this.supplement is defined -%}
+            <li>
+                Supplement:
+                <a href="https://www.doi.org/{{ this.supplement }}">
+                    {{ this.supplement }}
+                </a>
+            </li>
+        {%- endif -%}
+    </ul>
 
         <!-- Add download button --!>
         <!-- Preprint DOI link will be prioritized over PDF stored on the website --!>
@@ -93,4 +97,5 @@
 
     {% endblock %}
 
+</div>
 {% endblock %}
