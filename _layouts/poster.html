@@ -2,12 +2,11 @@
 {% from "utils.html" import make_breadcrums, make_toc, get_authors %}
 
 {% block body %}
-
 <div class="container">
 
-  {% block breadcrumbs %}
+    {% block breadcrumbs %}
       {{ make_breadcrums(this) }}
-  {% endblock %}
+    {% endblock %}
 
 
     {% block content %}
@@ -38,7 +37,10 @@
                 </li>
             {%- endif -%}
             {%- if this.doi is defined -%}
-                <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a></li>
+                <li>
+                    doi:
+                    <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a>
+                </li>
             {%- endif -%}
         </ul>
 
@@ -80,4 +82,5 @@
 
     {% endblock %}
 
+</div>
 {% endblock %}

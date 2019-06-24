@@ -95,9 +95,7 @@
             {%- endif -%}
             {%- if poster.doi is defined -%}
                 {{ " doi: " }}
-                <a href="https://www.doi.org/{{ poster.doi }}">
-                    {{ poster.doi }}
-                </a>
+                <a href="https://www.doi.org/{{ poster.doi }}">{{ poster.doi }}</a>.
             {%- endif -%}
         </p>
     </div>
@@ -109,9 +107,16 @@
     <div class="col-md-2">
         <a href={{ page.url }}>
         {%- if thumbnail_width > 0 -%}
-            <img src="/{{ site.images_path }}/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle center-block">
+            <img
+                class="img-responsive img-circle center-block"
+                src="/{{ site.images_path }}/{{ page.thumbnail }}"
+                width={{ thumbnail_width }}
+            >
         {%- else -%}
-            <img src="/{{ site.images_path }}/{{ page.thumbnail }}" class="img-responsive img-circle">
+            <img
+                class="img-responsive img-circle"
+                src="/{{ site.images_path }}/{{ page.thumbnail }}"
+            >
         {%- endif -%}
         </a>
     </div>
