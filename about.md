@@ -64,8 +64,9 @@ I consider myself an amateur photographer as well.
 - Thesis: [Métodos Espectrales para la Determinación de la Profundidad del Punto de Curie y el Espesor Elástico de la Corteza Terrestre](https://github.com/santisoler/tesina-fisica)
 
 
-# Contact
+# Contact and Profiles
 
 - {{ draw_icon("mail", site) }} [santiago.r.soler@gmail.com](mailto:santiago.r.soler@gmail.com)
 - {{ draw_icon("github", site) }} [santisoler](https://www.github.com/santisoler)
 - {{ draw_icon("twitter", site) }} [santirsoler](https://twitter.com/santirsoler)
+- {{ draw_icon("orcid", site) }} ORCID: [0000-0001-9202-5317](https://orcid.org/0000-0001-9202-5317)

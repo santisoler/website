@@ -113,7 +113,6 @@ navbar_items: [
     ["Projects", "/projects"],
     ["Publications", "/publications"],
     ["Posters", "/posters"],
-    ["Contact", "/about.html#contact"],
     ]
 
 navbar_icons: [
