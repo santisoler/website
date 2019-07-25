@@ -68,3 +68,4 @@ I consider myself an amateur photographer as well.
 
 - {{ draw_icon("mail", site) }} [santiago.r.soler@gmail.com](mailto:santiago.r.soler@gmail.com)
 - {{ draw_icon("github", site) }} [santisoler](https://www.github.com/santisoler)
+- {{ draw_icon("twitter", site) }} [santirsoler](https://twitter.com/santirsoler)
