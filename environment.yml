@@ -7,7 +7,7 @@ dependencies:
     # Install Urubu's requirements from conda
     - jinja2>=2.7
     - beautifulsoup4
-    - markdown=2.6.11
+    - markdown<3
     - pygments
     - pyyaml
     - pip:
