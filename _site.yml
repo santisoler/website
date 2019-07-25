@@ -94,6 +94,11 @@ icons:
         family: academicons
         style: ai
         title: ORCID
+    twitter:
+        icon: twitter
+        family: fontawesome
+        style: fab
+        title: Twitter
 
 
 authors:
@@ -113,6 +118,7 @@ navbar_items: [
 navbar_icons: [
     ["github", "https://www.github.com/santisoler"],
     ["orcid", "https://orcid.org/0000-0001-9202-5317"],
+    ["twitter", "https://twitter.com/santirsoler"],
     ["mail", "mailto:santiago.r.soler@gmail.com"],
     ]
 
