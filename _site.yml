@@ -102,11 +102,19 @@ icons:
 
 
 authors:
-    me: Santiago R. Soler
-    agustina: Agustina Pesce
-    guido: Guido M. Gianni
-    mario: Mario E. Giménez
-    leo: Leonardo Uieda
+    me:
+      name: Santiago R. Soler
+      url: https://santisoler.github.io/
+    agustina:
+      name: Agustina Pesce
+      url: https://github.com/aguspesce
+    guido:
+      name: Guido M. Gianni
+    mario:
+      name: Mario E. Giménez
+    leo:
+      name: Leonardo Uieda
+      url: https://www.leouieda.com/
 
 navbar_items: [
     ["About", "/about.html"],
