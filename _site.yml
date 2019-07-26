@@ -16,9 +16,10 @@ ignore_patterns: [
     "README.md",
     "ci",
     "environment.yml",
+    "requirements.txt",
     "search",
     "tipusearch",
-    "LICENSE.md"
+    "LICENSE.md",
 ]
 
 pdfs_path: pdfs
