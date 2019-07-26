@@ -11,4 +11,4 @@ dependencies:
     - pygments
     - pyyaml
     - pip:
-        - https://github.com/jandecaluwe/urubu/archive/master.zip
+        - urubu=1.3.1
