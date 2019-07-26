@@ -39,7 +39,7 @@ http://localhost:8000 to view it.
 ## Continuous Integration and Deployment
 
 After a new commit is pushed into the `master` branch, the website is automatically
-build by [Travis CI](https://travis.org) and deployed into
+build by [Travis CI](https://travis-ci.org) and deployed into
 [santisoler/santisoler.github.io](https://www.github.com/santisoler/santisoler.github.io) by [`doctr`](https://drdoctr.github.io).
 This process is configured inside the `.travis.yml` file.
 
