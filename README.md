@@ -16,14 +16,14 @@ Install the [Anaconda](https://www.anaconda.com/) distribution and create a cond
 environment from the `environment.yml` file:
 
 ```
-conda env create
+conda env create -f environment.yml
 ```
 
 Once all packages have been installed, you can change to the new `urubu` environment
 using:
 
 ```
-source activate urubu
+conda activate urubu
 ```
 
 
@@ -40,20 +40,12 @@ http://localhost:8000 to view it.
 
 After a new commit is pushed into the `master` branch, the website is automatically
 build by Travis CI and deployed into
-[santisoler/santisoler.github.io](https://www.github.com/santisoler/santisoler.github.io).
-This is done through `.travis.yml` configuration file and the scripts inside `ci`. The
-latter have been written by [leouieda](https://www.leouieda.com).
-I'd like to thank him for spare me some work and a few headaches.
+[santisoler/santisoler.github.io](https://www.github.com/santisoler/santisoler.github.io) by [`doctr`](https://drdoctr.github.io).
+This process is configured inside the `.travis.yml` file.
 
-> **Personal reminder:** *never try to reinvent the wheel*.
-
-If you want to implement any Travis CI deployment, I heavily recommend reading the
-[Encription keys](https://docs.travis-ci.com/user/encryption-keys/) entry at Travis CI
-documentation.
-
-> **Remember to use the repository *from* which the CI will be carried out when
-creating encription keys**
-
+Old versions of my website used to maintain `ci` scripts (mainly written by
+[leouieda](https://www.leouieda.com)) in order to deploy the website. They were replaced
+by [`doctr`](https://drdoctr.github.io), making this process much easier.
 
 ## Adding a new publication
 
