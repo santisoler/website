@@ -1,13 +1,16 @@
 ---
 title: "Gravitational field calculation in spherical coordinates using variable densities in depth"
-date: 2018-12-29
+layout: publication
+date: 2019-06-11
 author: me, agustina, mario, leo
 repository: pinga-lab/tesseroid-variable-density
 journal: Geophysical Journal International
-thumbnail: soler2018-thumbnail.jpg
-inreview: true
-layout: publication
-figure: soler2018.jpg
+supplement: 10.6084/m9.figshare.8239622
+preprint: 10.31223/osf.io/3548g
+doi: 10.1093/gji/ggz277
+citation: "Soler, S. R., Pesce, A., Gimenez, M. E., & Uieda, L., 2019. Gravitational field calculation in spherical coordinates using variable densities in depth, Geophysical Journal International, doi:10.1093/gji/ggz277"
+thumbnail: tesseroid-variable-density-thumbnail.jpg
+figure: tesseroid-variable-density.jpg
 caption: |
     Application of the methodology to the Neuquén Basin, a foreland basin in the
     southern Andes. (a) Topography of the Neuquén Basin and its location in South

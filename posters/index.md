@@ -1,9 +1,8 @@
 ---
 title: Posters
 layout: index
-
-content:
-    - lapis2019
+order: date
+reverse: true
 
 banner:
     title: Posters

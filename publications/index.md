@@ -1,10 +1,8 @@
 ---
 title: Publications
 layout: index
-
-content:
-    - soler2018
-    - gianni2018
+order: date
+reverse: true
 
 banner:
     title: Publications

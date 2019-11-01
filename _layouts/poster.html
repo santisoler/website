@@ -2,17 +2,16 @@
 {% from "utils.html" import make_breadcrums, make_toc, get_authors %}
 
 {% block body %}
-
 <div class="container">
 
-  {% block breadcrumbs %}
+    {% block breadcrumbs %}
       {{ make_breadcrums(this) }}
-  {% endblock %}
+    {% endblock %}
 
 
     {% block content %}
-		<h1>{{ this.title }}</h1>
-		<p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
+        <h1>{{ this.title }}</h1>
+        <p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
 
         <h2>Information</h2>
         <ul>
@@ -38,7 +37,10 @@
                 </li>
             {%- endif -%}
             {%- if this.doi is defined -%}
-                <li>doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a></li>
+                <li>
+                    doi:
+                    <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a>
+                </li>
             {%- endif -%}
         </ul>
 
@@ -65,6 +67,20 @@
             {{this.body}}
         </main>
 
+        <ul class="pager">
+            {% if this.prev %}
+                <li class="previous">
+                    <a href="{{this.prev.url}}">&larr; {{this.prev.title}}</a>
+                </li>
+            {% endif %}
+            {% if this.next %}
+                <li class="next">
+                    <a href="{{this.next.url}}">{{this.next.title}} &rarr;</a>
+                </li>
+            {% endif %}
+        </ul>
+
     {% endblock %}
 
+</div>
 {% endblock %}

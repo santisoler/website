@@ -58,15 +58,19 @@
     <div class="col-md-10">
         <a href={{ article.url }}><h2 class="item">{{ article.title }}</h2></a>
         <p class="item">
-            {{ get_authors(article, site) }} ({{ article.date.year }})
+            {{ get_authors(article, site, add_url=false) }} ({{ article.date.year }})
         </p>
         <p class="item">
-            <em>{{ article.journal }}</em>
+            <em>{{ article.journal }}.</em>
             {%- if article.doi is defined -%}
-                . doi: <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
+                {{ " doi: " }}
+                <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>.
             {%- endif -%}
             {%- if article.inreview -%}
-                .<span class="text-warning"> This article is <strong>under peer-review</strong>. </span>
+                {{ " " }}
+                <span class="text-warning">
+                    This article is <strong>under peer-review</strong>.
+                </span>
             {%- endif -%}
         </p>
     </div>
@@ -78,7 +82,7 @@
     <div class="col-md-10">
         <a href={{ poster.url }}><h2 class="item">{{ poster.title }}</h2></a>
         <p class="item">
-            {{ get_authors(poster, site) }} ({{ poster.date.year }})
+            {{ get_authors(poster, site, add_url=false) }} ({{ poster.date.year }})
         </p>
         <p class="item">
             Presented at
@@ -88,6 +92,10 @@
             {{ " " + poster.meeting }}.
             {%- if poster.meeting_url is defined -%}
                 </a>
+            {%- endif -%}
+            {%- if poster.doi is defined -%}
+                {{ " doi: " }}
+                <a href="https://www.doi.org/{{ poster.doi }}">{{ poster.doi }}</a>.
             {%- endif -%}
         </p>
     </div>
@@ -99,9 +107,16 @@
     <div class="col-md-2">
         <a href={{ page.url }}>
         {%- if thumbnail_width > 0 -%}
-            <img src="/{{ site.images_path }}/{{ page.thumbnail }}" width={{ thumbnail_width }} class="img-responsive img-circle center-block">
+            <img
+                class="img-responsive img-circle center-block"
+                src="/{{ site.images_path }}/{{ page.thumbnail }}"
+                width={{ thumbnail_width }}
+            >
         {%- else -%}
-            <img src="/{{ site.images_path }}/{{ page.thumbnail }}" class="img-responsive img-circle">
+            <img
+                class="img-responsive img-circle"
+                src="/{{ site.images_path }}/{{ page.thumbnail }}"
+            >
         {%- endif -%}
         </a>
     </div>
@@ -112,15 +127,22 @@
 
 {# Other functions #}
 
-{%- macro get_authors(article, site, fancy=true) -%}
+{%- macro get_authors(article, site, fancy=true, add_url=true) -%}
     {# Make the author list by expanding the stubs into full names from "site.authors" #}
     {%- for author in article.author.split(', ') -%}
+        {# Set author_name if fancy is true or false #}
         {%- if fancy and author == "me" -%}
-            {% set author_name = "<strong>" + site.authors[author] + "</strong>" -%}
+            {% set author_name = "<strong>" + site.authors[author].name + "</strong>" -%}
         {%- else -%}
-            {% set author_name = site.authors[author] -%}
+            {% set author_name = site.authors[author].name -%}
         {%- endif -%}
-        {{ author_name }}
+        {# Print author name if they have an url #}
+        {%- if add_url and site.authors[author].url -%}
+            <a href={{ site.authors[author].url }}>{{ author_name }}</a>
+        {%- else -%}
+            {{ author_name }}
+        {%- endif -%}
+        {# Check if a comma or an "and" must be added or not after the author name #}
         {%- if not loop.last -%}
             {%- if loop.revindex == 2 -%}
                 {{ " and " }}
@@ -134,17 +156,17 @@
 
 {%- macro draw_icon(icon, site, size='', url=false) -%}
     {%- set icon = site.icons[icon] -%}
-	{%- if url -%}
-		<a href="{{ url }}">
-	{%- endif -%}
+    {%- if url -%}
+        <a href="{{ url }}">
+    {%- endif -%}
     {%- if icon.family == "fontawesome" -%}
         <i class="{{ icon.style }} fa-{{ icon.icon }} {{ size }}" title="{{ icon.title }}"></i>
     {%- elif icon.family == "academicons" -%}
         <i class="{{ icon.style }} ai-{{ icon.icon }} {{ size }}" title="{{ icon.title }}"></i>
-	{%- endif -%}
-	{%- if url -%}
-		</a>
-	{%- endif -%}
+    {%- endif -%}
+    {%- if url -%}
+        </a>
+    {%- endif -%}
 {%- endmacro -%}
 
 
@@ -178,10 +200,10 @@
 
 
 {%- macro figure(image, site, caption='') -%}
-	<figure>
+    <figure>
         <img src="/{{ site.images_path }}/{{ image }}" class="img-responsive" alt="{{caption}}">
         {%- if caption -%}
-			<figcaption class="text-left"><em>{{caption}}</em></figcaption>
+            <figcaption class="text-left"><em>{{caption}}</em></figcaption>
         {%- endif -%}
-	</figure>
+    </figure>
 {%- endmacro -%}

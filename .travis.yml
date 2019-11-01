@@ -1,38 +1,33 @@
 sudo: false
-
+language: python
+python:
+    # Python >3.5 is required by doctr
+    - 3.6
 notifications:
   email: false
 
-# Only build pushes from the website branch. PRs are always built.
+# Only build pushes from the master branch. PRs are always built.
 branches:
   only:
     - master
 
 env:
   global:
-    # Github Token (GH_TOKEN)
-    secure: "ZSNYSt7wMI6GA9jAKLs3ofm7DXV7iM12JuRaBZUzdrmY4MXIRH3qXiiY5gsRTn9JQEbekQ0oP9bU3TI0v98PGQecJ/itbxJWU5XhnR6xD58cxV5keQ7cfWOt08Pb9eITSfJXH7oXZ4wUzLve9bKN9+j1xALLqnG4aJhtz88HWeb6bjbBXKro9ooPCzBYofV+3LuiLsl3TVo45LNfh67rzVAPXfC9mmdOmXFwGQbzFP+CdppkGtUCJRwjH8Ldf/UloPOCBIWJvTjL/vQyjQJKVKpvRnUq3lOxjLSNxeeBv07edITpZDEikms+hBoEhJK43PjH1akNQxE9nWHWTh/f+FSEQRssOprbtGgrSw0eohCOcZikNb1Qc+UEl/liL5xswTqmWFNe2/gPFv5rStuUVuqQ7/1kqVGZZK0x0q5FUErm+5gE3sy5PgApCJiDHL7tVd8TW1Mv0wd5TKMXmAFymGVOjej0FNtQVnze8PGfAXiqPFq9A/g2hHE9puUqwlwHay4JKau0jPSA2qkiTeZ7dUnRyI8US3D/V9RNrT3SdsofSLs84PYQHFDeLyZG7M2OGLy2g/R5dYW9QMUpl115a3l6AIcBMDnWitAnlulsddYxi51tNz4ch49AGEj93T2B1ti2uLjcVX7Ebz+tDSTSh/R9+6o30V8dJ7K0QkwHX6k="
-
-before_install:
-  # Get Miniconda from Continuum
-  # Need to source the script to set the PATH variable in this environment
-  # (not the scripts environment)
-  - source ci/install-miniconda.sh
+    # Doctr deploy key for santisoler/santisoler.github.io
+    - secure: "sr74q7igPRZAvS+CPEAbFgoVdolDnczBO8rIA4P1uN7bPl0C96Bkfi+e16CMRXmTi1EwtdXXruaip9oJolxXKVdBXrjrtPYFJtJkCqWg+abe6ALknqwSwjS25BTbda8GV2Mxus4TfNubRarBdI/Oitc8mdA9gPfs934I9RythEC0HSuwPUnbiBUkglzNyeHHuJDy1wjcQbu3DuKrO4MSE0v5/oN3k3rZyvCfdQ3HIikSzIIIFfNGd0gx+KvvvagiiuIM6bLEc0YNaOn/zqXkmMwE7ZDwECIRSgeTgoBtwq1DCe4UwLEPVMCP7qd+PbrthQ4O7JMXfCA/vlks27ZABNtow+O4zXuvUMUSybuMyRWyntey+9iT9Wm1vttZDleNbn+u0iLXTv52oKm1bngZxPDNP58doyVDEhCe4YooXV19TJy5w8vYWPKjaFKYQFEhsXuEBKUQo7MQn1XcAzTHGwuJdrMKIchY4+zWsh1Urwq1qsF0y/j608ftTf1xijc/Z0OXqyj2qUmEeW7PTsx+jjWmcPFA5RGD9bHjvQBgUe/cq9NscDVb9yCxJR/1kul1YUL10Yjq71FcPmEHAskY/B9I36qY3OQfoaPb/5PVefDrDKfYJ2VwQP9PD9Dn7kE7iQ685IKLUKsPWBFYp69yR6/3I9i7VtrxLhSzX1c0Xl0="
 
 install:
-  # Update conda itself
-  - conda update --yes conda
-  # Create a conda env based on environment.yml
-  - conda env create
-  - source activate urubu
+  # Install dependencies
+  - pip install -r requirements.txt
 
 script:
+  # Build HTML version of the website
   - make
 
 deploy:
   # Push the built HMTL to Github pages
   - provider: script
-    script: bash ci/deploy-gh-pages.sh
+    script: doctr deploy . --key-path .github_deploy_key_for_doctr.enc --built-docs _build --deploy-repo santisoler/santisoler.github.io
     skip_cleanup: true
     on:
       branch: master
