@@ -11,7 +11,9 @@ summary:
     and now PhD Student in Geophysics at the
     <a href="https://www.unsj.edu.ar">Universidad Nacional de San Juan</a>.
     I research forward and inverse gravity models at the
-    <a href="https://igsv.unsj.edu.ar">Instituto Geofísico Sismológico Volponi</a>
+    <a href="https://igsv.unsj.edu.ar">Instituto Geofísico Sismológico Volponi</a> and
+    at the
+    <a href="https://www.compgeolab.org/">Computer-Oriented Geoscience Lab</a>
     with the support of a <a href="https://www.conicet.gov.ar">CONICET</a> scholarship.
     <br>
     I'm also commited to contribute on Free Software projects to
@@ -31,6 +33,7 @@ and now a PhD Student in Geophysics at the
 
 I research forward and inverse gravity models at the
 [Instituto Geofísico Sismológico Volponi](http://http://igsv.unsj.edu.ar/)
+and at the [Computer-Oriented Geoscience Lab](https://www.compgeolab.org/)
 with the support of a [CONICET](https://www.conicet.gov.ar) scholarship.
 
 I'm also commited to contribute on Free Software projects to
