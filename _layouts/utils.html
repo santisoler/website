@@ -87,16 +87,17 @@
             {{ get_authors(talk, site, add_url=false) }} ({{ talk.date.year }})
         </p>
         <p class="item">
-            Presented at
-            {%- if talk.meeting_url is defined -%}
-                <a href="{{ talk.meeting_url }}">
+            Presented at {{ " " }}
+            {%- if talk.event_url is defined -%}
+                <a href="{{ talk.event_url }}">
             {%- endif -%}
-            {{ " " + talk.meeting }}.
-            {%- if talk.meeting_url is defined -%}
+            {{ talk.event }}.
+            {%- if talk.event_url is defined -%}
                 </a>
             {%- endif -%}
             {%- if talk.doi is defined -%}
-                {{ " doi: " }}
+                <br>
+                {{ "doi: " }}
                 <a href="https://www.doi.org/{{ talk.doi }}">{{ talk.doi }}</a>.
             {%- endif -%}
         </p>

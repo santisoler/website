@@ -92,8 +92,8 @@ title: <title of the talk>
 date: <Presentation date in YYYY-MM-DD>
 author: <comma separated authors defined in _site.yml>
 layout: talk
-meeting: <name of the scientific meeting>
-meeting_url: <url of the scientific meeting>
+event: <name of the scientific event>
+event_url: <url of the scientific event>
 doi: <doi number of the slides, not the url>
 google_slide: <url for google slides obtained from the html code after Publish on Web>
 image: <light jpg version of one slide for fast web browsing (optional)>

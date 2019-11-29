@@ -15,12 +15,12 @@
 
         <h2>Information</h2>
         <ul>
-            <li>Presented at
-                {%- if this.meeting_url is defined -%}
-                    <a href="{{ this.meeting_url }}">
+            <li>Presented at {{ " " }}
+                {%- if this.event_url is defined -%}
+                    <a href="{{ this.event_url }}">
                 {%- endif -%}
-                {{ " " + this.meeting }}
-                {%- if this.meeting_url is defined -%}
+                {{ this.event }}
+                {%- if this.event_url is defined -%}
                     </a>
                 {%- endif -%}
             </li>
