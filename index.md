@@ -5,6 +5,7 @@ content:
     - about
     - projects
     - publications
+    - talks
     - posters
 banner:
     title: Santiago Soler
