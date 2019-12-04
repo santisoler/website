@@ -36,12 +36,12 @@
             {%- endif -%}
         </ul>
 
-        {%- if this.doi -%}
-            <a href="https://www.doi.org/{{ this.doi }}" class="btn btn-primary" role="button">
+        {%- if this.pdf -%}
+            <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
                 <strong>Download slides</strong>
             </a>
-        {%- elif this.pdf -%}
-            <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
+        {%- elif this.doi -%}
+            <a href="https://www.doi.org/{{ this.doi }}" class="btn btn-primary" role="button">
                 <strong>Download slides</strong>
             </a>
         {%- endif -%}
