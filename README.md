@@ -81,6 +81,39 @@ Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) *
 paths** to the files.
 
 
+## Adding a new talk
+
+When a new talk wants to be uploaded you have to create a Markdown file inside
+`talks` folder which should have the following format:
+
+```markdown
+---
+title: <title of the talk>
+date: <Presentation date in YYYY-MM-DD>
+author: <comma separated authors defined in _site.yml>
+layout: talk
+event: <name of the scientific event>
+event_url: <url of the scientific event>
+doi: <doi number of the slides, not the url>
+google_slide: <url for google slides obtained from the html code after Publish on Web>
+image: <light jpg version of one slide for fast web browsing (optional)>
+pdf: <full pdf version of the slides> (optional, if doi is given it will be downloaded from it)
+thumbnail: <thumbnail filename located on /images>
+license: <license name defined on _site.yml>
+---
+
+## Abstract
+
+<insert-abstract>
+```
+
+In order to get the url to the Google Slides you must copy it from the HTML code
+obtained after choosing to Publish on Web.
+Read [this](https://support.google.com/docs/answer/183965?hl=en) for more information.
+If `google_slide` is not defined, then the slides will be replaced by the image passed
+on `image`. One of both must be passed.
+
+
 ## Adding a new poster
 
 When a new poster wants to be uploaded you have to create a Markdown file inside

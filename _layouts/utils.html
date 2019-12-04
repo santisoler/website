@@ -30,6 +30,8 @@
         {%- endif -%}
         {%- if page.layout == 'publication' -%}
             {{ publication_text(page, site) }}
+        {%- elif page.layout == 'talk' -%}
+            {{ talk_text(page, site) }}
         {%- elif page.layout == 'poster' -%}
             {{ poster_text(page, site) }}
         {%- else -%}
@@ -71,6 +73,32 @@
                 <span class="text-warning">
                     This article is <strong>under peer-review</strong>.
                 </span>
+            {%- endif -%}
+        </p>
+    </div>
+{%- endmacro -%}
+
+
+{%- macro talk_text(talk, site) -%}
+    {# Create text for a talk home item #}
+    <div class="col-md-10">
+        <a href={{ talk.url }}><h2 class="item">{{ talk.title }}</h2></a>
+        <p class="item">
+            {{ get_authors(talk, site, add_url=false) }} ({{ talk.date.year }})
+        </p>
+        <p class="item">
+            Presented at {{ " " }}
+            {%- if talk.event_url is defined -%}
+                <a href="{{ talk.event_url }}">
+            {%- endif -%}
+            {{ talk.event }}.
+            {%- if talk.event_url is defined -%}
+                </a>
+            {%- endif -%}
+            {%- if talk.doi is defined -%}
+                <br>
+                {{ "doi: " }}
+                <a href="https://www.doi.org/{{ talk.doi }}">{{ talk.doi }}</a>.
             {%- endif -%}
         </p>
     </div>
