@@ -60,8 +60,8 @@ author: <comma separated authors defined in _site.yml>
 layout: publication
 open_access: <true or false>
 doi: <doi number of the version of record (not url)>
-preprint: <doi number of the preprint (not url)>
-supplement: <doi number of the supplement (not url)>
+preprint: <doi number of the preprint (not url)> (optional)
+supplement: <doi number of the supplement (not url)> (optional)
 repository: <GitHub repository of the publication as username/repository>
 journal: <Journal>
 thumbnail: <thumbnail filename located on /images>
