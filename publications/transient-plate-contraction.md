@@ -3,6 +3,7 @@ title: "Transient plate contraction between two simultaneous slab windows: Insig
 date: 2018-04-08
 author: guido, agustina, me
 layout: publication
+open_access: false
 doi: 10.1016/j.jog.2018.07.008
 repository: santisoler/paper-plate-contraction-patagonia
 journal: Journal of Geodynamics

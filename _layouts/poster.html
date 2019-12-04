@@ -48,6 +48,10 @@
             <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
                 <strong>Download poster</strong>
             </a>
+        {%- elif this.doi -%}
+            <a href="https://www.doi.org/{{ this.doi }}" class="btn btn-primary" role="button">
+                <strong>Download poster</strong>
+            </a>
         {%- endif -%}
 
         <h2>Poster</h2>

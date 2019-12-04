@@ -7,7 +7,6 @@ meeting: LAPIS2019
 meeting_url: http://lapis2019.fcaglp.unlp.edu.ar/
 doi: 10.6084/m9.figshare.8242439
 image: lapis2019.jpg
-pdf: lapis2019.pdf
 thumbnail: lapis2019-thumbnail.jpg
 license: cc-by
 layout: poster
