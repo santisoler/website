@@ -58,13 +58,14 @@ title: "My article title"
 date: <Publication date in YYYY-MM-DD>
 author: <comma separated authors defined in _site.yml>
 layout: publication
+open_access: <true or false>
 doi: <doi number of the version of record (not url)>
 preprint: <doi number of the preprint (not url)>
 supplement: <doi number of the supplement (not url)>
 repository: <GitHub repository of the publication as username/repository>
 journal: <Journal>
 thumbnail: <thumbnail filename located on /images>
-pdf: <filename of pdf version of the article located on /pdf>
+pdf: <filename of pdf version of the article located on /pdfs> (optional)
 inreview: <true or false if the article is undergoing a peer review process>
 figure: <filename of abstract figure inside /images>
 caption: |
@@ -72,13 +73,34 @@ caption: |
 citation.md: |
     <citation in Markdown format, could be divided in several lines>
 ---
+
 # Abstract
 
 <insert-abstract>
 ```
 
-Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) **are not
-paths** to the files.
+It's a good idea to add a figure and a caption that work as a graphical abstract or
+represent the main contribution of the publication. The figure should be added to the
+`/images` directory and pass the filename on the `figure` field.
+
+You need to add a thumbnail for the publication that will appear on the pages that lists
+all publications. It can be a low resolution version of the abstract figure, and it
+should be also included under the `/images` directory. The filename of the thumbnail
+should be passed on the `thumbnail` field.
+
+The preferred source for downloading the article is automatically chosen from:
+- the article doi,
+- the preprint doi, or
+- a full PDF version uploaded to the `/pdfs` directory on the website.
+
+If the article has open access, its DOI will be the first choice.
+If on the other hand, it has not open access, we will point to the preprint DOI.
+When passing a `pdf` we will override everything and make the uploaded PDF version as
+the first choice. The `pdf` field should receive the filename of the uploaded PDF file
+inside the `/pdfs` directory.
+
+Remember that every filename you enter on the header (`image`, `thumbnail`, `pdf`, etc)
+**are not paths** to the files, but filenames.
 
 
 ## Adding a new talk
@@ -95,9 +117,9 @@ layout: talk
 event: <name of the scientific event>
 event_url: <url of the scientific event>
 doi: <doi number of the slides, not the url>
-google_slide: <url for google slides obtained from the html code after Publish on Web>
-image: <light jpg version of one slide for fast web browsing (optional)>
-pdf: <full pdf version of the slides> (optional, if doi is given it will be downloaded from it)
+google_slide: <url for google slides obtained from the html code after Publish on Web> (optional)
+image: <light jpg version of one slide for fast web browsing > (optional, used only if google_slide is not passed)
+pdf: <full pdf version of the slides> (optional)
 thumbnail: <thumbnail filename located on /images>
 license: <license name defined on _site.yml>
 ---
@@ -107,11 +129,25 @@ license: <license name defined on _site.yml>
 <insert-abstract>
 ```
 
-In order to get the url to the Google Slides you must copy it from the HTML code
-obtained after choosing to Publish on Web.
-Read [this](https://support.google.com/docs/answer/183965?hl=en) for more information.
+You need to add a thumbnail for the talk that will appear on the pages that lists all
+talks. It can be a low resolution version of the first slide, and it should be
+included under the `/images` directory. The filename of the thumbnail should be passed
+on the `thumbnail` field.
+
+If the slides are stored on Google Slides, it's possible to just append them as
+a interactive box that allows to navigate through all slides. You just need to pass
+a specific url on the `google_slides` field. In order to get this url you must copy it
+from the HTML code obtained after choosing to Publish on Web. Read
+[this](https://support.google.com/docs/answer/183965?hl=en) for more information.
 If `google_slide` is not defined, then the slides will be replaced by the image passed
-on `image`. One of both must be passed.
+on `image`. Either one of both must be passed.
+
+The preferred source to download the slides is from the passed DOI.
+If `pdf` is passed, they will be downloaded from a full PDF version of the slides
+located on the `/pdfs` directory of the website.
+
+Remember that every filename you enter on the header (`image`, `thumbnail`, `pdf`, etc)
+**are not paths** to the files, but filenames.
 
 
 ## Adding a new poster
@@ -140,9 +176,17 @@ license: <license name defined on _site.yml>
 <insert-abstract>
 ```
 
-Remember that every filename you enter on the header (`thumbnail`, `pdf`, etc) **are not
-paths** to the files.
+You need to add a thumbnail for the poster that will appear on the pages that lists all
+posters. It can be a low resolution version of the poster, and it should be
+included under the `/images` directory. The filename of the thumbnail should be passed
+on the `thumbnail` field.
 
+The preferred source to download the poster is from the passed DOI.
+If `pdf` is passed, it will be downloaded from a full PDF version of the poster located
+on the `/pdfs` directory of the website.
+
+Remember that every filename you enter on the header (`image`, `thumbnail`, `pdf`, etc)
+**are not paths** to the files, but filenames.
 
 
 ## Acknowledgments
