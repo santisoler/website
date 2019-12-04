@@ -8,6 +8,7 @@ journal: Geophysical Journal International
 supplement: 10.6084/m9.figshare.8239622
 preprint: 10.31223/osf.io/3548g
 doi: 10.1093/gji/ggz277
+open_access: false
 citation: "Soler, S. R., Pesce, A., Gimenez, M. E., & Uieda, L., 2019. Gravitational field calculation in spherical coordinates using variable densities in depth, Geophysical Journal International, doi:10.1093/gji/ggz277"
 thumbnail: tesseroid-variable-density-thumbnail.jpg
 figure: tesseroid-variable-density.jpg

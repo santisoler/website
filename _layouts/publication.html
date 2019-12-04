@@ -47,20 +47,27 @@
         {%- endif -%}
     </ul>
 
-        <!-- Add download button --!>
-        <!-- Preprint DOI link will be prioritized over PDF stored on the website --!>
+        <!-- Add inreview disclaimer --!>
         {%- if this.inreview -%}
             <div class="alert alert-warning">
                 This paper is currently under peer-review at {{ this.journal }}.
             </div>
         {%- endif -%}
 
-        {%- if this.preprint -%}
-            <a href="https://doi.org/{{ this.preprint }}" class="btn btn-primary" role="button">
+        <!-- Add download button --!>
+        <!-- DOI link will be prioritized over PDF stored on the website --!>
+        <!-- If the article is open access, then it will be downloaded from the DOI. --!>
+        <!-- If not, it will be downloaded from the preprint DOI (if any). --!>
+        {%- if this.pdf -%}
+            <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
                 <strong>Download article</strong>
             </a>
-        {%- elif this.pdf -%}
-            <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
+        {%- elif this.open_access -%}
+            <a href="https://doi.org/{{ this.doi }}" class="btn btn-primary" role="button">
+                <strong>Download article</strong>
+            </a>
+        {%- elif not this.open_access and this.preprint -%}
+            <a href="https://doi.org/{{ this.preprint }}" class="btn btn-primary" role="button">
                 <strong>Download article</strong>
             </a>
         {%- endif -%}
