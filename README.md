@@ -83,7 +83,7 @@ paths** to the files.
 
 ## Adding a new talk
 
-When a new taltalk wants to be uploaded you have to create a Markdown file inside
+When a new talk wants to be uploaded you have to create a Markdown file inside
 `talks` folder which should have the following format:
 
 ```markdown
@@ -97,7 +97,7 @@ event_url: <url of the scientific event>
 doi: <doi number of the slides, not the url>
 google_slide: <url for google slides obtained from the html code after Publish on Web>
 image: <light jpg version of one slide for fast web browsing (optional)>
-pdf: <full pdf version of the slides>
+pdf: <full pdf version of the slides> (optional, if doi is given it will be downloaded from it)
 thumbnail: <thumbnail filename located on /images>
 license: <license name defined on _site.yml>
 ---
