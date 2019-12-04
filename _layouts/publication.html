@@ -62,7 +62,7 @@
             <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
                 <strong>Download article</strong>
             </a>
-        {%- elif this.open_access -%}
+        {%- elif this.open_access and this.doi -%}
             <a href="https://doi.org/{{ this.doi }}" class="btn btn-primary" role="button">
                 <strong>Download article</strong>
             </a>
