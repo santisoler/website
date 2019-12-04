@@ -130,7 +130,7 @@ meeting: <name of the scientific meeting>
 meeting_url: <url of the scientific meeting>
 doi: <doi number of the poster, not the url>
 image: <light jpg version of the poster for fast web browsing>
-pdf: <full pdf version of the poster>
+pdf: <full pdf version of the poster> (optional, if doi is given it will be downloaded from it)
 thumbnail: <thumbnail filename located on /images>
 license: <license name defined on _site.yml>
 ---
