@@ -115,6 +115,24 @@ authors:
     leo:
       name: Leonardo Uieda
       url: https://www.leouieda.com/
+    rampin:
+      name: Rémi Rampin
+      url: https://github.com/remram44
+    vankemenade:
+      name: Hugo vanKemenade
+      url: https://github.com/hugovk
+    matthewturk:
+      name: Matthew Turk
+      url: https://github.com/matthewturk
+    shapero:
+      name: Daniel Shapero
+      url: https://github.com/danshapero
+    banihirwe:
+      name: Anderson Banihirwe
+      url: https://github.com/andersy005
+    leeman:
+      name: John Leeman
+      url: https://github.com/jrleeman
 
 navbar_items: [
     ["About", "/about.html"],
