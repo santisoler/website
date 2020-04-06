@@ -15,8 +15,7 @@ summary:
     at the
     <a href="https://www.compgeolab.org/">Computer-Oriented Geoscience Lab</a>
     with the support of a <a href="https://www.conicet.gov.ar">CONICET</a> scholarship.
-    <br>
-    I'm also commited to contribute on Free Software projects to
+    I'm also commited to contribute on open-source projects to
     improve science openness and reproducibility.
 banner:
     title: About me
@@ -36,10 +35,10 @@ I research forward and inverse gravity models at the
 and at the [Computer-Oriented Geoscience Lab](https://www.compgeolab.org/)
 with the support of a [CONICET](https://www.conicet.gov.ar) scholarship.
 
-I'm also commited to contribute on Free Software projects to
+I'm also commited to contribute on open-source software software projects to
 improve science openness and reproducibility such as
-[Fatiando a Terra](https://www.fatiando.org/): a collection of open-source Python tools
-for forward and inverse modelling in geophysics.
+[Fatiando a Terra](https://www.fatiando.org/): a collection of open-source
+Python tools for forward and inverse modelling in geophysics.
 
 Longtime GNU/Linux user and Free Software supporter, I'm keen on:
 
