@@ -1,7 +1,7 @@
 # Source code to build my personal website
 
-[![Travis CI Status](https://img.shields.io/travis/santisoler/website/master.svg?style=for-the-badge)](https://travis-ci.org/santisoler/website)
-[![Powered by Urubu](https://img.shields.io/badge/powered_by-urubu-blue.svg?style=for-the-badge)](http://urubu.jandecaluwe.com/)
+[![Travis CI Status](https://travis-ci.com/santisoler/website.svg?branch=master)](https://travis-ci.com/santisoler/website)
+[![Powered by Urubu](https://img.shields.io/badge/powered_by-urubu-blue.svg)](http://urubu.jandecaluwe.com/)
 
 This is the source code for
 [santisoler.github.io](https://santisoler.github.io).
