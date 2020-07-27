@@ -1,7 +1,7 @@
 ---
 title: Mecánica Estadística
-date: 2018-03-01
-end_date: 2019-04-01
+date: 2019-04-01
+start_date: 2018-03-01
 author: me
 layout: teaching
 thumbnail: mecanica-estadistica-thumbnail.jpg

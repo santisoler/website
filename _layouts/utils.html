@@ -86,8 +86,8 @@
         <a href={{ course.url }}><h2 class="item">{{ course.title }}</h2></a>
         <p class="item">
             {{ get_authors(course, site, add_url=false) }}
-            {% if course.end_date %}
-                ({{ course.date.year }} - {{ course.end_date.year}})
+            {% if course.start_date %}
+                ({{ course.start_date.year }} - {{ course.date.year}})
             {% else %}
                 ({{ course.date.year }})
             {%- endif -%}

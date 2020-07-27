@@ -13,8 +13,8 @@
         <h1>{{ this.title }}</h1>
         <p>
             {{ get_authors(this, site) }}
-            {% if this.end_date %}
-                ({{ this.date.year }} - {{ this.end_date.year}})
+            {% if this.start_date %}
+                ({{ this.start_date.year }} - {{ this.date.year}})
             {% else %}
                 ({{ this.date.year }})
             {%- endif -%}
