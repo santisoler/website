@@ -5,7 +5,7 @@ author: me
 layout: teaching
 thumbnail: python-unsj-2020-thumbnail.jpg
 institution: Universidad Nacional de San Juan
-institution_url: https://www.unsj.edu.ar
+institution_url: http://www.unsj.edu.ar
 website: https://www.github.com/santisoler/python-unsj-2020
 ---
 

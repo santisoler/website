@@ -9,9 +9,9 @@ summary:
     I'm a Lic. in Physics graduated from the
     <a href="https://www.unr.edu.ar">Universidad Nacional de Rosario</a>
     and now PhD Student in Geophysics at the
-    <a href="https://www.unsj.edu.ar">Universidad Nacional de San Juan</a>.
+    <a href="http://www.unsj.edu.ar">Universidad Nacional de San Juan</a>.
     I research forward and inverse gravity models at the
-    <a href="https://igsv.unsj.edu.ar">Instituto Geofísico Sismológico Volponi</a> and
+    <a href="http://igsv.unsj.edu.ar">Instituto Geofísico Sismológico Volponi</a> and
     at the
     <a href="https://www.compgeolab.org/">Computer-Oriented Geoscience Lab</a>
     with the support of a <a href="https://www.conicet.gov.ar">CONICET</a> scholarship.
@@ -32,7 +32,7 @@ banner:
 I'm a Lic. in Physics graduated from the
 [Universidad Nacional de Rosario](https://www.unr.edu.ar)
 and now a PhD Student in Geophysics at the
-[Universidad Nacional de San Juan](https://www.unsj.edu.ar).
+[Universidad Nacional de San Juan](http://www.unsj.edu.ar).
 
 I research forward and inverse gravity models at the
 [Instituto Geofísico Sismológico Volponi](http://http://igsv.unsj.edu.ar/)
@@ -73,7 +73,7 @@ You can also download a
 ## Phd in Geophysics
 
 - April 2017 - Present
-- [Universidad Nacional de San Juan](https://www.unsj.edu.ar)
+- [Universidad Nacional de San Juan](http://www.unsj.edu.ar)
 
 ## Licentiate in Physics
 
