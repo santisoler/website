@@ -31,10 +31,6 @@
                     <a href="{{ this.website }}"><b>Website</b></a>
                 </li>
             {%- endif -%}
-            {%- if this.license is defined -%}
-                {%- set license = site.licenses[this.license] -%}
-                <li>License: <a href="{{ license.url }}">{{ license.name }}</a></li>
-            {%- endif -%}
         </ul>
 
         <main>
