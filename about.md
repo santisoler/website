@@ -17,6 +17,10 @@ summary:
     with the support of a <a href="https://www.conicet.gov.ar">CONICET</a> scholarship.
     I'm also commited to contribute on open-source projects to
     improve science openness and reproducibility.
+    </p>
+    <p style="text-align:right;">
+    <a href="about.html">Read more...</a>
+    </p>
 banner:
     title: About me
     img: blanco.jpg
@@ -51,6 +55,18 @@ Longtime GNU/Linux user and Free Software supporter, I'm keen on:
 When I'm not researching or coding I like to spend time outdoors doing rock
 climbing, trekking and mountaineering, biking or kayaking.
 I consider myself an amateur photographer as well.
+
+
+# Curriculum Vitae
+
+You can access an [HTML version of my Curriculum
+Vitae](https://santisoler.github.io/cv)
+or download it as a
+[PDF file](https://raw.githubusercontent.com/santisoler/cv/gh-pages/cv.pdf).
+
+You can also download a
+[Spanish version of the CV](https://raw.githubusercontent.com/santisoler/cv/gh-pages/cv_es.pdf).
+
 
 # Education
 
