@@ -5,8 +5,8 @@ end_date: 2019-04-01
 author: me
 layout: teaching
 thumbnail: mecanica-estadistica-thumbnail.jpg
-institution: Universidad Nacional de San Juan
-institution_url: https://www.unsj.edu.ar
+institution: Facultad de Ciencias Exáctas, Físicas y Naturales, UNSJ
+institution_url: http://exactas.unsj.edu.ar/
 website: https://santisoler.github.io/mecanica-estadistica/
 ---
 
