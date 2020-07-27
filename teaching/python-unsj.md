@@ -9,7 +9,7 @@ institution_url: https://www.unsj.edu.ar
 website: https://www.github.com/santisoler/python-unsj-2020
 ---
 
-## About
+# About
 
 El curso tiene como objetivo introducir a las y los participantes al lenguaje
 de programación Python, orientado al manejo, análisis y modelado de datos
@@ -22,7 +22,7 @@ sobre las diversas librerías científicas del ecosistema del lenguaje Python.
 Puedes encontrar más información y material del curso en
 [github.com/santisoler/python-unsj-2020]({{ this.website }}).
 
-## Videos
+# Videos
 
 Debido a la situación de pandemia generada por el brote de COVID-19, el curso
 ha sido desarrollado de forma online mediante transmiciones en vivo a través de
