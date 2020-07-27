@@ -1,6 +1,6 @@
 # Source code to build my personal website
 
-[![Travis CI Status](https://travis-ci.com/santisoler/website.svg?branch=master)](https://travis-ci.com/santisoler/website)
+![GitHub Actions](https://github.com/santisoler/website/workflows/build/badge.svg)
 [![Powered by Urubu](https://img.shields.io/badge/powered_by-urubu-blue.svg)](http://urubu.jandecaluwe.com/)
 
 This is the source code for
