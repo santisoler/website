@@ -11,7 +11,14 @@
 
     {% block content %}
         <h1>{{ this.title }}</h1>
-        <p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
+        <p>
+            {{ get_authors(this, site) }}
+            {% if this.end_date %}
+                ({{ this.date.year }} - {{ this.end_date.year}})
+            {% else %}
+                ({{ this.date.year }})
+            {%- endif -%}
+        </p>
 
         <h2>Information</h2>
         <ul>
