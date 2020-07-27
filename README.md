@@ -1,6 +1,6 @@
 # Source code to build my personal website
 
-![GitHub Actions](https://github.com/santisoler/website/workflows/build/badge.svg)
+[![GitHub Actions](https://github.com/santisoler/website/workflows/build/badge.svg)](https://github.com/santisoler/website/actions)
 [![Powered by Urubu](https://img.shields.io/badge/powered_by-urubu-blue.svg)](http://urubu.jandecaluwe.com/)
 
 This is the source code for
