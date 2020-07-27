@@ -30,6 +30,8 @@
         {%- endif -%}
         {%- if page.layout == 'publication' -%}
             {{ publication_text(page, site) }}
+        {%- elif page.layout == 'teaching' -%}
+            {{ teaching_text(page, site) }}
         {%- elif page.layout == 'talk' -%}
             {{ talk_text(page, site) }}
         {%- elif page.layout == 'poster' -%}
@@ -78,6 +80,32 @@
     </div>
 {%- endmacro -%}
 
+{%- macro teaching_text(course, site) -%}
+    {# Create text for a teaching home item #}
+    <div class="col-md-10">
+        <a href={{ course.url }}><h2 class="item">{{ course.title }}</h2></a>
+        <p class="item">
+            {{ get_authors(course, site, add_url=false) }}
+            {% if course.start_date %}
+                ({{ course.start_date.year }} - {{ course.date.year}})
+            {% else %}
+                ({{ course.date.year }})
+            {%- endif -%}
+
+        </p>
+        {% if course.institution -%}
+            <p class="item">
+                {%- if course.institution_url is defined -%}
+                    <a href="{{ course.institution_url }}">
+                {%- endif -%}
+                {{ course.institution }}
+                {%- if course.institution_url is defined -%}
+                    </a>
+                {%- endif -%}
+            </p>
+        {%- endif -%}
+    </div>
+{%- endmacro -%}
 
 {%- macro talk_text(talk, site) -%}
     {# Create text for a talk home item #}

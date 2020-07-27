@@ -5,6 +5,7 @@ content:
     - about
     - projects
     - publications
+    - teaching
     - talks
     - posters
 banner:
