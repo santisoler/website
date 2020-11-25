@@ -115,6 +115,8 @@ event: <name of the scientific event>
 event_url: <url of the scientific event>
 doi: <doi number of the slides, not the url>
 google_slide: <url for google slides obtained from the html code after Publish on Web> (optional)
+slides_url: <url for the slides> (optional, use only if google_slide is not
+passed. Need image.)
 image: <light jpg version of one slide for fast web browsing > (optional, used only if google_slide is not passed)
 pdf: <full pdf version of the slides> (optional)
 thumbnail: <thumbnail filename located on /images>
