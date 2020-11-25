@@ -9,6 +9,8 @@ thumbnail: seg-uns-2020-thumbnail.jpg
 license: cc-by
 ---
 
+Organized by SEG Student Chapter of Universidad del Sur.
+
 ## Abstract
 
 En las últimas décadas las herramientas computacionales han cobrado un rol
