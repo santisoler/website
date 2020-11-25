@@ -60,11 +60,13 @@
         {%- elif this.image -%}
             {%- if this.pdf -%}
                 <a href="/{{ site.pdfs_path }}/{{ this.pdf }}">
+            {%- elif this.slides_url -%}
+                <a href="{{ this.slides_url }}">
             {%- endif -%}
             <figure>
                 <img src="/{{ site.images_path }}/{{ this.image }}" class="img-responsive poster">
             </figure>
-            {%- if this.pdf -%}
+            {%- if this.pdf or this.slides_url -%}
                 </a>
             {%- endif -%}
         {%- endif -%}
