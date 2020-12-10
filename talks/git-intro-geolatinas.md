@@ -4,8 +4,8 @@ date: 2020-10-01
 author: me
 layout: talk
 slides_url: https://santisoler.github.io/git-intro-geolatinas
-image: git-intro-geolatinas.jpg
-thumbnail: git-intro-geolatinas-thumbnail.jpg
+image: intro-git-geolatinas.jpg
+thumbnail: intro-git-geolatinas-thumbnail.jpg
 license: cc-by
 ---
 
