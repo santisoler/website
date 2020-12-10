@@ -111,10 +111,12 @@ title: <title of the talk>
 date: <Presentation date in YYYY-MM-DD>
 author: <comma separated authors defined in _site.yml>
 layout: talk
-event: <name of the scientific event>
-event_url: <url of the scientific event>
+event: <name of the scientific event> (optional)
+event_url: <url of the scientific event> (optional, only if event is passed)
 doi: <doi number of the slides, not the url>
 google_slide: <url for google slides obtained from the html code after Publish on Web> (optional)
+slides_url: <url for the slides> (optional, use only if google_slide is not
+passed. Need image.)
 image: <light jpg version of one slide for fast web browsing > (optional, used only if google_slide is not passed)
 pdf: <full pdf version of the slides> (optional)
 thumbnail: <thumbnail filename located on /images>

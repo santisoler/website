@@ -15,15 +15,17 @@
 
         <h2>Information</h2>
         <ul>
-            <li>Presented at {{ " " }}
-                {%- if this.event_url is defined -%}
-                    <a href="{{ this.event_url }}">
-                {%- endif -%}
-                {{ this.event }}
-                {%- if this.event_url is defined -%}
-                    </a>
-                {%- endif -%}
-            </li>
+            {%- if this.event -%}
+                <li>Presented at {{ " " }}
+                    {%- if this.event_url is defined -%}
+                        <a href="{{ this.event_url }}">
+                    {%- endif -%}
+                    {{ this.event }}
+                    {%- if this.event_url is defined -%}
+                        </a>
+                    {%- endif -%}
+                </li>
+            {%- endif -%}
             {%- if this.license is defined -%}
                 {%- set license = site.licenses[this.license] -%}
                 <li>License: <a href="{{ license.url }}">{{ license.name }}</a></li>
@@ -60,11 +62,13 @@
         {%- elif this.image -%}
             {%- if this.pdf -%}
                 <a href="/{{ site.pdfs_path }}/{{ this.pdf }}">
+            {%- elif this.slides_url -%}
+                <a href="{{ this.slides_url }}">
             {%- endif -%}
             <figure>
                 <img src="/{{ site.images_path }}/{{ this.image }}" class="img-responsive poster">
             </figure>
-            {%- if this.pdf -%}
+            {%- if this.pdf or this.slides_url -%}
                 </a>
             {%- endif -%}
         {%- endif -%}
