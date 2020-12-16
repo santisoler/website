@@ -68,12 +68,12 @@
             <em>{{ article.journal }}.</em>
             {%- if article.doi is defined -%}
                 {{ " doi: " }}
-                <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>.
+                <a href="https://www.doi.org/{{ article.doi }}">{{ article.doi }}</a>
             {%- endif -%}
             {%- if article.inreview -%}
                 {{ " " }}
                 <span class="text-warning">
-                    This article is <strong>under peer-review</strong>.
+                    This article is <strong>under peer-review</strong>
                 </span>
             {%- endif -%}
         </p>
@@ -120,7 +120,7 @@
                 {%- if talk.event_url is defined -%}
                     <a href="{{ talk.event_url }}">
                 {%- endif -%}
-                {{ talk.event }}.
+                {{ talk.event }}
                 {%- if talk.event_url is defined -%}
                     </a>
                 {%- endif -%}
@@ -129,7 +129,7 @@
                 {%- if talk.organizer_url is defined -%}
                     <a href="{{ talk.organizer_url }}">
                 {%- endif -%}
-                {{ talk.organizer }}.
+                {{ talk.organizer }}
                 {%- if talk.organizer_url is defined -%}
                     </a>
                 {%- endif -%}
@@ -137,7 +137,7 @@
             {%- if talk.doi is defined -%}
                 <br>
                 {{ "doi: " }}
-                <a href="https://www.doi.org/{{ talk.doi }}">{{ talk.doi }}</a>.
+                <a href="https://www.doi.org/{{ talk.doi }}">{{ talk.doi }}</a>
             {%- endif -%}
         </p>
     </div>
@@ -156,14 +156,14 @@
             {%- if poster.meeting_url is defined -%}
                 <a href="{{ poster.meeting_url }}">
             {%- endif -%}
-            {{ poster.meeting }}.
+            {{ poster.meeting }}
             {%- if poster.meeting_url is defined -%}
                 </a>
             {%- endif -%}
             {%- if poster.doi is defined -%}
                 <br>
                 {{ "doi: " }}
-                <a href="https://www.doi.org/{{ poster.doi }}">{{ poster.doi }}</a>.
+                <a href="https://www.doi.org/{{ poster.doi }}">{{ poster.doi }}</a>
             {%- endif -%}
         </p>
     </div>
