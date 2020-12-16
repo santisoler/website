@@ -3,13 +3,12 @@ title: Herramientas Computacionales para Geociencias
 date: 2020-10-02
 author: me
 layout: talk
+organizer: SEG Student Chapter of Universidad del Sur
 image: seg-uns-2020.jpg
 slides_url: https://santisoler.github.io/seg-uns-2020
 thumbnail: seg-uns-2020-thumbnail.jpg
 license: cc-by
 ---
-
-Organized by SEG Student Chapter of Universidad del Sur.
 
 ## Abstract
 

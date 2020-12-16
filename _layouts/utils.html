@@ -114,8 +114,8 @@
         <p class="item">
             {{ get_authors(talk, site, add_url=false) }} ({{ talk.date.year }})
         </p>
-        {%- if talk.event -%}
-            <p class="item">
+        <p class="item">
+            {%- if talk.event -%}
                 Presented at {{ " " }}
                 {%- if talk.event_url is defined -%}
                     <a href="{{ talk.event_url }}">
@@ -124,13 +124,22 @@
                 {%- if talk.event_url is defined -%}
                     </a>
                 {%- endif -%}
-                {%- if talk.doi is defined -%}
-                    <br>
-                    {{ "doi: " }}
-                    <a href="https://www.doi.org/{{ talk.doi }}">{{ talk.doi }}</a>.
+            {%- elif talk.organizer -%}
+                Organized by {{ " " }}
+                {%- if talk.organizer_url is defined -%}
+                    <a href="{{ talk.organizer_url }}">
                 {%- endif -%}
-            </p>
-        {%- endif -%}
+                {{ talk.organizer }}.
+                {%- if talk.organizer_url is defined -%}
+                    </a>
+                {%- endif -%}
+            {%- endif -%}
+            {%- if talk.doi is defined -%}
+                <br>
+                {{ "doi: " }}
+                <a href="https://www.doi.org/{{ talk.doi }}">{{ talk.doi }}</a>.
+            {%- endif -%}
+        </p>
     </div>
 {%- endmacro -%}
 

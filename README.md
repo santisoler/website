@@ -113,6 +113,8 @@ author: <comma separated authors defined in _site.yml>
 layout: talk
 event: <name of the scientific event> (optional)
 event_url: <url of the scientific event> (optional, only if event is passed)
+organizer: <name of the organizer> (optional)
+organizer_url: <url of the organizer> (optional, only if organizer is passed)
 doi: <doi number of the slides, not the url>
 google_slide: <url for google slides obtained from the html code after Publish on Web> (optional)
 slides_url: <url for the slides> (optional, use only if google_slide is not
