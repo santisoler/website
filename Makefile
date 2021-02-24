@@ -6,8 +6,8 @@ build:
 	python -m urubu build
 	touch _build/.nojekyll
 
-serve:
-	python -m urubu serve
+serve: build
+	livereload _build -p 8000
 
 clean:
 	rm -rf _build
