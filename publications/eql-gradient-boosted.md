@@ -9,9 +9,9 @@ preprint: 10.31223/X58G7C
 # supplement: <doi number of the supplement (not url)> (optional)
 repository: compgeolab/eql-gradient-boosted
 journal: Geophysical Journal International
-thumbnail: <thumbnail filename located on /images>
+thumbnail: eql-gradient-boosted-thumbnail.jpg
 inreview: true
-figure: <filename of abstract figure inside /images>
+figure: eql-gradient-boosted.jpg
 caption: |
     <caption of the abstract figure, could be divided in several lines>
 citation.md: |
