@@ -6,14 +6,12 @@ layout: publication
 open_access: false
 # doi: <doi number of the version of record (not url)>
 preprint: 10.31223/X58G7C
-# supplement: <doi number of the supplement (not url)> (optional)
+supplement: 10.6084/m9.figshare.13604360
 repository: compgeolab/eql-gradient-boosted
 journal: Geophysical Journal International
 thumbnail: eql-gradient-boosted-thumbnail.jpg
 inreview: true
 figure: eql-gradient-boosted.jpg
-caption: |
-    <caption of the abstract figure, could be divided in several lines>
 citation.md: |
     Soler S.R. and Uieda L. (2021). Gradient-boosted equivalent sources. doi:
     [10.31223/X58G7C](https://doi.org/10.31223/X58G7C)
