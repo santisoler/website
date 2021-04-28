@@ -242,23 +242,19 @@ img.poster {
     margin-bottom: 30px;
 }
 
+/* Improve style for embedded videos */
 .videowrapper {
-    float: none;
-    clear: both;
-    width: 700px;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-    margin: 0 auto;
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
 }
 
-.videowrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 700px;
-    max-height: 400px;
+.videowrapper iframe, .videowrapper object, .videowrapper embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
 }
