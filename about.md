@@ -26,7 +26,7 @@ banner:
     img: blanco.jpg
     img_description: Climbing at Cerro Blanco, San Juan, Argentina.
 ---
-{%- from "utils.html" import draw_icon -%}
+{%- from "_utils.html" import draw_icon -%}
 
 
 I'm a Lic. in Physics graduated from the
