@@ -1,6 +1,6 @@
 ---
 title: Fatiando a Terra
-layout: page
+layout: none
 thumbnail: fatiando.png
 url: https://www.fatiando.org
 project_url: https://www.fatiando.org
