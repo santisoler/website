@@ -16,8 +16,6 @@ ignore_patterns: [
     "README.md",
     "environment.yml",
     "requirements.txt",
-    "search",
-    "tipusearch",
     "LICENSE.md",
 ]
 
