@@ -136,6 +136,7 @@ authors:
 
 navbar_items: [
     ["About", "/about.html"],
+    ["Blog", "/blog"],
     ["Projects", "/projects"],
     ["Publications", "/publications"],
     ["Teaching", "/teaching"],
