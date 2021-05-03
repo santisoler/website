@@ -1,22 +1,23 @@
 ---
 title: "Tutorial: Processing gravity and magnetic data with Harmonica"
+layout: presentation
 date: 2021-04-22
 author: me, andrea, agustina
-layout: talk
-event: Transform21
-event_url: https://softwareunderground.org/events/transform-2021
-organizer: Software Underground
-organizer_url: https://softwareunderground.org/
-thumbnail: swung-thumbnail.png
+meeting:
+    name: Transform21
+    url: https://softwareunderground.org/events/transform-2021
+organizer:
+    name: Software Underground
+    url: https://softwareunderground.org/
+thumbnail: /images/swung-thumbnail.png
 license: cc-by
 ---
+{%- from "macros.html" import youtube_video -%}
 
-<div class="videowrapper">
-<iframe
-src="https://www.youtube-nocookie.com/embed/0bxZcCAr6bw" title="YouTube video
-player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+
+# Tutorial video
+
+{{ youtube_video("https://www.youtube-nocookie.com/embed/0bxZcCAr6bw") }}
 
 ## About
 
