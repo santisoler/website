@@ -5,9 +5,8 @@ date: 2018-04-08
 author: guido, agustina, me
 journal:
     name: Journal of Geodynamics
-    url:
+    url: https://www.journals.elsevier.com/journal-of-geodynamics/
     doi: 10.1016/j.jog.2018.07.008
-    open_access: false
 code:
     repo: santisoler/paper-plate-contraction-patagonia
     url: https://github.com/santisoler/paper-plate-contraction-patagonia

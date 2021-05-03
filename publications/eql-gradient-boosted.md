@@ -6,7 +6,7 @@ author: me, leo
 inreview: true
 journal:
     name: Geophysical Journal International
-    url:
+    url: https://academic.oup.com/gji/
     doi:
     open_access: false
 preprint:

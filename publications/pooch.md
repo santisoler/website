@@ -5,7 +5,7 @@ date: 2020-01-17
 author: leo, me, rampin, vankemenade, matthewturk, shapero, banihirwe, leeman
 journal:
     name: Journal of Open Source Software
-    url:
+    url: https://joss.theoj.org/
     doi: 10.21105/joss.01943
     open_access: true
 code:

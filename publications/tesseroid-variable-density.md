@@ -5,7 +5,7 @@ date: 2019-06-11
 author: me, agustina, mario, leo
 journal:
     name: Geophysical Journal International
-    url:
+    url: https://academic.oup.com/gji/
     doi: 10.1093/gji/ggz277
     open_access: false
 preprint:
