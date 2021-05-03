@@ -253,6 +253,10 @@ nav ul li a {
   color: #ececec;
 }
 
+.nav-home > a {
+  font-weight: 700;
+}
+
 ul.social-icons {
   list-style: none;
   padding: 0;
