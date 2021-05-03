@@ -1,108 +1,87 @@
-{% extends "_base.html" %}
-{% from "_utils.html" import make_breadcrums, make_toc, get_authors, figure %}
+{% extends "_entry.html" %}
+{%- from "macros.html" import link, doi_link -%}
 
-{% block body %}
-<div class="container">
-
-    {% block breadcrumbs %}
-      {{ make_breadcrums(this) }}
-    {% endblock %}
-
-
-    {% block content %}
-        <h1>{{ this.title }}</h1>
-        <p>{{ get_authors(this, site) }} ({{ this.date.year }})</p>
-
-    <h2>Information</h2>
-    <ul>
-        <li>Journal: <em>{{ this.journal }}</em></li>
-        {%- if this.repository is defined -%}
-            <li>
-                Source code:
-                <a href="https://www.github.com/{{ this.repository }}">
-                    {{ this.repository }}
-                </a>
-            </li>
-        {%- endif -%}
-        {%- if this.doi is defined -%}
-            <li>
-                doi: <a href="https://www.doi.org/{{ this.doi }}">{{ this.doi }}</a>
-            </li>
-        {%- endif -%}
-        {%- if this.preprint is defined -%}
-            <li>
-                Preprint (PDF):
-                <a href="https://www.doi.org/{{ this.preprint }}">
-                    {{ this.preprint }}
-                </a>
-            </li>
-        {%- endif -%}
-        {%- if this.supplement is defined -%}
-            <li>
-                Supplement:
-                <a href="https://www.doi.org/{{ this.supplement }}">
-                    {{ this.supplement }}
-                </a>
-            </li>
-        {%- endif -%}
-    </ul>
-
-        <!-- Add inreview disclaimer --!>
-        {%- if this.inreview -%}
-            <div class="alert alert-warning">
-                This paper is currently under peer-review at {{ this.journal }}.
-            </div>
-        {%- endif -%}
-
-        <!-- Add download button --!>
-        <!-- DOI link will be prioritized over PDF stored on the website --!>
-        <!-- If the article is open access, then it will be downloaded from the DOI. --!>
-        <!-- If not, it will be downloaded from the preprint DOI (if any). --!>
-        {%- if this.pdf -%}
-            <a href="/{{ site.pdfs_path }}/{{ this.pdf }}" class="btn btn-primary" role="button">
-                <strong>Download article</strong>
-            </a>
-        {%- elif this.open_access and this.doi -%}
-            <a href="https://doi.org/{{ this.doi }}" class="btn btn-primary" role="button">
-                <strong>Download article</strong>
-            </a>
-        {%- elif not this.open_access and this.preprint -%}
-            <a href="https://doi.org/{{ this.preprint }}" class="btn btn-primary" role="button">
-                <strong>Download article</strong>
-            </a>
-        {%- endif -%}
-
-        <main>
-            {{this.body}}
-        </main>
-
-        {%- if this.figure -%}
-            {%- if this.caption -%}
-                {{ figure(this.figure, site, caption=this.caption) }}
-            {%- else -%}
-                {{ figure(this.figure, site) }}
+{% block extra_info %}
+    {%- if this.inreview -%}
+        <div class="warning">
+            This article is under peer-review process
+            {% if this.journal is defined -%}
+            in <em>{{ this.journal.name }}</em>
             {%- endif -%}
+        </div>
+    {%- endif -%}
+{% endblock %}
+
+{% block info %}
+  <h2>Info</h2>
+  <ul>
+    {%- if this.journal is defined -%}
+        {%- if this.journal.name -%}
+        <li>
+            Journal:
+            <em>{{ link(this.journal.name, this.journal.url) }}</em>
+        </li>
         {%- endif -%}
-
-        {%- if this.citation is defined -%}
-            <h2>How to cite</h2>
-            {{ this.citation }}
+        {%- if this.journal.doi -%}
+        <li>
+            Version of record:
+            {{ doi_link(this.journal.doi) }}
+        </li>
         {%- endif -%}
+        {%- if this.journal.open_access -%}
+        <li>
+            Open Access
+        </li>
+        {%- endif -%}
+    {%- endif -%}
+    {%- if this.preprint is defined -%}
+        {%- if this.preprint.archive -%}
+        <li>
+            Preprint server:
+            <em>{{ link(this.preprint.archive, this.preprint.url) }}</em>
+        </li>
+        {%- endif -%}
+        {%- if this.preprint.doi -%}
+        <li>
+            Preprint: {{ doi_link(this.preprint.doi) }}
+        </li>
+        {%- endif -%}
+    {%- endif -%}
+    {%- if this.code is defined -%}
+        <li>
+            Source code:
+            {{ link(this.code.repo, this.code.url) }}
+        </li>
+    {%- endif -%}
+    {%- if this.supplement is defined -%}
+        <li>
+            Supplementary material:
+            {{ doi_link(this.supplement.doi) }}
+        </li>
+    {%- endif -%}
+  </ul>
+  {%- if this.download -%}
+      {% set download_url = '' %}
+      {% if this.download == "preprint" %}
+      {%   set download_url = "https://doi.org/" + this.preprint.doi %}
+      {% elif this.download == "journal" %}
+      {%   set download_url = "https://doi.org/" + this.journal.doi %}
+      {% else %}
+      {%   set download_url = this.download %}
+      {% endif %}
 
-        <ul class="pager">
-            {% if this.prev %}
-                <li class="previous">
-                    <a href="{{this.prev.url}}">&larr; {{this.prev.title}}</a>
-                </li>
-            {% endif %}
-            {% if this.next %}
-                <li class="next">
-                    <a href="{{this.next.url}}">{{this.next.title}} &rarr;</a>
-                </li>
-            {% endif %}
-        </ul>
+      <a class="button" href="{{download_url}}">
+          Download the article
+      </a>
+  {%- endif -%}
+{% endblock %}
 
-    {% endblock %}
+{% block content %}
+  {{ this.body }}
 
-</div>
+  {%- if this.citation is defined -%}
+  <h2>How to cite</h2>
+  <p>{{this.citation}}</p>
+  {%- endif -%}
+
 {% endblock %}

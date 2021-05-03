@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+{%- from "macros.html" import get_authors, pager -%}
+
+{% block body %}
+
+{% include '_navbar.html' %}
+
+<main class="container">
+
+  <h1 class="title">{{this.title}}</h1>
+  <p class="authors">{{ get_authors(this, site) }} ({{ this.date.year }})</p>
+
+  {% block extra_info %}
+  {% endblock %}
+
+  <div class="row">
+    <div class="col-lg-3 order-lg-2 order-xl-2">
+      {% block info %}
+      {% endblock %}
+    </div>
+    <div class="col-lg-9 order-lg-1 order-xl-1">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+
+  {{ pager(this) }}
+</main>
+
+{% include '_footer.html' %}
+
+{% endblock %}

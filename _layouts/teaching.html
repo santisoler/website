@@ -1,63 +1,28 @@
-{% extends "_base.html" %}
-{% from "_utils.html" import make_breadcrums, make_toc, get_authors %}
+{% extends "_entry.html" %}
+{%- from "macros.html" import link -%}
 
-{% block body %}
-<div class="container">
+{% block info %}
+  <h2>Info</h2>
+  <ul>
+    {%- if this.institution is defined -%}
+    <li>
+        {{ link(this.institution.name, this.institution.url) }}
+    </li>
+    {%- endif -%}
+    {%- if this.website is defined -%}
+    <li>
+        Website:
+        {{ link(this.website.name, this.website.url) }}
+    </li>
+    {%- endif -%}
+    {%- if this.code is defined -%}
+    <li>
+        Source code:
+        {{ link(this.code.repo, this.code.url) }}
+    </li>
+    {%- endif -%}
+{% endblock %}
 
-    {% block breadcrumbs %}
-      {{ make_breadcrums(this) }}
-    {% endblock %}
-
-
-    {% block content %}
-        <h1>{{ this.title }}</h1>
-        <p>
-            {{ get_authors(this, site) }}
-            {% if this.start_date %}
-                ({{ this.start_date.year }} - {{ this.date.year}})
-            {% else %}
-                ({{ this.date.year }})
-            {%- endif -%}
-        </p>
-
-        <h2>Information</h2>
-        <ul>
-            {%- if this.institution is defined -%}
-                <li>
-                {%- if this.institution_url is defined -%}
-                    <a href="{{ this.event_url }}">
-                {%- endif -%}
-                {{ this.institution }}
-                {%- if this.institution_url is defined -%}
-                    </a>
-                {%- endif -%}
-                </li>
-            {%- endif -%}
-            {%- if this.website is defined -%}
-                <li>
-                    <a href="{{ this.website }}"><b>Website</b></a>
-                </li>
-            {%- endif -%}
-        </ul>
-
-        <main>
-            {{this.body}}
-        </main>
-
-        <ul class="pager">
-            {% if this.prev %}
-                <li class="previous">
-                    <a href="{{this.prev.url}}">&larr; {{this.prev.title}}</a>
-                </li>
-            {% endif %}
-            {% if this.next %}
-                <li class="next">
-                    <a href="{{this.next.url}}">{{this.next.title}} &rarr;</a>
-                </li>
-            {% endif %}
-        </ul>
-
-    {% endblock %}
-
-</div>
+{% block content %}
+  {{ this.body }}
 {% endblock %}

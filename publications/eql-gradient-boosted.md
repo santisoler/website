@@ -1,25 +1,39 @@
 ---
 title: "Gradient-boosted equivalent sources"
+layout: publication
 date: 2021-02-25
 author: me, leo
-layout: publication
-open_access: false
-# doi: <doi number of the version of record (not url)>
-preprint: 10.31223/X58G7C
-supplement: 10.6084/m9.figshare.13604360
-repository: compgeolab/eql-gradient-boosted
-journal: Geophysical Journal International
-thumbnail: eql-gradient-boosted-thumbnail.jpg
 inreview: true
-figure: eql-gradient-boosted.jpg
+journal:
+    name: Geophysical Journal International
+    url:
+    doi:
+    open_access: false
+preprint:
+    archive: EarthArXiv
+    url:
+    doi: 10.31223/X58G7C
+code:
+    repo: compgeolab/eql-gradient-boosted
+    url: https://github.com/compgeolab/eql-gradient-boosted
+supplement:
+    doi: 10.6084/m9.figshare.13604360
+download: preprint
+thumbnail: /images/eql-gradient-boosted-thumbnail.jpg
 citation.md: |
-    Soler S.R. and Uieda L. (2021). Gradient-boosted equivalent sources. doi:
-    [10.31223/X58G7C](https://doi.org/10.31223/X58G7C)
+    Soler S.R. and Uieda L. (2021). Gradient-boosted equivalent sources.
+    doi: [10.31223/X58G7C](https://doi.org/10.31223/X58G7C)
 ---
 
 # About
 
-We present the gradient-boosted equivalent sources: a new methodology for interpolating very large datasets of gravity and magnetic observations even on modest personal computers, without the high computer memory needs of the classical equivalent sources technique. This new method is inspired by the gradient-boosting technique, mainly used in machine learning solutions.
+We present the gradient-boosted equivalent sources: a new methodology for
+interpolating very large datasets of gravity and magnetic observations even on
+modest personal computers, without the high computer memory needs of the
+classical equivalent sources technique. This new method is inspired by the
+gradient-boosting technique, mainly used in machine learning solutions.
+
+![Visual abstract](/images/eql-gradient-boosted.jpg)
 
 # Abstract
 

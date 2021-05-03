@@ -2,10 +2,7 @@
 title: About me
 layout: index
 pager: false
-
-thumbnail: about.jpg
-home_alignment: right
-summary:
+excerpt:
     I'm a Lic. in Physics graduated from the
     <a href="https://www.unr.edu.ar">Universidad Nacional de Rosario</a>
     and now PhD Student in Geophysics at the
@@ -21,14 +18,7 @@ summary:
     <p style="text-align:right;">
     <a href="about.html">Read more...</a>
     </p>
-banner:
-    title: About me
-    img: blanco.jpg
-    img_description: Climbing at Cerro Blanco, San Juan, Argentina.
 ---
-{%- from "_utils.html" import draw_icon -%}
-
-
 I'm a Lic. in Physics graduated from the
 [Universidad Nacional de Rosario](https://www.unr.edu.ar)
 and now a PhD Student in Geophysics at the
@@ -84,7 +74,7 @@ You can also download a
 
 # Contact and Profiles
 
-- {{ draw_icon("mail", site) }} [santiago.r.soler@gmail.com](mailto:santiago.r.soler@gmail.com)
-- {{ draw_icon("github", site) }} [santisoler](https://www.github.com/santisoler)
-- {{ draw_icon("twitter", site) }} [santirsoler](https://twitter.com/santirsoler)
-- {{ draw_icon("orcid", site) }} ORCID: [0000-0001-9202-5317](https://orcid.org/0000-0001-9202-5317)
+- [santiago.r.soler@gmail.com](mailto:santiago.r.soler@gmail.com)
+- [santisoler](https://www.github.com/santisoler)
+- [santirsoler](https://twitter.com/santirsoler)
+- ORCID: [0000-0001-9202-5317](https://orcid.org/0000-0001-9202-5317)
