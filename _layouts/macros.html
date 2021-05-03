@@ -1,0 +1,190 @@
+<!-- Functions for templates -->
+<!-- ======================= -->
+
+
+<!-- ----------------------------------- -->
+<!-- Display entries on home and indexes -->
+<!-- ----------------------------------- -->
+
+{%- macro print_entry(entry, site) -%}
+    {# Display the content of a single entry #}
+    <div class="entry row">
+      <div class="col-md-2 thumbnail-col">
+        <a href="{{entry.url}}">
+          <img src="{{entry.thumbnail}}"/>
+        </a>
+      </div>
+      <div class="col-md-10">
+        <h2><a href="{{entry.url}}">{{entry.title}}</a></h2>
+        {%- if entry.excerpt is defined -%}
+          {{ entry.excerpt }}
+        {%- elif entry.layout == "publication" -%}
+            {{ publication_text(entry, site) }}
+        {%- elif entry.layout == "presentation" -%}
+            {{ presentation_text(entry, site) }}
+        {%- elif entry.layout == "teaching" -%}
+            {{ teaching_text(entry, site) }}
+        {%- endif -%}
+      </div>
+    </div>
+{%- endmacro -%}
+
+
+{%- macro publication_text(article, site) -%}
+    <p>
+        {{ get_authors(article, site, add_url=false) }} ({{ article.date.year }})
+    </p>
+    {%- if article.journal.name is defined -%}
+    <p><em>{{ article.journal.name }}</em></p>
+    {%- endif -%}
+    {%- if article.inreview -%}
+    <p>
+        <span class="text-warning">
+            This article is <strong>under peer-review</strong>
+        </span>
+    </p>
+    {%- endif -%}
+{%- endmacro -%}
+
+
+{%- macro presentation_text(presentation, site) -%}
+    <p>
+        {{ get_authors(presentation, site, add_url=false) }} ({{ presentation.date.year }})
+    </p>
+    {%- if presentation.meeting is defined -%}
+    <p>
+        Presented at
+        <em>{{ presentation.meeting.name }}</em>
+    </p>
+    {%- endif -%}
+    {%- if presentation.organizer is defined -%}
+    <p>
+        Organized by
+        <em>{{ presentation.organizer.name }}</em>
+    </p>
+    {%- endif -%}
+{%- endmacro -%}
+
+
+{%- macro teaching_text(teaching, site) -%}
+    <p>
+        {{ get_authors(teaching, site, add_url=false) }} ({{ teaching.date.year }})
+    </p>
+    {%- if teaching.institution is defined -%}
+    <p>
+        <em>{{ teaching.institution.name }}</em>
+    </p>
+    {%- endif -%}
+{%- endmacro -%}
+
+
+
+<!-- -------------------------------------------------- -->
+<!-- Generate author lists and links from name and urls -->
+<!-- -------------------------------------------------- -->
+
+{%- macro get_authors(article, site, fancy=true, add_url=true) -%}
+    {# Make the author list by expanding the stubs into full names from "site.authors" #}
+    {%- for author in article.author.split(', ') -%}
+        {# Set author_name if fancy is true or false #}
+        {%- if fancy and author == "me" -%}
+            {% set author_name = "<strong>" + site.authors[author].name + "</strong>" -%}
+        {%- else -%}
+            {% set author_name = site.authors[author].name -%}
+        {%- endif -%}
+        {# Print author name if they have an url #}
+        {%- if add_url and site.authors[author].url -%}
+            <a href={{ site.authors[author].url }}>{{ author_name }}</a>
+        {%- else -%}
+            {{ author_name }}
+        {%- endif -%}
+        {# Check if a comma or an "and" must be added or not after the author name #}
+        {%- if not loop.last -%}
+            {%- if loop.revindex == 2 -%}
+                {{ " and " }}
+            {%- else -%}
+                {{ ", " }}
+            {%- endif -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endmacro -%}
+
+
+{%- macro doi_link(doi) -%}
+    {# Generates doi with link #}
+    <a href="https://doi.org/{{ doi }}">{{ doi }}</a>
+{%- endmacro -%}
+
+
+{%- macro link(name, url) -%}
+    {# Returns name of the element with link if existing #}
+    {%- if url -%}
+        <a href="{{ url }}">{{ name }}</a>
+    {%- else -%}
+        {{ name }}
+    {%- endif -%}
+{%- endmacro -%}
+
+
+<!-- --------------- -->
+<!-- Generate pagers -->
+<!-- --------------- -->
+
+{%- macro pager(page, max_chars=50) -%}
+    {# Create pager for next and previous article #}
+    <ul class="pager">
+        {%- if page.prev -%}
+            {%- set title = page.prev.title -%}
+            {%- if title|length > max_chars -%}
+                {%- set title = title[:max_chars] + "..." -%}
+            {%- endif -%}
+            <li class="previous">
+                <a href="{{page.prev.url}}">&larr; {{title}}</a>
+            </li>
+        {%- endif -%}
+        {%- if page.next -%}
+            {%- set title = page.next.title -%}
+            {%- if title|length > max_chars -%}
+                {%- set title = title[:max_chars] + "..." -%}
+            {%- endif -%}
+            <li class="next">
+                <a href="{{page.next.url}}">{{title}} &rarr;</a>
+            </li>
+        {%- endif -%}
+    </ul>
+{%- endmacro -%}
+
+
+
+<!-- -------------------------- -->
+<!-- Functions to embed iframes -->
+<!-- -------------------------- -->
+
+{%- macro google_slides(slides) -%}
+    <div>
+    <iframe
+        src="{{ slides }}"
+        frameborder="0"
+        width="960"
+        height="749"
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+    >
+    </iframe>
+    </div>
+{%- endmacro -%}
+
+
+{%- macro youtube_video(video) -%}
+    <div class="videowrapper">
+    <iframe
+        width="560"
+        height="315"
+        src="{{ video }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+    ></iframe>
+    </div>
+{%- endmacro -%}

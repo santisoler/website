@@ -1,22 +1,28 @@
 {% extends "_base.html" %}
-{%- from "utils.html" import item -%}
+{%- from "macros.html" import print_entry -%}
 
 
 {% block body %}
 
-    <div class="container">
-
-        <div class="page-header">
-            <h1>{{ this.title }}</h1>
+    <header>
+        {% include '_navbar.html' %}
+        <div class="cover">
+            <h1>{{this.title}}</h1>
         </div>
+    </header>
 
-        {%- for article in this.content -%}
-            {{ item(article, site, thumbnail_width=200) }}
-        {%- endfor -%}
+    <main class="container">
 
-        <main>
-            {{ this.body }}
-        </main>
+        {{ this.body }}
 
-    </div>
+        {%- if this.content is defined -%}
+            {%- for entry in this.content -%}
+                {{ print_entry(entry, site) }}
+            {%- endfor -%}
+        {%- endif -%}
+
+    </main>
+
+    {% include '_footer.html' %}
+
 {% endblock %}

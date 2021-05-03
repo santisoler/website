@@ -3,11 +3,15 @@ title: Introducción a Python para Científicxs
 date: 2020-06-23
 author: me
 layout: teaching
-thumbnail: python-unsj-2020-thumbnail.jpg
-institution: Universidad Nacional de San Juan
-institution_url: http://www.unsj.edu.ar
-website: https://www.github.com/santisoler/python-unsj-2020
+thumbnail: /images/python-unsj-2020-thumbnail.jpg
+institution:
+    name: Universidad Nacional de San Juan
+    url: http://www.unsj.edu.ar
+code:
+    repo: github.com/santisoler/python-unsj-2020
+    url: https://www.github.com/santisoler/python-unsj-2020
 ---
+{%- from "macros.html" import youtube_video -%}
 
 # About
 
@@ -28,13 +32,5 @@ Debido a la situación de pandemia generada por el brote de COVID-19, el curso
 ha sido desarrollado de forma online mediante transmiciones en vivo a través de
 YouTube Live.
 
-<div class="videowrapper">
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube-nocookie.com/embed/videoseries?list=PL-__b47x5vlHisjuu_tTfiIe8BefmNWZD"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-></iframe>
-</div>
+
+{{ youtube_video("https://www.youtube-nocookie.com/embed/videoseries?list=PL-__b47x5vlHisjuu_tTfiIe8BefmNWZD") }}

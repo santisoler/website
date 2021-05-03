@@ -1,13 +1,45 @@
 {% extends "_base.html" %}
-{% from "utils.html" import home_section %}
-
-{% block home %}
-{% endblock %}
+{% from "macros.html" import print_entry %}
 
 {% block body %}
 
-{%- for category in this.content -%}
-    {{ home_section(category, site, thumbnail_width=200, inner_shadow=loop.cycle(false, true)) }}
+<header class="main-header">
+
+    {% include '_navbar.html' %}
+
+    <div class="cover">
+      <img
+        src="{{ site.frontcover_image.url }}"
+        alt=" {{ site.frontcover_image.alt }}"
+      />
+      <h1>{{site.brand}}</h1>
+      <ul class="social-icons">
+        {% for social in site.social %}
+        <li>
+            <a href="{{social.url}}">
+                <i class="{{social.icon}}" title={{social.name}}></i>
+            </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+</header>
+
+<main class="container">
+{%- for section in this.content -%}
+    <section>
+        <h1>{{section.title}}</h1>
+        {%- if section.content is defined -%}
+            {%- for entry in section.content -%}
+                {{ print_entry(entry, site) }}
+            {%- endfor -%}
+        {%- else -%}
+          {{ section.excerpt }}
+        {%- endif -%}
+    </section>
 {%- endfor -%}
+</main>
+
+{% include '_footer.html' %}
 
 {% endblock %}
