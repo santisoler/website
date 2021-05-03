@@ -3,7 +3,7 @@
 
 {% block info %}
   <h2>Info</h2>
-  <ul>
+  <ul class="fa-ul">
     {%- if this.institution is defined -%}
     <li>
         <i class="fa-li fas fa-university" title="Organizer"></i>
@@ -13,7 +13,6 @@
     {%- if this.website is defined -%}
     <li>
         <i class="fa-li fas fa-globe" title="Website"></i>
-        Website:
         {{ link(this.website.name, this.website.url) }}
     </li>
     {%- endif -%}
