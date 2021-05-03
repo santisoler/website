@@ -14,22 +14,25 @@
 
 {% block info %}
   <h2>Info</h2>
-  <ul>
-    {%- if this.journal is defined -%}
+  <ul class="fa-ul">
+    {%- if this.journal is defined and not this.inreview -%}
         {%- if this.journal.name -%}
         <li>
+            <i class="fa-li fas fa-book" title="Journal"></i>
             Journal:
             <em>{{ link(this.journal.name, this.journal.url) }}</em>
         </li>
         {%- endif -%}
         {%- if this.journal.doi -%}
         <li>
+            <i class="fa-li far fa-file" title="doi of version of record"></i>
             Version of record:
             {{ doi_link(this.journal.doi) }}
         </li>
         {%- endif -%}
         {%- if this.journal.open_access -%}
         <li>
+            <i class="fa-li ai ai-open-access" title="Open Access"></i>
             Open Access
         </li>
         {%- endif -%}
@@ -37,25 +40,29 @@
     {%- if this.preprint is defined -%}
         {%- if this.preprint.archive -%}
         <li>
+            <i class="fa-li fas fa-book" title="Preprint server"></i>
             Preprint server:
             <em>{{ link(this.preprint.archive, this.preprint.url) }}</em>
         </li>
         {%- endif -%}
         {%- if this.preprint.doi -%}
         <li>
+            <i class="fa-li far fa-file" title="doi of preprint"></i>
             Preprint: {{ doi_link(this.preprint.doi) }}
         </li>
         {%- endif -%}
     {%- endif -%}
     {%- if this.code is defined -%}
         <li>
+            <i class="fa-li fas fa-code" title="Source code"></i>
             Source code:
             {{ link(this.code.repo, this.code.url) }}
         </li>
     {%- endif -%}
     {%- if this.supplement is defined -%}
         <li>
-            Supplementary material:
+            <i class="fa-li fas fa-paperclip" title="Supplement"></i>
+            Supplement:
             {{ doi_link(this.supplement.doi) }}
         </li>
     {%- endif -%}

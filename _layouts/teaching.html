@@ -6,17 +6,20 @@
   <ul>
     {%- if this.institution is defined -%}
     <li>
+        <i class="fa-li fas fa-university" title="Organizer"></i>
         {{ link(this.institution.name, this.institution.url) }}
     </li>
     {%- endif -%}
     {%- if this.website is defined -%}
     <li>
+        <i class="fa-li fas fa-globe" title="Website"></i>
         Website:
         {{ link(this.website.name, this.website.url) }}
     </li>
     {%- endif -%}
     {%- if this.code is defined -%}
     <li>
+        <i class="fa-li fas fa-code" title="Source code"></i>
         Source code:
         {{ link(this.code.repo, this.code.url) }}
     </li>
