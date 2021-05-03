@@ -1,13 +1,18 @@
 ---
 title: "Pooch: A friend to fetch your data files"
+layout: publication
 date: 2020-01-17
 author: leo, me, rampin, vankemenade, matthewturk, shapero, banihirwe, leeman
-layout: publication
-open_access: true
-doi: 10.21105/joss.01943
-repository: fatiando/pooch
-journal: Journal of Open Source Software
-thumbnail: pooch.png
+journal:
+    name: Journal of Open Source Software
+    url: https://joss.theoj.org/
+    doi: 10.21105/joss.01943
+    open_access: true
+code:
+    repo: fatiando/pooch
+    url: https://github.com/fatiando/pooch
+download: journal
+thumbnail: /images/pooch.png
 citation.md: |
     Uieda, L., Soler, S.R., Rampin, R., van Kemenade, H., Turk, M., Shapero,
     D., Banihirwe, A., and Leeman, J. (2020). Pooch: A friend to fetch your
@@ -34,7 +39,7 @@ Instead of scientists and library authors recreating the same code, it would be
 best to have a minimalistic and easy to set up tool for fetching and
 maintaining data files.
 
-Pooch is a Python library that fills this gap. It manages a data _registry_
+Pooch is a Python library that fills this gap. It manages a data *registry*
 (containing file names, SHA-256 cryptographic hashes, and download URLs) by
 downloading files from one or more remote servers and storing them in a local
 data cache. Pooch is written in pure Python and has minimal dependencies. It

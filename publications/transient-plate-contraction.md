@@ -1,21 +1,23 @@
 ---
 title: "Transient plate contraction between two simultaneous slab windows: Insights from Paleogene tectonics of the Patagonian Andes"
+layout: publication
 date: 2018-04-08
 author: guido, agustina, me
-layout: publication
-open_access: false
-doi: 10.1016/j.jog.2018.07.008
-repository: santisoler/paper-plate-contraction-patagonia
-journal: Journal of Geodynamics
-thumbnail: transient-plate-contraction-thumbnail.jpg
-inreview: false
-figure: transient-plate-contraction.jpg
+journal:
+    name: Journal of Geodynamics
+    url: https://www.journals.elsevier.com/journal-of-geodynamics/
+    doi: 10.1016/j.jog.2018.07.008
+code:
+    repo: santisoler/paper-plate-contraction-patagonia
+    url: https://github.com/santisoler/paper-plate-contraction-patagonia
+thumbnail: /images/transient-plate-contraction-thumbnail.jpg
 citation.md: |
     Gianni, G.; Pesce, A. & Soler, S.
     Transient plate contraction between two simultaneous slab windows: Insights from
     Paleogene tectonics of the Patagonian Andes
     *Journal of Geodynamics*, 2018, 121, 64-75
 ---
+
 # Abstract
 
 Plate kinematic reconstructions show that the Farallon-Phoenix (Aluk) spreading
@@ -36,3 +38,5 @@ the latitudinally vari- able tectonomagmatic evolution of Patagonia during
 early Paleogene times.  Finally, this work adds resolution to geodynamic
 processes in active margins where complex midocean ridge-trench interactions
 take place.
+
+![Visual abstract](/images/transient-plate-contraction.jpg)
