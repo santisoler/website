@@ -1,165 +1,86 @@
 brand: Santiago Soler
+favicon: images/about.jpg
+frontcover_image:
+  url: images/about.jpg
+  alt: Profile picture
 
-author:
-    name: Santiago R. Soler
-    url: https://santisoler.github.io/
-    github: https://www.github.com/santisoler
-
-bootswatch: yeti # flatly, yeti, lumen, paper, cyborg, readable, simplex
-navbar_inverse: false
-bootstrap: 3.3.6
-navbar_right_items: 0
+social:
+  - name: Github
+    url: https://github.com/santisoler
+    icon: fab fa-github
+  - name: Twitter
+    url: https://twitter.com/santirsoler
+    icon: fab fa-twitter
+  - name: ORCID
+    url: https://orcid.org/0000-0001-9202-5317
+    icon: fab fa-orcid
+  - name: Mail
+    url: mailto:santiago.r.soler@gmail.com
+    icon: fas fa-envelope
 
 keep_files: [".nojekyll"]
-
-ignore_patterns: [
-    "README.md",
-    "environment.yml",
-    "requirements.txt",
-    "search",
-    "tipusearch",
-    "LICENSE.md",
-]
-
-pdfs_path: pdfs
-images_path: images
-banners_path: images/banners
-
-# Fill out your Google Analytics ID here
-google_analytics: UA-134700790-2
+ignore_patterns:
+  ["README.md", "environment.yml", "requirements.txt", "LICENSE.md"]
 
 reflinks:
-    urubu:
-        url: http://urubu.jandecaluwe.com
-        title: Urubu
-    urubu_manual:
-        url: http://urubu.jandecaluwe.com/manual
-        title: Urubu Manual
-    urubu_quickstart_site:
-        url: http://urubu-quickstart.jandecaluwe.com
-        title: Urubu Quickstart site
-    jandecaluwe:
-        url: http://www.jandecaluwe.com
-        title: Jan Decaluwe
-    content_license:
-        url: http://creativecommons.org/licenses/by-sa/3.0/
-        title: CC-BY-SA License
-    software_license:
-        url: http://www.gnu.org/licenses/agpl-3.0.txt
-        title: GNU Affero General Public License
-    markdown:
-        url: http://daringfireball.net/projects/markdown/
-        title: Markdown
-    jinja2:
-        url: http://jinja.pocoo.org
-        title: Jinja2
-    bootstrap:
-        url: http://getbootstrap.com
-        title: Bootstrap
-    bootswatch:
-        url: http://bootswatch.com
-        title: Bootswatch
-    website_repo:
-        url: https://www.github.com/santisoler/website
-        title: santisoler/website
-    license:
-        title: Creative Commons Attribution 4.0 International License
-        url: https://creativecommons.org/licenses/by/4.0/
-    font_awesome:
-        title: Font Awesome
-        url: https://fontawesome.com
-    conicet:
-        title: CONICET
-        url: https://www.conicet.gov.ar/
-    igsv:
-        title: Instituto Geofísico-Sismológico Volponi
-        url: http://igsv.unsj.edu.ar/
-    unsj:
-        title: Universidad Nacional de San Juan
-        url: http://www.unsj.edu.ar/
-
-icons:
-    github:
-        icon: github
-        family: fontawesome
-        style: fab
-        title: GitHub
-    mail:
-        icon: envelope
-        family: fontawesome
-        style: fas
-        title: email
-    orcid:
-        icon: orcid
-        family: academicons
-        style: ai
-        title: ORCID
-    twitter:
-        icon: twitter
-        family: fontawesome
-        style: fab
-        title: Twitter
-
+  urubu:
+    url: http://urubu.jandecaluwe.com
+    title: Urubu
+  bootstrap:
+    url: http://getbootstrap.com
+    title: Bootstrap
+  website_repo:
+    url: https://www.github.com/santisoler/website
+    title: santisoler/website
+  license:
+    title: Creative Commons Attribution 4.0 International License
+    url: https://creativecommons.org/licenses/by/4.0/
+  font_awesome:
+    title: Font Awesome
+    url: https://fontawesome.com
 
 authors:
-    me:
-      name: Santiago R. Soler
-      url: https://santisoler.github.io/
-    agustina:
-      name: Agustina Pesce
-      url: https://github.com/aguspesce
-    andrea:
-      name: Andrea Balza Morales
-      url: https://www.andreabalza.com/
-    guido:
-      name: Guido M. Gianni
-    mario:
-      name: Mario E. Giménez
-    leo:
-      name: Leonardo Uieda
-      url: https://www.leouieda.com/
-    rampin:
-      name: Rémi Rampin
-      url: https://github.com/remram44
-    vankemenade:
-      name: Hugo van Kemenade
-      url: https://github.com/hugovk
-    matthewturk:
-      name: Matthew Turk
-      url: https://github.com/matthewturk
-    shapero:
-      name: Daniel Shapero
-      url: https://github.com/danshapero
-    banihirwe:
-      name: Anderson Banihirwe
-      url: https://github.com/andersy005
-    leeman:
-      name: John Leeman
-      url: https://github.com/jrleeman
-
-navbar_items: [
-    ["About", "/about.html"],
-    ["Projects", "/projects"],
-    ["Publications", "/publications"],
-    ["Teaching", "/teaching"],
-    ["Talks", "/talks"],
-    ["Posters", "/posters"],
-    ]
-
-navbar_icons: [
-    ["github", "https://www.github.com/santisoler"],
-    ["orcid", "https://orcid.org/0000-0001-9202-5317"],
-    ["twitter", "https://twitter.com/santirsoler"],
-    ["mail", "mailto:santiago.r.soler@gmail.com"],
-    ]
+  me:
+    name: Santiago R. Soler
+    url: https://santisoler.github.io/
+  agustina:
+    name: Agustina Pesce
+    url: https://github.com/aguspesce
+  andrea:
+    name: Andrea Balza Morales
+    url: https://www.andreabalza.com/
+  guido:
+    name: Guido M. Gianni
+  mario:
+    name: Mario E. Giménez
+  leo:
+    name: Leonardo Uieda
+    url: https://www.leouieda.com/
+  rampin:
+    name: Rémi Rampin
+    url: https://github.com/remram44
+  vankemenade:
+    name: Hugo van Kemenade
+    url: https://github.com/hugovk
+  matthewturk:
+    name: Matthew Turk
+    url: https://github.com/matthewturk
+  shapero:
+    name: Daniel Shapero
+    url: https://github.com/danshapero
+  banihirwe:
+    name: Anderson Banihirwe
+    url: https://github.com/andersy005
+  leeman:
+    name: John Leeman
+    url: https://github.com/jrleeman
 
 licenses:
-    cc-by:
-        name: Creative Commons Attribution 4.0 International
-        short: CC BY 4.0
-        url: https://creativecommons.org/licenses/by/4.0/
-    cc-by-sa:
-        name: Creative Commons Attribution-ShareAlike 4.0 International
-        short: CC BY-SA 4.0
-        url: https://creativecommons.org/licenses/by-sa/4.0/
-
+  cc-by:
+    name: Creative Commons Attribution 4.0 International
+    slung: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  cc-by-sa:
+    name: Creative Commons Attribution-ShareAlike 4.0 International
+    slung: CC BY-SA 4.0
+    url: https://creativecommons.org/licenses/by-sa/4.0/
