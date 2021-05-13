@@ -322,6 +322,18 @@ section > h1 {
   }
 }
 
+.community {
+  text-align: center;
+}
+
+.community img {
+  max-width: 70%;
+}
+
+.community h2 {
+  font-size: 2.8rem;
+}
+
 /* ------ */
 /* Footer */
 /* ------ */
@@ -359,6 +371,10 @@ footer p {
 
 .text-warning {
   color: #e5c07b;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .pager {
