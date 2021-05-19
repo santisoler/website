@@ -18,7 +18,7 @@ social:
     url: mailto:santiago.r.soler@gmail.com
     icon: fas fa-envelope
 
-keep_files: [".nojekyll"]
+keep_files: [".nojekyll", "CNAME"]
 ignore_patterns:
   ["README.md", "environment.yml", "requirements.txt", "LICENSE.md"]
 
@@ -42,7 +42,7 @@ reflinks:
 authors:
   me:
     name: Santiago R. Soler
-    url: https://santisoler.github.io/
+    url: https://www.santisoler.com/
   agustina:
     name: Agustina Pesce
     url: https://aguspesce.github.io

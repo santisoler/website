@@ -4,7 +4,7 @@
 [![Powered by Urubu](https://img.shields.io/badge/powered_by-urubu-blue.svg)](http://urubu.jandecaluwe.com/)
 
 This is the source code for
-[santisoler.github.io](https://santisoler.github.io).
+[www.santisoler.com](https://www.santisoler.com).
 
 
 ## Dependencies
@@ -192,7 +192,7 @@ Remember that every filename you enter on the header (`image`, `thumbnail`, `pdf
 
 ## Acknowledgments
 
-The source code have been written by [santisoler](https://santisoler.github.io) based on
+The source code have been written by [santisoler](https://www.santisoler.com) based on
 [Urubu's Quickstart Page](https://github.com/jandecaluwe/urubu-quickstart/) and inspired
 on [leouieda.com](https://www.leouieda.com).
 
