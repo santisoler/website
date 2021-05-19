@@ -18,7 +18,7 @@ social:
     url: mailto:santiago.r.soler@gmail.com
     icon: fas fa-envelope
 
-keep_files: [".nojekyll"]
+keep_files: [".nojekyll", "CNAME"]
 ignore_patterns:
   ["README.md", "environment.yml", "requirements.txt", "LICENSE.md"]
 
