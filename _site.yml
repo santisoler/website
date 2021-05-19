@@ -1,4 +1,5 @@
 brand: Santiago Soler
+author: Santiago Soler
 favicon: images/about.jpg
 frontcover_image:
   url: images/about.jpg
@@ -6,17 +7,43 @@ frontcover_image:
 
 social:
   - name: Github
+    handle: "@santisoler"
     url: https://github.com/santisoler
     icon: fab fa-github
+    home: true
   - name: Twitter
+    handle: "@santirsoler"
     url: https://twitter.com/santirsoler
     icon: fab fa-twitter
+    home: true
   - name: ORCID
+    handle: 0000-0001-9202-5317
     url: https://orcid.org/0000-0001-9202-5317
     icon: fab fa-orcid
-  - name: Mail
+    home: true
+  - name: ResearchGate
+    handle: ResearchGate
+    url: https://www.researchgate.net/profile/Santiago-Soler-2
+    icon: ai ai-researchgate
+  - name: figshare
+    handle: figshare
+    url: https://figshare.com/authors/Santiago_Rub_n_Soler/6476147
+    icon: ai ai-figshare
+  - name: GMail
+    handle: santiago.r.soler@gmail.com
     url: mailto:santiago.r.soler@gmail.com
     icon: fas fa-envelope
+    home: true
+    contact: true
+  - name: Website
+    handle: www.santisoler.com
+    url: https://www.santisoler.com
+    icon: fas fa-globe
+  - name: GPG Public Key
+    handle: GPG Public Key
+    url: /santisoler_pub.asc
+    icon: fas fa-key
+    contact: true
 
 keep_files: [".nojekyll", "CNAME"]
 ignore_patterns:

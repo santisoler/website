@@ -356,6 +356,18 @@ footer p {
   margin-bottom: 0;
 }
 
+/* ----- */
+/* About */
+/* ----- */
+
+img.profile {
+  border-radius: 50%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 300px;
+  text-align: center;
+}
+
 /* -------------- */
 /* Custom classes */
 /* -------------- */
@@ -381,6 +393,10 @@ footer p {
 
 .text-align-center {
   text-align: center;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
 }
 
 .pager {

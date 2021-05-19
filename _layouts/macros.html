@@ -116,10 +116,10 @@
 {%- endmacro -%}
 
 
-{%- macro link(name, url) -%}
+{%- macro link(name, url, title=None) -%}
     {# Returns name of the element with link if existing #}
     {%- if url -%}
-        <a href="{{ url }}">{{ name }}</a>
+        <a href="{{ url }}" title={{ title }}>{{ name }}</a>
     {%- else -%}
         {{ name }}
     {%- endif -%}

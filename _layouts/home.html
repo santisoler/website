@@ -15,11 +15,13 @@
       <h1>{{site.brand}}</h1>
       <ul class="social-icons">
         {% for social in site.social %}
+        {%- if social.home -%}
         <li>
             <a href="{{social.url}}">
                 <i class="{{social.icon}}" title={{social.name}}></i>
             </a>
         </li>
+        {%- endif -%}
         {% endfor %}
       </ul>
     </div>
