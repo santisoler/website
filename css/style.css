@@ -285,7 +285,10 @@ ul.social-icons > li > a:hover {
 
 section > h1 {
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ababab;
 }
 
 .entry {

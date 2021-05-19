@@ -2,23 +2,25 @@
 title: About me
 layout: index
 pager: false
-excerpt:
+excerpt.md: |
     I'm a Lic. in Physics graduated from the
-    <a href="https://www.unr.edu.ar">Universidad Nacional de Rosario</a>
+    [Universidad Nacional de Rosario](https://www.unr.edu.ar)
     and now PhD Student in Geophysics at the
-    <a href="http://www.unsj.edu.ar">Universidad Nacional de San Juan</a>.
+    [Universidad Nacional de San Juan](http://www.unsj.edu.ar)
     I research forward and inverse gravity models at the
-    <a href="http://igsv.unsj.edu.ar">Instituto Geofísico Sismológico Volponi</a> and
+    [Instituto Geofísico Sismológico Volponi](http://igsv.unsj.edu.ar)
     at the
-    <a href="https://www.compgeolab.org/">Computer-Oriented Geoscience Lab</a>
-    with the support of a <a href="https://www.conicet.gov.ar">CONICET</a> scholarship.
-    I'm also commited to contribute on open-source projects to
+    [Computer-Oriented Geoscience Lab](https://www.compgeolab.org/)
+    with the support of a
+    [CONICET](https://www.conicet.gov.ar)
+    scholarship.
+    I'm also committed to contribute on open-source projects to
     improve science openness and reproducibility.
-    </p>
     <p style="text-align:right;">
-    <a href="about.html">Read more...</a>
+        <a href="about.html">Read more...</a>
     </p>
 ---
+
 I'm a Lic. in Physics graduated from the
 [Universidad Nacional de Rosario](https://www.unr.edu.ar)
 and now a PhD Student in Geophysics at the
