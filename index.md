@@ -17,7 +17,7 @@ I'm proud of being part of these awesome communities:
 </p>
 
 <div class="row justify-content-around">
-    <div class="col-xl-2 col-lg-4 col-md-6 community">
+    <div class="col-xl col-lg-4 col-md-6 community">
         <a href="https://www.fatiando.org">
             <img
                 src="images/logos/fatiando-logo.png"
@@ -26,7 +26,7 @@ I'm proud of being part of these awesome communities:
             <h2>Fatiando a Terra</h2>
         </a>
     </div>
-    <div class="col-xl-2 col-lg-4 col-md-6 community">
+    <div class="col-xl col-lg-4 col-md-6 community">
         <a href="https://www.compgeolab.org">
             <img
                 src="images/logos/compgeolab-light.png"
@@ -35,7 +35,7 @@ I'm proud of being part of these awesome communities:
             <h2>Computer-Oriented Geoscience Lab</h2>
         </a>
     </div>
-    <div class="col-xl-2 col-lg-4 col-md-6 community">
+    <div class="col-xl col-lg-4 col-md-6 community">
         <a href="https://geolatinas.weebly.com/">
             <img
                 class="community-logo"
@@ -45,7 +45,7 @@ I'm proud of being part of these awesome communities:
             <h2>Geolatinas</h2>
         </a>
     </div>
-    <div class="col-xl-2 col-lg-4 col-md-6 community">
+    <div class="col-xl col-lg-4 col-md-6 community">
         <a href="https://softwareunderground.org/">
             <img
                 class="community-logo"
@@ -55,7 +55,7 @@ I'm proud of being part of these awesome communities:
             <h2>Software Underground</h2>
         </a>
     </div>
-    <div class="col-xl-2 col-lg-4 col-md-6 community">
+    <div class="col-xl col-lg-4 col-md-6 community">
         <a href="https://carpentries.org/">
             <img
                 class="community-logo"

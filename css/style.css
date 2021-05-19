@@ -332,6 +332,7 @@ section > h1 {
 
 .community img {
   max-width: 180px;
+  width: 90%;
 }
 
 .community h2 {
