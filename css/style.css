@@ -327,14 +327,16 @@ section > h1 {
 
 .community {
   text-align: center;
+  margin-top: 3rem;
 }
 
 .community img {
-  max-width: 70%;
+  max-width: 180px;
 }
 
 .community h2 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
+  margin-top: 1rem;
 }
 
 /* ------ */
