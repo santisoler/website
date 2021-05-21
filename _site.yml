@@ -73,6 +73,12 @@ reflinks:
   font_awesome:
     title: Font Awesome
     url: https://fontawesome.com
+  fork_awesome:
+    title: Fork Awesome
+    url: https://forkaweso.me
+  academicons:
+    title: Academicons
+    url: https://jpswalsh.github.io/academicons/
 
 authors:
   me:
