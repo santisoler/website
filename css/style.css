@@ -368,6 +368,10 @@ img.profile {
   text-align: center;
 }
 
+p.description {
+  font-size: 8rem;
+}
+
 /* -------------- */
 /* Custom classes */
 /* -------------- */

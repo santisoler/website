@@ -119,9 +119,29 @@
 {%- macro link(name, url, title=None) -%}
     {# Returns name of the element with link if existing #}
     {%- if url -%}
-        <a href="{{ url }}" title={{ title }}>{{ name }}</a>
+        {%- if title -%}
+            <a href="{{ url }}" title="{{ title }}">{{ name }}</a>
+        {%- else -%}
+            <a href="{{ url }}">{{ name }}</a>
+        {%- endif -%}
     {%- else -%}
         {{ name }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro social_list_item(social, show_icon=True) -%}
+    {%- if show_icon -%}
+        {%- if social.icon -%}
+          <i class="fa-li {{social.icon}}" title="{{social.name}}"></i>
+        {%- else -%}
+          <i class="fa-li fas fa-link" title="{{social.name}}"></i>
+        {%- endif -%}
+    {%- endif -%}
+    {%- if social.handle -%}
+      {{social.name}}:
+      {{ link(social.handle, social.url, title=social.name) }}
+    {%- else -%}
+      {{ link(social.name, social.url, title=social.name) }}
     {%- endif -%}
 {%- endmacro -%}
 

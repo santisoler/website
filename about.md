@@ -126,16 +126,16 @@ either in English or Spanish:
       </a>
     </li>
     <li>
+      <i class="fa-li fas fa-user-graduate"></i>
+      Advisor: {{ site.authors.mario.name }}
+    </li>
+    <li>
       <i class="fa-li fas fa-book"></i>
       Thesis:
       <a href="https://github.com/santisoler/tesina-fisica">
         Métodos Espectrales para la Determinación de la Profundidad del Punto de Curie
         y el Espesor Elástico de la Corteza Terrestre
       </a>
-    </li>
-    <li>
-      <i class="fa-li fas fa-user-graduate"></i>
-      Advisor: {{ site.authors.mario.name }}
     </li>
   </ul>
 

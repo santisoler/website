@@ -1,5 +1,5 @@
 {% extends "_base.html" %}
-{%- from "macros.html" import link -%}
+{%- from "macros.html" import social_list_item -%}
 
 {% block body %}
 
@@ -20,7 +20,7 @@
                 alt="Profile picture of {{ site.author }}"
             >
             </div>
-            <p>
+            <p class="description">
             Physicist and PhD Student in Geophysics at CONICET.
             Python developer at Fatiando a Terra.
             Free and open-source software supporter who loves spending time
@@ -35,8 +35,7 @@
                   {% for social in site.social %}
                   {%- if not social.contact -%}
                   <li>
-                      <i class="fa-li {{social.icon}}"></i>
-                      {{ link(social.handle, social.url, title=social.name) }}
+                      {{ social_list_item(social, show_icon=True) }}
                   </li>
                   {% endif %}
                   {% endfor %}
@@ -49,8 +48,7 @@
                   {% for social in site.social %}
                   {%- if social.contact -%}
                   <li>
-                      <i class="fa-li {{social.icon}}"></i>
-                      {{ link(social.handle, social.url, title=social.name) }}
+                      {{ social_list_item(social, show_icon=True) }}
                   </li>
                   {% endif %}
                   {% endfor %}

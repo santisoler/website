@@ -22,14 +22,13 @@ social:
     icon: fab fa-orcid
     home: true
   - name: ResearchGate
-    handle: ResearchGate
     url: https://www.researchgate.net/profile/Santiago-Soler-2
     icon: ai ai-researchgate
   - name: figshare
     handle: figshare
     url: https://figshare.com/authors/Santiago_Rub_n_Soler/6476147
     icon: ai ai-figshare
-  - name: GMail
+  - name: Mail
     handle: santiago.r.soler@gmail.com
     url: mailto:santiago.r.soler@gmail.com
     icon: fas fa-envelope
@@ -40,9 +39,18 @@ social:
     url: https://www.santisoler.com
     icon: fas fa-globe
   - name: GPG Public Key
-    handle: GPG Public Key
     url: /santisoler_pub.asc
     icon: fas fa-key
+    contact: true
+  - name: Telegram
+    handle: "@santisoler"
+    url: https://t.me/santisoler
+    icon: fab fa-telegram-plane
+    contact: true
+  - name: Matrix
+    handle: "@santisoler:matrix.org"
+    url: https://matrix.to/#/@santisoler:matrix.org
+    icon: fas fa-comment-dots
     contact: true
 
 keep_files: [".nojekyll", "CNAME"]
