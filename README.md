@@ -51,144 +51,84 @@ When a new publication wants to be uploaded you have to create a Markdown file i
 
 ```markdown
 ---
-title: "My article title"
-date: <Publication date in YYYY-MM-DD>
-author: <comma separated authors defined in _site.yml>
+title: <title of the article>
 layout: publication
-open_access: <true or false>
-doi: <doi number of the version of record (not url)>
-preprint: <doi number of the preprint (not url)> (optional)
-supplement: <doi number of the supplement (not url)> (optional)
-repository: <GitHub repository of the publication as username/repository>
-journal: <Journal>
-thumbnail: <thumbnail filename located on /images>
-pdf: <filename of pdf version of the article located on /pdfs> (optional)
-inreview: <true or false if the article is undergoing a peer review process>
-figure: <filename of abstract figure inside /images>
-caption: |
-    <caption of the abstract figure, could be divided in several lines>
+date: <publication date in YYYY-MM-DD>
+author: <comma separated authors defined in _site.yml>
+inreview: <true or false>
+journal:
+    name: <name of the journal>
+    url: <url of the journal website>
+    doi: <doi of the version of record (not url, just doi)>
+    open_access: false <true if the article is open access>
+preprint:
+    archive: <name of the archive for the preprint>
+    url: <url of the archive website>
+    doi: <doi of the preprint (not url, just doi)>
+code:
+    repo: <name of the repository with code (eg user/repo-name)>
+    url: <url of the repository>
+supplement:
+    doi: <doi of the supplementary material (not url, just doi)>
+download: <preprint or journal>
+thumbnail: <path to thumbnail image (eg /image/foo.jpg)>
 citation.md: |
-    <citation in Markdown format, could be divided in several lines>
+    Citation of the article in Markdown
 ---
-
-# Abstract
-
-<insert-abstract>
 ```
 
-It's a good idea to add a figure and a caption that work as a graphical abstract or
-represent the main contribution of the publication. The figure should be added to the
-`/images` directory and pass the filename on the `figure` field.
+You need to add a thumbnail for the publication that will appear on the pages
+that lists all publications. The path to the thumbnail should be passed to the
+`thumbnail` entry.
 
-You need to add a thumbnail for the publication that will appear on the pages that lists
-all publications. It can be a low resolution version of the abstract figure, and it
-should be also included under the `/images` directory. The filename of the thumbnail
-should be passed on the `thumbnail` field.
+We can change the behaviour of the _Download_ button by specifying the source
+for the article through the `download` entry. We could pass `preprint` or
+`journal`. If `download` is empty, the button won't be created.
 
-The preferred source for downloading the article is automatically chosen from:
-- the article doi,
-- the preprint doi, or
-- a full PDF version uploaded to the `/pdfs` directory on the website.
-
-If the article has open access, its DOI will be the first choice.
-If on the other hand, it has not open access, we will point to the preprint DOI.
-When passing a `pdf` we will override everything and make the uploaded PDF version as
-the first choice. The `pdf` field should receive the filename of the uploaded PDF file
-inside the `/pdfs` directory.
-
-Remember that every filename you enter on the header (`image`, `thumbnail`, `pdf`, etc)
-**are not paths** to the files, but filenames.
+We can specify if the article is under peer-review process by passing `inreview`
+as `true`.
 
 
-## Adding a new talk
-
-When a new talk wants to be uploaded you have to create a Markdown file inside
-`talks` folder which should have the following format:
+## Adding a new presentation
 
 ```markdown
 ---
-title: <title of the talk>
-date: <Presentation date in YYYY-MM-DD>
+title: <title of the presentation>
+layout: presentation
+date: <date in YYYY-MM-DD>
 author: <comma separated authors defined in _site.yml>
-layout: talk
-event: <name of the scientific event> (optional)
-event_url: <url of the scientific event> (optional, only if event is passed)
-organizer: <name of the organizer> (optional)
-organizer_url: <url of the organizer> (optional, only if organizer is passed)
-doi: <doi number of the slides, not the url>
-google_slide: <url for google slides obtained from the html code after Publish on Web> (optional)
-slides_url: <url for the slides> (optional, use only if google_slide is not
-passed. Need image.)
-image: <light jpg version of one slide for fast web browsing > (optional, used only if google_slide is not passed)
-pdf: <full pdf version of the slides> (optional)
-thumbnail: <thumbnail filename located on /images>
-license: <license name defined on _site.yml>
+meeting:
+    name: <name of the scientific meeting where it was presented>
+    url: <url of the meeting or event>
+organizer:
+    name: <institution that organizes the meeting or event>
+    url: <url of the organizer>
+code:
+    repo: <name of the repository with code (eg user/repo-name)>
+    url: <url of the repository>
+thumbnail: <path to thumbnail image (eg /image/foo.jpg)>
+license: <license as defined in _site.yml (eg cc-by)>
 ---
-
-## Abstract
-
-<insert-abstract>
 ```
 
-You need to add a thumbnail for the talk that will appear on the pages that lists all
-talks. It can be a low resolution version of the first slide, and it should be
-included under the `/images` directory. The filename of the thumbnail should be passed
-on the `thumbnail` field.
-
-If the slides are stored on Google Slides, it's possible to just append them as
-a interactive box that allows to navigate through all slides. You just need to pass
-a specific url on the `google_slides` field. In order to get this url you must copy it
-from the HTML code obtained after choosing to Publish on Web. Read
-[this](https://support.google.com/docs/answer/183965?hl=en) for more information.
-If `google_slide` is not defined, then the slides will be replaced by the image passed
-on `image`. Either one of both must be passed.
-
-The preferred source to download the slides is from the passed DOI.
-If `pdf` is passed, they will be downloaded from a full PDF version of the slides
-located on the `/pdfs` directory of the website.
-
-Remember that every filename you enter on the header (`image`, `thumbnail`, `pdf`, etc)
-**are not paths** to the files, but filenames.
-
-
-## Adding a new poster
-
-When a new poster wants to be uploaded you have to create a Markdown file inside
-`posters` folder which should have the following format:
+## Adding a new teaching entry
 
 ```markdown
 ---
-title: <title of the poster>
-date: <Presentation date in YYYY-MM-DD>
+title: <Title of the course>
+layout: teaching
+date: <start date in YYYY-MM-DD>
+end_date: <date when the course ended (optional)>
 author: <comma separated authors defined in _site.yml>
-layout: poster
-repository: <GitHub repository of the poster as username/repository>
-meeting: <name of the scientific meeting>
-meeting_url: <url of the scientific meeting>
-doi: <doi number of the poster, not the url>
-image: <light jpg version of the poster for fast web browsing>
-pdf: <full pdf version of the poster> (optional, if doi is given it will be downloaded from it)
-thumbnail: <thumbnail filename located on /images>
-license: <license name defined on _site.yml>
+institution:
+    name: <name of the institution>
+    url: <url of the institution>
+website:
+    name: <website of the course material>
+    url: <url to the course website>
+thumbnail: <path to thumbnail image (eg /image/foo.jpg)>
 ---
-
-## Abstract
-
-<insert-abstract>
 ```
-
-You need to add a thumbnail for the poster that will appear on the pages that lists all
-posters. It can be a low resolution version of the poster, and it should be
-included under the `/images` directory. The filename of the thumbnail should be passed
-on the `thumbnail` field.
-
-The preferred source to download the poster is from the passed DOI.
-If `pdf` is passed, it will be downloaded from a full PDF version of the poster located
-on the `/pdfs` directory of the website.
-
-Remember that every filename you enter on the header (`image`, `thumbnail`, `pdf`, etc)
-**are not paths** to the files, but filenames.
-
 
 ## Acknowledgments
 
