@@ -3,28 +3,25 @@
 
 {% block body %}
 
+{% include '_navbar.html' %}
+
 <header class="main-header">
-
-    {% include '_navbar.html' %}
-
-    <div class="cover">
-      <img
-        src="{{ site.frontcover_image.url }}"
-        alt=" {{ site.frontcover_image.alt }}"
-      />
-      <h1>{{site.brand}}</h1>
-      <ul class="social-icons">
-        {% for social in site.social %}
-        {%- if social.home -%}
-        <li>
-            <a href="{{social.url}}">
-                <i class="{{social.icon}}" title={{social.name}}></i>
-            </a>
-        </li>
-        {%- endif -%}
-        {% endfor %}
-      </ul>
-    </div>
+    <img
+    src="{{ site.frontcover_image.url }}"
+    alt=" {{ site.frontcover_image.alt }}"
+    />
+    <h1>{{site.brand}}</h1>
+    <ul class="social-icons">
+    {% for social in site.social %}
+    {%- if social.home -%}
+    <li>
+        <a href="{{social.url}}">
+            <i class="{{social.icon}}" title={{social.name}}></i>
+        </a>
+    </li>
+    {%- endif -%}
+    {% endfor %}
+    </ul>
 </header>
 
 <main class="container">
