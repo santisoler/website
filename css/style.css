@@ -196,43 +196,12 @@ iframe {
 }
 
 /* ------ */
-/* Header */
+/* Navbar */
 /* ------ */
-header {
-  background-color: #141a1b;
-  height: 30vh;
-  padding-bottom: 10rem; /* Compensate for navbar height */
-  margin-bottom: 5rem;
-}
-
-header.main-header {
-  height: 100vh;
-  padding-bottom: 14rem; /* Compensate for navbar height */
-}
-
-header h1 {
-  font-size: 5.5rem;
-  margin-top: 0;
-  text-align: center;
-}
-
-header .cover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-header .cover img {
-  border-radius: 50%;
-  max-height: 30rem;
-  margin-bottom: 3rem;
-}
-
 nav {
   background-color: #141a1b;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
+  height: 6rem;
 }
 
 nav ul {
@@ -242,6 +211,7 @@ nav ul {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1.4rem 0;
+  margin-bottom: 0;
 }
 
 nav ul li {
@@ -255,6 +225,38 @@ nav ul li a {
 
 .nav-home > a {
   font-weight: 700;
+}
+
+/* ------ */
+/* Header */
+/* ------ */
+header {
+  background-color: #141a1b;
+  height: 30vh;
+  min-height: 7rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header.main-header {
+  height: calc(100vh - 6rem); /* fill all viewport (remove navbar height) */
+  padding-bottom: 6rem; /* compensate for navbar height */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 5.5rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+header img {
+  border-radius: 50%;
+  max-height: 30rem;
+  margin-bottom: 3rem;
 }
 
 ul.social-icons {
