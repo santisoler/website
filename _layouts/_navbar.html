@@ -2,7 +2,7 @@
     <ul class="container">
         <li class="nav-home"><a href="/">Home</a></li>
     {% for item in site.reflinks['/'].content %}
-        <li><a href="{{item.url}}">{{item.title}}</a></li>
+        <li class="nav-item"><a href="{{item.url}}">{{item.title}}</a></li>
     {% endfor %}
     </ul>
 </nav>
