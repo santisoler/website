@@ -1,5 +1,10 @@
 <nav>
-    <ul class="container">
+    <div class="nav-burger container">
+        <a href="#" id="navBurger" title="Open navigation menu">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+    <ul id="navBar" class="container navbar">
         <li class="nav-home"><a href="/">Home</a></li>
     {% for item in site.reflinks['/'].content %}
         <li class="nav-item"><a href="{{item.url}}">{{item.title}}</a></li>
