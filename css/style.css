@@ -245,10 +245,10 @@ nav ul li a {
 }
 
 @media (max-width: 576px) {
-  .nav-burger {
+  .nav-burger a {
     margin-left: 3rem;
   }
-  nav ul.navbar {
+  nav ul.navbar li {
     margin-left: 3rem;
   }
 }
