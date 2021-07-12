@@ -17,7 +17,7 @@ excerpt.md: |
     scholarship.
     I'm also committed to contribute on open-source projects to
     improve science openness and reproducibility.
-    <div class="row justify-content-end">
+    <div class="row justify-content-center justify-content-md-end">
     <a class="button" href="about.html">
         Read more
     </a></div>
