@@ -280,7 +280,7 @@ header {
 }
 
 header.main-header {
-  height: 100vh;
+  height: calc(100vh - 6rem); /* fill all viewport (remove navbar height) */
   text-align: center;
 }
 
