@@ -4,38 +4,38 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: Checkout
-      uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
 
-    - name: Install dependencies
-      run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-    - name: Build the website
-      run: |
-        make all
+      - name: Build the website
+        run: |
+          make all
 
-    - name: Deploy to santisoler.github.io
-      if: success() && github.event_name == 'push'
-      # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
-      uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501
-      with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        external_repository: santisoler/santisoler.github.io
-        publish_branch: master
-        publish_dir: ./_build
-        # Only keep the latest commit to avoid bloating the repository
-        force_orphan: true
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: Deploy to santisoler.github.io
+        if: success() && github.event_name == 'push'
+        # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
+        uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: santisoler/santisoler.github.io
+          publish_branch: main
+          publish_dir: ./_build
+          # Only keep the latest commit to avoid bloating the repository
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
