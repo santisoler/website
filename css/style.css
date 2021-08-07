@@ -322,7 +322,8 @@ ul.social-icons > li > a:hover {
 /* Home */
 /* ---- */
 
-section > h1 {
+section > h2 {
+  font-size: 4.6rem;
   text-align: center;
   margin-top: 10rem;
   margin-bottom: 5rem;
@@ -342,7 +343,7 @@ section > h1 {
   border-radius: 50%;
 }
 
-.entry h2 {
+.entry h3 {
   margin-top: 0;
   margin-bottom: 0.7rem;
   font-size: 3rem;
@@ -355,7 +356,7 @@ section > h1 {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-  .entry h2 {
+  .entry h3 {
     text-align: center;
   }
 
@@ -374,7 +375,7 @@ section > h1 {
   width: 90%;
 }
 
-.community h2 {
+.community h3 {
   font-size: 2.2rem;
   margin-top: 1rem;
 }

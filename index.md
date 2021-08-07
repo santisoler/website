@@ -10,7 +10,7 @@ content:
 ---
 
 <section>
-<h1>Communities</h1>
+<h2>Communities</h2>
 
 <p>
 I'm proud of being part of these awesome communities:
@@ -23,7 +23,7 @@ I'm proud of being part of these awesome communities:
                 src="images/logos/fatiando-logo.png"
                 alt="Logo of Fatiando a Terra"
             >
-            <h2>Fatiando a Terra</h2>
+            <h3>Fatiando a Terra</h3>
         </a>
     </div>
     <div class="col-xl col-lg-4 col-md-6 community">
@@ -32,7 +32,7 @@ I'm proud of being part of these awesome communities:
                 src="images/logos/compgeolab-light.png"
                 alt="Logo of the Computer-Oriented Geoscience Lab"
             >
-            <h2>Computer-Oriented Geoscience Lab</h2>
+            <h3>Computer-Oriented Geoscience Lab</h3>
         </a>
     </div>
     <div class="col-xl col-lg-4 col-md-6 community">
@@ -42,7 +42,7 @@ I'm proud of being part of these awesome communities:
                 src="images/logos/geolatinas-logo-overlay.png"
                 alt="Logo of Geolatinas"
             >
-            <h2>Geolatinas</h2>
+            <h3>Geolatinas</h3>
         </a>
     </div>
     <div class="col-xl col-lg-4 col-md-6 community">
@@ -52,7 +52,7 @@ I'm proud of being part of these awesome communities:
                 src="images/logos/swung.png"
                 alt="Logo of Software Underground"
             >
-            <h2>Software Underground</h2>
+            <h3>Software Underground</h3>
         </a>
     </div>
     <div class="col-xl col-lg-4 col-md-6 community">
@@ -62,7 +62,7 @@ I'm proud of being part of these awesome communities:
                 src="images/logos/carpentries-hex-white.svg"
                 alt="Logo of The Carpentries"
             >
-            <h2>The Carpentries</h2>
+            <h3>The Carpentries</h3>
         </a>
     </div>
 </div>

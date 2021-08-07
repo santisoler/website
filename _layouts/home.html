@@ -27,7 +27,7 @@
 <main class="container">
 {%- for section in this.content -%}
     <section>
-        <h1>{{section.title}}</h1>
+        <h2>{{section.title}}</h2>
         {%- if section.content is defined -%}
             {%- for entry in section.content -%}
                 {{ print_entry(entry, site) }}
