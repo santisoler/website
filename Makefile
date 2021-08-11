@@ -7,7 +7,7 @@ build:
 	touch _build/.nojekyll
 
 serve:
-	python -m urubu serve
+	python _python/serve.py
 
 clean:
 	rm -rf _build
