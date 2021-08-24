@@ -20,7 +20,7 @@ supplement:
 download: preprint
 thumbnail: /images/eql-gradient-boosted-thumbnail.jpg
 citation.md: |
-    Soler S.R. and Uieda L. (2021). Gradient-boosted equivalent sources.
+    Soler, S.R. and Uieda, L. (2021). Gradient-boosted equivalent sources.
     Geophysical Journal International.
     doi: [10.1093/gji/ggab297](https://doi.org/10.1093/gji/ggab297)
 ---
