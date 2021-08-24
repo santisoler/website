@@ -3,15 +3,14 @@ title: "Gradient-boosted equivalent sources"
 layout: publication
 date: 2021-02-25
 author: me, leo
-inreview: true
 journal:
     name: Geophysical Journal International
     url: https://academic.oup.com/gji/
-    doi:
+    doi: 10.1093/gji/ggab297
     open_access: false
 preprint:
     archive: EarthArXiv
-    url:
+    url: https://eartharxiv.org/
     doi: 10.31223/X58G7C
 code:
     repo: compgeolab/eql-gradient-boosted
@@ -22,7 +21,8 @@ download: preprint
 thumbnail: /images/eql-gradient-boosted-thumbnail.jpg
 citation.md: |
     Soler S.R. and Uieda L. (2021). Gradient-boosted equivalent sources.
-    doi: [10.31223/X58G7C](https://doi.org/10.31223/X58G7C)
+    Geophysical Journal International.
+    doi: [10.1093/gji/ggab297](https://doi.org/10.1093/gji/ggab297)
 ---
 
 # About
