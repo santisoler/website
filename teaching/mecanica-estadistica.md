@@ -15,5 +15,5 @@ website:
 
 # About
 
-En el [sitio web]({{ this.website }}) de la cátedra podrás encontrar ejercicios
-de práctica, apuntes y material de la cátedra Mecánica Estadística.
+En el [sitio web de la cátedra]({{ this.website.url }}) podrás encontrar
+ejercicios de práctica, apuntes y material de la cátedra Mecánica Estadística.
