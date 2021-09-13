@@ -15,8 +15,12 @@
     {% for social in site.social %}
     {%- if social.home -%}
     <li>
-        <a href="{{social.url}}" title="TESTING">
-            <i class="{{social.icon}}" alt={{social.name}}></i>
+        <a href="{{social.url}}" aria-label="{{social.name}}">
+            <i
+                class="{{social.icon}}"
+                title="{{social.name}}"
+                aria-hidden="true"
+            ></i>
         </a>
     </li>
     {%- endif -%}
