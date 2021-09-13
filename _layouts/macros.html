@@ -132,9 +132,17 @@
 {%- macro social_list_item(social, show_icon=True) -%}
     {%- if show_icon -%}
         {%- if social.icon -%}
-          <i class="fa-li {{social.icon}}" title="{{social.name}}"></i>
+          <i 
+              class="fa-li {{social.icon}}" 
+              title="{{social.name}}" 
+              aria-hidden="true"
+          ></i>
         {%- else -%}
-          <i class="fa-li fas fa-link" title="{{social.name}}"></i>
+          <i 
+              class="fa-li fas fa-link" 
+              title="{{social.name}}" 
+              aria-hidden="true"
+          ></i>
         {%- endif -%}
     {%- endif -%}
     {%- if social.handle -%}
