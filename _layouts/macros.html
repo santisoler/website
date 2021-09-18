@@ -11,7 +11,7 @@
     <div class="entry row">
       <div class="col-md-2 thumbnail-col">
         <a href="{{entry.url}}">
-          <img src="{{entry.thumbnail}}"/>
+            <img src="{{entry.thumbnail}}" alt="{{entry.title}}"/>
         </a>
       </div>
       <div class="col-md-10">
@@ -132,9 +132,17 @@
 {%- macro social_list_item(social, show_icon=True) -%}
     {%- if show_icon -%}
         {%- if social.icon -%}
-          <i class="fa-li {{social.icon}}" title="{{social.name}}"></i>
+          <i 
+              class="fa-li {{social.icon}}" 
+              title="{{social.name}}" 
+              aria-hidden="true"
+          ></i>
         {%- else -%}
-          <i class="fa-li fas fa-link" title="{{social.name}}"></i>
+          <i 
+              class="fa-li fas fa-link" 
+              title="{{social.name}}" 
+              aria-hidden="true"
+          ></i>
         {%- endif -%}
     {%- endif -%}
     {%- if social.handle -%}
