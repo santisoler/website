@@ -56,26 +56,12 @@ I consider myself an amateur photographer as well.
 
 # Curriculum Vitae
 
-You can access a
-[HTML version of my Curriculum Vitae](https://santisoler.github.io/cv).
+You can access a [PDF version of my Curriculum
+Vitae](https://santisoler.github.io/cv/cv.pdf), written in LaTeX with the
+[`moderncv`](https://www.ctan.org/pkg/moderncv) document class.
 
-Alternatively, feel free to download a PDF version of the same curriculum,
-either in English or Spanish:
-
-<ul class="fa-ul">
-    <li>
-        <i class="fa-li fas fa-file-alt"></i>
-        <a href="https://raw.githubusercontent.com/santisoler/cv/gh-pages/cv.pdf">
-            Download Curriculum Vitae (English)
-        </a>
-    </li>
-    <li>
-        <i class="fa-li fas fa-file-alt"></i>
-        <a href="https://raw.githubusercontent.com/santisoler/cv/gh-pages/cv_es.pdf">
-            Descarga mi Curriculum Vitae (Español)
-        </a>
-    </li>
-</ul>
+The sources for building my CV are available in
+[santisoler/cv](https://github.com/santisoler/cv).
 
 
 # Education
