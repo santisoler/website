@@ -19,7 +19,7 @@ excerpt.md: |
     improve science openness and reproducibility.
     <div class="row justify-content-center justify-content-md-end">
     <a class="button" href="about.html">
-        Read more
+        More about me
     </a></div>
 ---
 
