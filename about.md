@@ -73,21 +73,21 @@ The sources for building my CV are available in
 
   <ul class="fa-ul">
     <li>
-      <i class="fa-li fas fa-calendar"></i>
+      <i class="fa-li fas fa-calendar" aria-hidden="true"></i>
       April 2017 - Present
     </li>
     <li>
-      <i class="fa-li fas fa-university"></i>
+      <i class="fa-li fas fa-university" aria-hidden="true"></i>
       <a href="http://www.unsj.edu.ar">
         Universidad Nacional de San Juan
       </a>
     </li>
     <li>
-      <i class="fa-li fas fa-user-graduate"></i>
+      <i class="fa-li fas fa-user-graduate" aria-hidden="true"></i>
       Advisor: {{ site.authors.mario.name }}
     </li>
     <li>
-      <i class="fa-li fas fa-user-graduate"></i>
+      <i class="fa-li fas fa-user-graduate" aria-hidden="true"></i>
       Co-advisor:
       <a href="{{ site.authors.leo.url }}">
       {{ site.authors.leo.name }}
@@ -102,21 +102,21 @@ The sources for building my CV are available in
 
   <ul class="fa-ul">
     <li>
-      <i class="fa-li fas fa-calendar"></i>
+      <i class="fa-li fas fa-calendar" aria-hidden="true"></i>
       March 2009 - August 2015
     </li>
     <li>
-      <i class="fa-li fas fa-university"></i>
+      <i class="fa-li fas fa-university" aria-hidden="true"></i>
       <a href="https://www.unr.edu.ar">
         Universidad Nacional de Rosario
       </a>
     </li>
     <li>
-      <i class="fa-li fas fa-user-graduate"></i>
+      <i class="fa-li fas fa-user-graduate" aria-hidden="true"></i>
       Advisor: {{ site.authors.mario.name }}
     </li>
     <li>
-      <i class="fa-li fas fa-book"></i>
+      <i class="fa-li fas fa-book" aria-hidden="true"></i>
       Thesis:
       <a href="https://github.com/santisoler/tesina-fisica">
         Métodos Espectrales para la Determinación de la Profundidad del Punto de Curie
