@@ -14,8 +14,8 @@
     />
 
     {% set url_prefix = '' %}
-    {% if site.baseurl %}
-    {%   set url_prefix = '/' + site.baseurl %}
+    {% if config.baseurl %}
+    {%   set url_prefix = '/' + config.baseurl %}
     {% endif %}
 
     <!-- CSS Reset -->

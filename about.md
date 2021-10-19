@@ -84,13 +84,13 @@ The sources for building my CV are available in
     </li>
     <li>
       <i class="fa-li fas fa-user-graduate" aria-hidden="true"></i>
-      Advisor: {{ site.authors.mario.name }}
+      Advisor: {{ config.authors.mario.name }}
     </li>
     <li>
       <i class="fa-li fas fa-user-graduate" aria-hidden="true"></i>
       Co-advisor:
-      <a href="{{ site.authors.leo.url }}">
-      {{ site.authors.leo.name }}
+      <a href="{{ config.authors.leo.url }}">
+      {{ config.authors.leo.name }}
       </a>
     </li>
   </ul>
@@ -113,7 +113,7 @@ The sources for building my CV are available in
     </li>
     <li>
       <i class="fa-li fas fa-user-graduate" aria-hidden="true"></i>
-      Advisor: {{ site.authors.mario.name }}
+      Advisor: {{ config.authors.mario.name }}
     </li>
     <li>
       <i class="fa-li fas fa-book" aria-hidden="true"></i>

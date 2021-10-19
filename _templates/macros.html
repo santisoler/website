@@ -6,7 +6,7 @@
 <!-- Display entries on home and indexes -->
 <!-- ----------------------------------- -->
 
-{%- macro print_entry(entry, site) -%}
+{%- macro print_entry(entry, config) -%}
     {# Display the content of a single entry #}
     <div class="entry row">
       <div class="col-md-2 thumbnail-col">
@@ -19,20 +19,20 @@
         {%- if entry.excerpt is defined -%}
           {{ entry.excerpt }}
         {%- elif entry.layout == "publication" -%}
-            {{ publication_text(entry, site) }}
+            {{ publication_text(entry, config) }}
         {%- elif entry.layout == "presentation" -%}
-            {{ presentation_text(entry, site) }}
+            {{ presentation_text(entry, config) }}
         {%- elif entry.layout == "teaching" -%}
-            {{ teaching_text(entry, site) }}
+            {{ teaching_text(entry, config) }}
         {%- endif -%}
       </div>
     </div>
 {%- endmacro -%}
 
 
-{%- macro publication_text(article, site) -%}
+{%- macro publication_text(article, config) -%}
     <p>
-        {{ get_authors(article, site, add_url=false) }} ({{ article.date.year }})
+        {{ get_authors(article, config, add_url=false) }} ({{ article.date.year }})
     </p>
     {%- if article.journal.name is defined -%}
     <p><em>{{ article.journal.name }}</em></p>
@@ -47,9 +47,9 @@
 {%- endmacro -%}
 
 
-{%- macro presentation_text(presentation, site) -%}
+{%- macro presentation_text(presentation, config) -%}
     <p>
-        {{ get_authors(presentation, site, add_url=false) }} ({{ presentation.date.year }})
+        {{ get_authors(presentation, config, add_url=false) }} ({{ presentation.date.year }})
     </p>
     {%- if presentation.meeting is defined -%}
     <p>
@@ -66,9 +66,9 @@
 {%- endmacro -%}
 
 
-{%- macro teaching_text(teaching, site) -%}
+{%- macro teaching_text(teaching, config) -%}
     <p>
-        {{ get_authors(teaching, site, add_url=false) }} ({{ teaching.date.year }})
+        {{ get_authors(teaching, config, add_url=false) }} ({{ teaching.date.year }})
     </p>
     {%- if teaching.institution is defined -%}
     <p>
@@ -83,17 +83,17 @@
 <!-- Generate author lists and links from name and urls -->
 <!-- -------------------------------------------------- -->
 
-{%- macro get_authors(article, site, fancy=true, add_url=true) -%}
-    {# Make the author list by expanding the stubs into full names from "site.authors" #}
+{%- macro get_authors(article, config, fancy=true, add_url=true) -%}
+    {# Make the author list by expanding the stubs into full names from "config.authors" #}
     {%- for author in article.author.split(', ') -%}
         {# Set author_name if fancy is true or false #}
         {%- if fancy and author == "me" -%}
-            {% set author_name = "<strong>" + site.authors[author].name + "</strong>" -%}
+            {% set author_name = "<strong>" + config.authors[author].name + "</strong>" -%}
         {%- else -%}
-            {% set author_name = site.authors[author].name -%}
+            {% set author_name = config.authors[author].name -%}
         {%- endif -%}
         {# Print author name if they have an url #}
-        {%- if add_url and site.authors[author].url -%}
+        {%- if add_url and config.authors[author].url -%}
             <a href={{ site.authors[author].url }}>{{ author_name }}</a>
         {%- else -%}
             {{ author_name }}

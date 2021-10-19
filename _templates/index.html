@@ -16,7 +16,7 @@
 
         {%- if page.content is defined -%}
             {%- for entry in page.content -%}
-                {{ print_entry(entry, site) }}
+                {{ print_entry(entry, config) }}
             {%- endfor -%}
         {%- endif -%}
 

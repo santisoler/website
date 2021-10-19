@@ -8,7 +8,7 @@
 <main class="container">
 
   <h1 class="title">{{page.title}}</h1>
-  <p class="authors">{{ get_authors(page, site) }} ({{ page.date.year }})</p>
+  <p class="authors">{{ get_authors(page, config) }} ({{ page.date.year }})</p>
 
   {% block extra_info %}
   {% endblock %}
