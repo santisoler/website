@@ -24,7 +24,7 @@ sobre las diversas librerías científicas del ecosistema del lenguaje Python.
 
 
 Puedes encontrar más información y material del curso en
-[github.com/santisoler/python-unsj-2020]({{ this.website }}).
+[github.com/santisoler/python-unsj-2020]({{ page.website }}).
 
 # Videos
 

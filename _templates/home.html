@@ -29,7 +29,7 @@
 </header>
 
 <main class="container">
-{%- for section in this.content -%}
+{%- for section in page.content -%}
     <section>
         <h2>{{section.title}}</h2>
         {%- if section.content is defined -%}
@@ -42,7 +42,7 @@
     </section>
 {%- endfor -%}
 
-    {{ this.body }}
+    {{ page.body }}
 
 </main>
 

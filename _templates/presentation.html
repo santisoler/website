@@ -4,43 +4,43 @@
 {% block info %}
   <h2>Info</h2>
   <ul class="fa-ul">
-    {%- if this.meeting is defined -%}
+    {%- if page.meeting is defined -%}
     <li>
         <i class="fa-li fas fa-users" title="Meeting"></i>
         Presented at:
-        {{ link(this.meeting.name, this.meeting.url) }}
+        {{ link(page.meeting.name, page.meeting.url) }}
     </li>
     {%- endif -%}
-    {%- if this.organizer is defined -%}
+    {%- if page.organizer is defined -%}
     <li>
         <i class="fa-li fas fa-university" title="Organizer"></i>
         Organized by:
-        {{ link(this.organizer.name, this.organizer.url) }}
+        {{ link(page.organizer.name, page.organizer.url) }}
     </li>
     {%- endif -%}
-    {%- if this.code is defined -%}
+    {%- if page.code is defined -%}
     <li>
         <i class="fa-li fas fa-code" title="Source code"></i>
         Source code:
-        {{ link(this.code.repo, this.code.url) }}
+        {{ link(page.code.repo, page.code.url) }}
     </li>
     {%- endif -%}
-    {%- if this.license is defined -%}
-    {%- set license = site.licenses[this.license] -%}
+    {%- if page.license is defined -%}
+    {%- set license = site.licenses[page.license] -%}
     <li>
         <i class="fa-li fas fa-balance-scale" title="License"></i>
         {{ link(license.name, license.url) }}
     </li>
     {%- endif -%}
-    {%- if this.doi is defined -%}
+    {%- if page.doi is defined -%}
     <li>
         <i class="fa-li far fa-file" title="doi"></i>
         doi:
-        {{ doi_link(this.doi) }}
+        {{ doi_link(page.doi) }}
     </li>
     {%- endif -%}
 {% endblock %}
 
 {% block content %}
-  {{ this.body }}
+  {{ page.body }}
 {% endblock %}

@@ -4,27 +4,27 @@
 {% block info %}
   <h2>Info</h2>
   <ul class="fa-ul">
-    {%- if this.institution is defined -%}
+    {%- if page.institution is defined -%}
     <li>
         <i class="fa-li fas fa-university" title="Organizer"></i>
-        {{ link(this.institution.name, this.institution.url) }}
+        {{ link(page.institution.name, page.institution.url) }}
     </li>
     {%- endif -%}
-    {%- if this.website is defined -%}
+    {%- if page.website is defined -%}
     <li>
         <i class="fa-li fas fa-globe" title="Website"></i>
-        {{ link(this.website.name, this.website.url) }}
+        {{ link(page.website.name, page.website.url) }}
     </li>
     {%- endif -%}
-    {%- if this.code is defined -%}
+    {%- if page.code is defined -%}
     <li>
         <i class="fa-li fas fa-code" title="Source code"></i>
         Source code:
-        {{ link(this.code.repo, this.code.url) }}
+        {{ link(page.code.repo, page.code.url) }}
     </li>
     {%- endif -%}
 {% endblock %}
 
 {% block content %}
-  {{ this.body }}
+  {{ page.body }}
 {% endblock %}

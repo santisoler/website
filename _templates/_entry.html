@@ -7,8 +7,8 @@
 
 <main class="container">
 
-  <h1 class="title">{{this.title}}</h1>
-  <p class="authors">{{ get_authors(this, site) }} ({{ this.date.year }})</p>
+  <h1 class="title">{{page.title}}</h1>
+  <p class="authors">{{ get_authors(page, site) }} ({{ page.date.year }})</p>
 
   {% block extra_info %}
   {% endblock %}
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  {{ pager(this) }}
+  {{ pager(page) }}
 </main>
 
 {% include '_footer.html' %}

@@ -2,11 +2,11 @@
 {%- from "macros.html" import link, doi_link -%}
 
 {% block extra_info %}
-    {%- if this.inreview -%}
+    {%- if page.inreview -%}
         <div class="warning">
             This article is under peer-review process
-            {% if this.journal is defined -%}
-            in <em>{{ this.journal.name }}</em>
+            {% if page.journal is defined -%}
+            in <em>{{ page.journal.name }}</em>
             {%- endif -%}
         </div>
     {%- endif -%}
@@ -15,8 +15,8 @@
 {% block info %}
   <h2>Info</h2>
   <ul class="fa-ul">
-    {%- if this.journal is defined and not this.inreview -%}
-        {%- if this.journal.name -%}
+    {%- if page.journal is defined and not page.inreview -%}
+        {%- if page.journal.name -%}
         <li>
             <i
                 class="fa-li fas fa-book"
@@ -24,10 +24,10 @@
                 aria-hidden="true"
             ></i>
             Journal:
-            <em>{{ link(this.journal.name, this.journal.url) }}</em>
+            <em>{{ link(page.journal.name, page.journal.url) }}</em>
         </li>
         {%- endif -%}
-        {%- if this.journal.doi -%}
+        {%- if page.journal.doi -%}
         <li>
             <i
                 class="fa-li far fa-file"
@@ -35,10 +35,10 @@
                 aria-hidden="true"
             ></i>
             Version of record:
-            {{ doi_link(this.journal.doi) }}
+            {{ doi_link(page.journal.doi) }}
         </li>
         {%- endif -%}
-        {%- if this.journal.open_access -%}
+        {%- if page.journal.open_access -%}
         <li>
             <i
                 class="fa-li ai ai-open-access"
@@ -49,8 +49,8 @@
         </li>
         {%- endif -%}
     {%- endif -%}
-    {%- if this.preprint is defined -%}
-        {%- if this.preprint.archive -%}
+    {%- if page.preprint is defined -%}
+        {%- if page.preprint.archive -%}
         <li>
             <i
                 class="fa-li fas fa-book"
@@ -58,21 +58,21 @@
                 aria-hidden="true"
             ></i>
             Preprint server:
-            <em>{{ link(this.preprint.archive, this.preprint.url) }}</em>
+            <em>{{ link(page.preprint.archive, page.preprint.url) }}</em>
         </li>
         {%- endif -%}
-        {%- if this.preprint.doi -%}
+        {%- if page.preprint.doi -%}
         <li>
             <i
                 class="fa-li far fa-file"
                 title="doi of preprint"
                 aria-hidden="true"
             ></i>
-            Preprint: {{ doi_link(this.preprint.doi) }}
+            Preprint: {{ doi_link(page.preprint.doi) }}
         </li>
         {%- endif -%}
     {%- endif -%}
-    {%- if this.code is defined -%}
+    {%- if page.code is defined -%}
         <li>
             <i
                 class="fa-li fas fa-code"
@@ -80,10 +80,10 @@
                 aria-hidden="true"
             ></i>
             Source code:
-            {{ link(this.code.repo, this.code.url) }}
+            {{ link(page.code.repo, page.code.url) }}
         </li>
     {%- endif -%}
-    {%- if this.supplement is defined -%}
+    {%- if page.supplement is defined -%}
         <li>
             <i
                 class="fa-li fas fa-paperclip"
@@ -91,18 +91,18 @@
                 aria-hidden="true"
             ></i>
             Supplement:
-            {{ doi_link(this.supplement.doi) }}
+            {{ doi_link(page.supplement.doi) }}
         </li>
     {%- endif -%}
   </ul>
-  {%- if this.download -%}
+  {%- if page.download -%}
       {% set download_url = '' %}
-      {% if this.download == "preprint" %}
-      {%   set download_url = "https://doi.org/" + this.preprint.doi %}
-      {% elif this.download == "journal" %}
-      {%   set download_url = "https://doi.org/" + this.journal.doi %}
+      {% if page.download == "preprint" %}
+      {%   set download_url = "https://doi.org/" + page.preprint.doi %}
+      {% elif page.download == "journal" %}
+      {%   set download_url = "https://doi.org/" + page.journal.doi %}
       {% else %}
-      {%   set download_url = this.download %}
+      {%   set download_url = page.download %}
       {% endif %}
 
       <a class="button" href="{{download_url}}">
@@ -112,11 +112,11 @@
 {% endblock %}
 
 {% block content %}
-  {{ this.body }}
+  {{ page.body }}
 
-  {%- if this.citation is defined -%}
+  {%- if page.citation is defined -%}
   <h2>How to cite</h2>
-  <p>{{this.citation}}</p>
+  <p>{{page.citation}}</p>
   {%- endif -%}
 
 {% endblock %}

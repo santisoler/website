@@ -6,7 +6,7 @@
     {% include '_navbar.html' %}
 
     <header>
-        <h1>{{this.title}}</h1>
+        <h1>{{page.title}}</h1>
     </header>
 
     <main class="container">
@@ -15,7 +15,7 @@
             <div class="text-align-center">
             <img
                 class="profile"
-                src="{{this.profile_picture}}"
+                src="{{page.profile_picture}}"
                 alt="Profile picture of {{ site.author }}"
             >
             </div>
@@ -57,7 +57,7 @@
         </div>
         <div class="col-lg-8">
 
-            {{ this.body }}
+            {{ page.body }}
 
         </div>
       </div>
