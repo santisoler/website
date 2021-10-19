@@ -1,13 +1,10 @@
-GH-PAGES = ${HOME}/dev/urubu-gh-pages/
+CONFIG=config.yml
 
-all: build
-
-build:
-	python -m urubu build
-	touch _build/.nojekyll
+all:
+	nene --config=$(CONFIG)
 
 serve:
-	python _python/serve.py
+	nene --config=$(CONFIG) --serve
 
 clean:
-	rm -rf _build
+	rm -r _build
