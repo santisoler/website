@@ -1,8 +1,18 @@
-brand: Santiago Soler
-author: Santiago Soler
-favicon: images/about.jpg
-frontcover_image:
-  url: images/about.jpg
+site:
+  name: Santiago Soler
+  author: Santiago Soler
+  favicon: images/favicon.svg
+  language: en
+
+ignore:
+  - "README.md"
+  - "css/*.md"
+  - "environment.yml"
+  - "requirements.txt"
+  - "LICENSE.md"
+
+home_image:
+  image: images/about.jpg
   alt: Profile picture of Santiago Soler in black and white
 
 social:
@@ -51,33 +61,6 @@ social:
     url: https://matrix.to/#/@santisoler:matrix.org
     icon: fa fa-matrix-org
     contact: true
-
-keep_files: [".nojekyll", "CNAME", "script.js"]
-ignore_patterns:
-  ["README.md", "css/*.md", "environment.yml", "requirements.txt", "LICENSE.md"]
-
-reflinks:
-  urubu:
-    url: http://urubu.jandecaluwe.com
-    title: Urubu
-  bootstrap:
-    url: http://getbootstrap.com
-    title: Bootstrap
-  website_repo:
-    url: https://www.github.com/santisoler/website
-    title: santisoler/website
-  license:
-    title: Creative Commons Attribution 4.0 International License
-    url: https://creativecommons.org/licenses/by/4.0/
-  font_awesome:
-    title: Font Awesome
-    url: https://fontawesome.com
-  fork_awesome:
-    title: Fork Awesome
-    url: https://forkaweso.me
-  academicons:
-    title: Academicons
-    url: https://jpswalsh.github.io/academicons/
 
 authors:
   me:
