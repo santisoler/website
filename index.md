@@ -1,6 +1,6 @@
 ---
 title: Santiago Soler
-layout: home
+template: home.html
 content:
   - about
   - projects

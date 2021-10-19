@@ -1,6 +1,6 @@
 ---
 title: Teaching
-layout: index
+template: index.html
 order: date
 reverse: true
 ---

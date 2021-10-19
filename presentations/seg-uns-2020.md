@@ -1,6 +1,6 @@
 ---
 title: Herramientas Computacionales para Geociencias
-layout: presentation
+template: presentation.html
 date: 2020-10-02
 author: me
 license: cc-by

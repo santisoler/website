@@ -1,6 +1,6 @@
 ---
 title: "Gravitational field of tesseroids with variable density"
-layout: presentation
+template: presentation.html
 date: 2019-04-01
 author: me, agustina, mario, leo
 doi: 10.6084/m9.figshare.8242439

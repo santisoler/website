@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: about
+template: about.html
 pager: false
 profile_picture: /images/about.jpg
 excerpt.md: |

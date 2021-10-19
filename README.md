@@ -52,7 +52,7 @@ When a new publication wants to be uploaded you have to create a Markdown file i
 ```markdown
 ---
 title: <title of the article>
-layout: publication
+template: publication.html
 date: <publication date in YYYY-MM-DD>
 author: <comma separated authors defined in _site.yml>
 inreview: <true or false>
@@ -94,7 +94,7 @@ as `true`.
 ```markdown
 ---
 title: <title of the presentation>
-layout: presentation
+template: presentation
 date: <date in YYYY-MM-DD>
 author: <comma separated authors defined in _site.yml>
 meeting:
@@ -116,7 +116,7 @@ license: <license as defined in _site.yml (eg cc-by)>
 ```markdown
 ---
 title: <Title of the course>
-layout: teaching
+template: teaching
 date: <start date in YYYY-MM-DD>
 end_date: <date when the course ended (optional)>
 author: <comma separated authors defined in _site.yml>

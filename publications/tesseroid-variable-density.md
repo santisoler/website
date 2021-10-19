@@ -1,6 +1,6 @@
 ---
 title: "Gravitational field calculation in spherical coordinates using variable densities in depth"
-layout: publication
+template: publication.html
 date: 2019-06-11
 author: me, agustina, mario, leo
 journal:

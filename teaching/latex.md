@@ -2,7 +2,7 @@
 title: Taller Introductorio a LaTeX
 date: 2017-06-07
 author: me, agustina
-layout: teaching
+template: teaching.html
 thumbnail: /images/poster-taller-latex-thumbnail.jpg
 institution:
     name: Facultad de Ciencias Exáctas, Físicas y Naturales, UNSJ

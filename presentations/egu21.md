@@ -1,6 +1,6 @@
 ---
 title: Gradient-boosted equivalent sources for gridding large gravity and magnetic datasets
-layout: presentation
+template: presentation.html
 date: 2021-04-26
 author: me, leo
 meeting:

@@ -1,6 +1,6 @@
 ---
 title: "Pooch: A friend to fetch your data files"
-layout: publication
+template: publication.html
 date: 2020-01-17
 author: leo, me, rampin, vankemenade, matthewturk, shapero, banihirwe, leeman
 journal:

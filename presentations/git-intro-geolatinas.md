@@ -1,6 +1,6 @@
 ---
 title: Introducción a Git
-layout: presentation
+template: presentation.html
 date: 2020-10-01
 author: me
 license: cc-by

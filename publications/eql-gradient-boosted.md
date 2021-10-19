@@ -1,6 +1,6 @@
 ---
 title: "Gradient-boosted equivalent sources"
-layout: publication
+template: publication.html
 date: 2021-02-25
 author: me, leo
 journal:

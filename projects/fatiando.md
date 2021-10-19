@@ -1,6 +1,6 @@
 ---
 title: Fatiando a Terra
-layout: empty
+template: empty.html
 thumbnail: /images/fatiando.png
 url: https://www.fatiando.org
 excerpt:

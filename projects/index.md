@@ -1,6 +1,6 @@
 ---
 title: Projects
-layout: index
+template: index.html
 content:
     - fatiando
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Transient plate contraction between two simultaneous slab windows: Insights from Paleogene tectonics of the Patagonian Andes"
-layout: publication
+template: publication.html
 date: 2018-04-08
 author: guido, agustina, me
 journal:

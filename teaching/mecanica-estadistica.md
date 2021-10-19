@@ -3,7 +3,7 @@ title: Mecánica Estadística
 date: 2018-03-01
 end_date: 2019-04-01
 author: me
-layout: teaching
+template: teaching.html
 thumbnail: /images/mecanica-estadistica-thumbnail.jpg
 institution:
     name: Facultad de Ciencias Exáctas, Físicas y Naturales, UNSJ

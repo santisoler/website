@@ -2,7 +2,7 @@
 title: Introducción a Python para Científicxs
 date: 2020-06-23
 author: me
-layout: teaching
+template: teaching.html
 thumbnail: /images/python-unsj-2020-thumbnail.jpg
 institution:
     name: Universidad Nacional de San Juan

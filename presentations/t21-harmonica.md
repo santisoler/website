@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: Processing gravity and magnetic data with Harmonica"
-layout: presentation
+template: presentation.html
 date: 2021-04-22
 author: me, andrea, agustina
 meeting:
