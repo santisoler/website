@@ -94,7 +94,7 @@
         {%- endif -%}
         {# Print author name if they have an url #}
         {%- if add_url and config.authors[author].url -%}
-            <a href={{ site.authors[author].url }}>{{ author_name }}</a>
+            <a href={{ config.authors[author].url }}>{{ author_name }}</a>
         {%- else -%}
             {{ author_name }}
         {%- endif -%}
