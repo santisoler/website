@@ -7,6 +7,7 @@ site:
 ignore:
   - "README.md"
   - "css/*.md"
+  - "css/academicons/README.md"
   - "environment.yml"
   - "requirements.txt"
   - "LICENSE.md"
