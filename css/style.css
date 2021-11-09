@@ -335,6 +335,13 @@ header.main-header {
   text-align: center;
 }
 
+/* For short screens, fix the header height */
+@media (max-height: 600px) {
+  header.main-header {
+    height: calc(600px - 6rem);
+  }
+}
+
 header h1 {
   font-size: 5.5rem;
   margin-top: 0;
