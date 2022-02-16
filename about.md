@@ -15,9 +15,9 @@ excerpt.md: |
 
 <h2 class="no-margin-top">A Summary</h2>
 
-I'm a Lic. in Physics graduated from the
+I'm a Lic. in Physics graduated at the
 [Universidad Nacional de Rosario](https://www.unr.edu.ar)
-and a PhD in Geophysics obtained at the
+and a PhD in Geophysics from the
 [Universidad Nacional de San Juan](http://www.unsj.edu.ar).
 
 I research forward and inverse gravity models at the
@@ -35,7 +35,7 @@ reviewing articles on [JOSS: The Journal of Open Source
 Software](https://joss.theoj.org/).
 
 I love teaching and sharing my knowledge: I've taught a few different Physics
-courses and also Python and git tutorials. In my intention of improving my
+courses and also Python and git tutorials. With the intention of improving my
 teaching skills I became a certified [Carpentries](https://carpentries.org)
 instructor.
 
