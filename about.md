@@ -138,6 +138,13 @@ The sources for building my CV are available in
         y el Espesor Elástico de la Corteza Terrestre
       </a>
     </li>
+    <li>
+      <i class="fa-li fas fa-file" aria-hidden="true"></i>
+      doi:
+      <a href="https://doi.org/10.6084/m9.figshare.16752466">
+       10.6084/m9.figshare.16752466
+      </a>
+    </li>
   </ul>
 
 </div>
