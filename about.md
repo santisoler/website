@@ -93,6 +93,21 @@ The sources for building my CV are available in
       {{ site.authors.leo.name }}
       </a>
     </li>
+    <li>
+      <i class="fa-li fas fa-book" aria-hidden="true"></i>
+      Thesis:
+      <a href="https://github.com/santisoler/phd-thesis">
+       Metodologías y herramientas computacionales para el procesamiento
+       y modelado de datos gravimétricos
+      </a>
+    </li>
+    <li>
+      <i class="fa-li fas fa-file" aria-hidden="true"></i>
+      doi:
+      <a href="https://doi.org/10.6084/m9.figshare.16906909">
+       10.6084/m9.figshare.16906909
+      </a>
+    </li>
   </ul>
 
 </div>
