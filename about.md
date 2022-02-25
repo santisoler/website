@@ -57,8 +57,8 @@ I consider myself an amateur photographer as well.
 # Curriculum Vitae
 
 You can access a [PDF version of my Curriculum
-Vitae](https://santisoler.github.io/cv/cv.pdf), written in LaTeX with the
-[`moderncv`](https://www.ctan.org/pkg/moderncv) document class.
+Vitae](https://santisoler.github.io/cv/cv.pdf), written in LaTeX using a custom
+template.
 
 The sources for building my CV are available in
 [santisoler/cv](https://github.com/santisoler/cv).
