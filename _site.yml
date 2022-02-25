@@ -54,7 +54,14 @@ social:
 
 keep_files: [".nojekyll", "CNAME", "script.js"]
 ignore_patterns:
-  ["README.md", "css/*.md", "environment.yml", "requirements.txt", "LICENSE.md"]
+  [
+    "README.md",
+    "css/*.md",
+    "environment.yml",
+    "requirements.txt",
+    "LICENSE.md",
+    "serve.py",
+  ]
 
 reflinks:
   urubu:
