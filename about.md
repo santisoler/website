@@ -4,19 +4,9 @@ layout: about
 pager: false
 profile_picture: /images/about.jpg
 excerpt.md: |
-    I'm a Lic. in Physics graduated from the
-    [Universidad Nacional de Rosario](https://www.unr.edu.ar)
-    and now PhD Student in Geophysics at the
-    [Universidad Nacional de San Juan](http://www.unsj.edu.ar)
-    I research forward and inverse gravity models at the
-    [Instituto Geofísico Sismológico Volponi](http://igsv.unsj.edu.ar)
-    at the
-    [Computer-Oriented Geoscience Lab](https://www.compgeolab.org/)
-    with the support of a
-    [CONICET](https://www.conicet.gov.ar)
-    scholarship.
-    I'm also committed to contribute on open-source projects to
-    improve science openness and reproducibility.
+    Physicist and PhD in Geophysics.
+    I research forward and inverse gravity models and develop open-source code
+    at [Fatiando a Terra](https://www.fatiando.org)
     <div class="row justify-content-center justify-content-md-end">
     <a class="button" href="about.html">
         More about me
@@ -25,9 +15,9 @@ excerpt.md: |
 
 <h2 class="no-margin-top">A Summary</h2>
 
-I'm a Lic. in Physics graduated from the
+I'm a Lic. in Physics graduated at the
 [Universidad Nacional de Rosario](https://www.unr.edu.ar)
-and now a PhD Student in Geophysics at the
+and a PhD in Geophysics from the
 [Universidad Nacional de San Juan](http://www.unsj.edu.ar).
 
 I research forward and inverse gravity models at the
@@ -45,7 +35,7 @@ reviewing articles on [JOSS: The Journal of Open Source
 Software](https://joss.theoj.org/).
 
 I love teaching and sharing my knowledge: I've taught a few different Physics
-courses and also Python and git tutorials. In my intention of improving my
+courses and also Python and git tutorials. With the intention of improving my
 teaching skills I became a certified [Carpentries](https://carpentries.org)
 instructor.
 
