@@ -11,6 +11,11 @@ excerpt.md: |
     <a class="button" href="about.html">
         More about me
     </a></div>
+description: |
+    Physicist and PhD in Geophysics.
+    Python developer at Fatiando a Terra.
+    Free and open-source software supporter who loves spending time
+    outdoors.
 ---
 
 <h2 class="no-margin-top">A Summary</h2>
