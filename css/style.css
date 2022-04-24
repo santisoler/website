@@ -555,3 +555,8 @@ img.profile {
   width: 100%;
   height: 100%;
 }
+
+/* Change color of iframes for embedded pdfs */
+.pdf {
+  color: #1b2224;
+}

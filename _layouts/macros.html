@@ -188,22 +188,6 @@
 <!-- Functions to embed iframes -->
 <!-- -------------------------- -->
 
-{%- macro google_slides(slides) -%}
-    <div>
-    <iframe
-        src="{{ slides }}"
-        frameborder="0"
-        width="960"
-        height="749"
-        allowfullscreen="true"
-        mozallowfullscreen="true"
-        webkitallowfullscreen="true"
-    >
-    </iframe>
-    </div>
-{%- endmacro -%}
-
-
 {%- macro youtube_video(video) -%}
     <div class="videowrapper">
     <iframe
