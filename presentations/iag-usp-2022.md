@@ -9,7 +9,7 @@ organizer:
 code:
     repo: santisoler/iag-usp-2022
     url: https://github.com/santisoler/iag-usp-2022
-thumbnail: images/iag-usp-2022-thumbnail.jpg
+thumbnail: /images/iag-usp-2022-thumbnail.jpg
 license: cc-by
 ---
 
