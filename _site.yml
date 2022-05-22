@@ -16,6 +16,11 @@ social:
     url: https://twitter.com/santirsoler
     icon: fab fa-twitter
     home: true
+  - name: Mastodon
+    handle: "@santisoler@scicomm.xyz"
+    url: https://scicomm.xyz/@santisoler
+    icon: fab fa-mastodon
+    home: true
   - name: ORCID
     handle: 0000-0001-9202-5317
     url: https://orcid.org/0000-0001-9202-5317
