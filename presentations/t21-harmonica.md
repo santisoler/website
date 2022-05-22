@@ -17,7 +17,7 @@ license: cc-by
 
 # Tutorial video
 
-{{ youtube_video("https://www.youtube-nocookie.com/embed/0bxZcCAr6bw") }}
+{{ youtube_video("https://www.youtube.com/watch?v=0bxZcCAr6bw", thumbnail="/images/yt-thumbnails/t21-harmonica.jpg") }}
 
 ## About
 

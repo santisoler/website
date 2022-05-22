@@ -43,7 +43,7 @@ a 5 minutes video where I take more time to explain the new method.
 
 ## Video
 
-{{ youtube_video("https://www.youtube.com/embed/qNMvuwV1n-0") }}
+{{ youtube_video("https://www.youtube.com/watch?v=qNMvuwV1n-0", thumbnail="/images/yt-thumbnails/egu21.jpg") }}
 
 *doi: {{ doi_link("10.6084/m9.figshare.14515188") }}*
 

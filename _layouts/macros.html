@@ -132,15 +132,15 @@
 {%- macro social_list_item(social, show_icon=True) -%}
     {%- if show_icon -%}
         {%- if social.icon -%}
-          <i 
-              class="fa-li {{social.icon}}" 
-              title="{{social.name}}" 
+          <i
+              class="fa-li {{social.icon}}"
+              title="{{social.name}}"
               aria-hidden="true"
           ></i>
         {%- else -%}
-          <i 
-              class="fa-li fas fa-link" 
-              title="{{social.name}}" 
+          <i
+              class="fa-li fas fa-link"
+              title="{{social.name}}"
               aria-hidden="true"
           ></i>
         {%- endif -%}
@@ -188,15 +188,32 @@
 <!-- Functions to embed iframes -->
 <!-- -------------------------- -->
 
-{%- macro youtube_video(video) -%}
-    <div class="videowrapper">
-    <iframe
-        width="560"
-        height="315"
-        src="{{ video }}"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-    ></iframe>
-    </div>
+{%- macro youtube_video(video_url, thumbnail) -%}
+<!-- Thumbnail of Youtube video -->
+<div class="ratio ratio-16x9">
+  <div class="yt" style='background-image: url("{{ thumbnail }}")'>
+    <a
+      href="{{ video_url }}"
+      aria-label="Watch on YouTube"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="play-button">
+        <img src="/assets/play.svg">
+      </div>
+    </a>
+    <a
+      href="{{ video_url }}"
+      aria-label="Watch on YouTube"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="watch-on-yt">
+        <div aria-hidden="true">Watch on</div>
+        <div><img src="/assets/yt-logo.svg" alt="YouTube logo"></div>
+      </div>
+    </a>
+  </div>
+</div>
+
 {%- endmacro -%}

@@ -33,4 +33,4 @@ ha sido desarrollado de forma online mediante transmiciones en vivo a través de
 YouTube Live.
 
 
-{{ youtube_video("https://www.youtube-nocookie.com/embed/videoseries?list=PL-__b47x5vlHisjuu_tTfiIe8BefmNWZD") }}
+{{ youtube_video("https://www.youtube.com/watch?v=LS_e9gqTM2s&list=PL-__b47x5vlHisjuu_tTfiIe8BefmNWZD", thumbnail="/images/yt-thumbnails/python-unsj.jpg") }}
