@@ -12,6 +12,8 @@ code:
 thumbnail: /images/iag-usp-2022-thumbnail.jpg
 license: cc-by
 ---
+{%- from "macros.html" import doi_link, youtube_video -%}
+
 
 # About
 
@@ -19,6 +21,10 @@ This was an invited talk to the [Instituto de Astronomia, Geofísica e Ciências
 Atmosféricas (IAG)](https://www.iag.usp.br/) of the [Universdade de São
 Paulo](https://www5.usp.br/). Special thanks to Gabriel Dragone for the
 invitation.
+
+# Video
+
+{{ youtube_video("https://www.youtube.com/watch?v=W5NWnMI6s1Q", thumbnail="/images/iag-usp-2022.png") }}
 
 # Slides
 
