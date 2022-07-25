@@ -25,16 +25,19 @@ I'm a Lic. in Physics graduated at the
 and a PhD in Geophysics from the
 [Universidad Nacional de San Juan](http://www.unsj.edu.ar).
 
-I research forward and inverse gravity models at the
+During my PhD I researched forward and inverse gravity models at the
 [Instituto Geofísico Sismológico Volponi](http://http://igsv.unsj.edu.ar/)
 and at the [Computer-Oriented Geoscience Lab](https://www.compgeolab.org/)
 with the support of a [CONICET](https://www.conicet.gov.ar) scholarship.
 
-Being a longtime GNU/Linux user and Free Software supporter, I'm also committed
-to contribute to open-source software projects to improve science openness and
-reproducibility such as [Fatiando a Terra](https://www.fatiando.org/):
+Nowadays I work as a Postdoctoral Researcher Fellow at the [Department of
+Earth, Ocean and Atmospheric Sciences](https://www.eoas.ubc.ca/) of the
+[University of British Columbia](https://www.ubc.ca/).
+
+I'm also a longtime GNU/Linux user and Free Software supporter. I'm one of the
+core developers of [Fatiando a Terra](https://www.fatiando.org/):
 a collection of open-source Python tools for forward and inverse modelling in
-geophysics.
+geophysics; and contribute to open-source projects whenever I have the chance.
 I also support open-source software in Science and open-access publications by
 reviewing articles on [JOSS: The Journal of Open Source
 Software](https://joss.theoj.org/).
