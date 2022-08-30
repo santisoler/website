@@ -54,7 +54,7 @@ social:
   - name: Matrix
     handle: "@santisoler:matrix.org"
     url: https://matrix.to/#/@santisoler:matrix.org
-    icon: fa fa-matrix-org
+    icon: fas fa-comment
     contact: true
 
 keep_files: [".nojekyll", "CNAME", "script.js"]
