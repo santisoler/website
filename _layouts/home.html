@@ -15,7 +15,12 @@
     {% for social in site.social %}
     {%- if social.home -%}
     <li>
+        {%- if social.anchor_extras -%}
+        <a {{ social.anchor_extras }} href="{{social.url}}" aria-label="{{social.name}}">
+        {%- else -%}
         <a href="{{social.url}}" aria-label="{{social.name}}">
+        {%- endif -%}
+
             <i
                 class="{{social.icon}}"
                 title="{{social.name}}"

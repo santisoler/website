@@ -116,13 +116,13 @@
 {%- endmacro -%}
 
 
-{%- macro link(name, url, title=None) -%}
+{%- macro link(name, url, title=None, extras="") -%}
     {# Returns name of the element with link if existing #}
     {%- if url -%}
         {%- if title -%}
-            <a href="{{ url }}" title="{{ title }}">{{ name }}</a>
+          <a {{ extras}} href="{{ url }}" title="{{ title }}">{{ name }}</a>
         {%- else -%}
-            <a href="{{ url }}">{{ name }}</a>
+          <a {{ extras }} href="{{ url }}">{{ name }}</a>
         {%- endif -%}
     {%- else -%}
         {{ name }}
@@ -147,7 +147,11 @@
     {%- endif -%}
     {%- if social.handle -%}
       {{social.name}}:
+      {%- if social.anchor_extras -%}
+      {{ link(social.handle, social.url, title=social.name, extras=social.anchor_extras) }}
+      {%- else -%}
       {{ link(social.handle, social.url, title=social.name) }}
+      {%- endif -%}
     {%- else -%}
       {{ link(social.name, social.url, title=social.name) }}
     {%- endif -%}
