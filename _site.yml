@@ -21,6 +21,8 @@ social:
     url: https://scicomm.xyz/@santisoler
     icon: fab fa-mastodon
     home: true
+    anchor_extras: 'rel="me"'
+    contact: true
   - name: ORCID
     handle: 0000-0001-9202-5317
     url: https://orcid.org/0000-0001-9202-5317
