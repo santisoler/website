@@ -4,7 +4,7 @@ layout: presentation
 date: 2023-05-03
 author: me
 organizer:
-    name: IGeBa, Universidad Buenos Aires
+    name: IGeBA, Universidad Buenos Aires
     url: https://igeba.gl.fcen.uba.ar/
 code:
     repo: santisoler/2023-fatiando-igeba
