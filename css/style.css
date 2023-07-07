@@ -425,12 +425,12 @@ section > h2 {
 
 .community {
   text-align: center;
-  margin-top: 3rem;
 }
 
 .community img {
-  max-width: 150px;
-  width: 90%;
+  width: auto;
+  height: auto;
+  max-height: 150px;
 }
 
 .community h3 {
