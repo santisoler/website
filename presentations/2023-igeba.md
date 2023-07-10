@@ -25,7 +25,7 @@ Básicas, Aplicadas y Ambientales de Buenos Aires (IGeBA).
 
 # Slides
 
-[![Slides for PyCascades 2023](/images/2023-igeba.png)](https://doi.org/10.6084/m9.figshare.22300822)
+[![Slides](/images/2023-igeba.png)](https://www.santisoler.com/2023-fatiando-igeba)
 
 Slides: [santisoler.com/2023-fatiando-igeba](
     https://www.santisoler.com/2023-fatiando-igeba
