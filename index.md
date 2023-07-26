@@ -16,8 +16,8 @@ content:
 I'm proud of being part of these awesome communities:
 </p>
 
-<div class="row justify-content-around">
-    <div class="col-xl col-lg-4 col-md-6 community">
+<div class="row justify-content-center mt-5">
+    <div class="col-xl-3 col-lg-4 col-md-6 community">
         <a href="https://www.fatiando.org">
             <img
                 src="images/logos/fatiando-logo.png"
@@ -26,7 +26,17 @@ I'm proud of being part of these awesome communities:
             <h3>Fatiando a Terra</h3>
         </a>
     </div>
-    <div class="col-xl col-lg-4 col-md-6 community">
+    <div class="col-xl-3 col-lg-4 col-md-6 community">
+        <a href="https://simpeg.xyz">
+            <img
+                class="community-logo"
+                src="images/logos/simpeg.png"
+                alt="Logo of SimPEG"
+            >
+            <h3>SimPEG</h3>
+        </a>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6 community">
         <a href="https://www.compgeolab.org">
             <img
                 src="images/logos/compgeolab-light.png"
@@ -35,7 +45,7 @@ I'm proud of being part of these awesome communities:
             <h3>Computer-Oriented Geoscience Lab</h3>
         </a>
     </div>
-    <div class="col-xl col-lg-4 col-md-6 community">
+    <div class="col-xl-3 col-lg-4 col-md-6 community">
         <a href="https://geolatinas.weebly.com/">
             <img
                 class="community-logo"
@@ -45,7 +55,7 @@ I'm proud of being part of these awesome communities:
             <h3>Geolatinas</h3>
         </a>
     </div>
-    <div class="col-xl col-lg-4 col-md-6 community">
+    <div class="col-xl-3 col-lg-4 col-md-6 community">
         <a href="https://softwareunderground.org/">
             <img
                 class="community-logo"
@@ -55,7 +65,7 @@ I'm proud of being part of these awesome communities:
             <h3>Software Underground</h3>
         </a>
     </div>
-    <div class="col-xl col-lg-4 col-md-6 community">
+    <div class="col-xl-3 col-lg-4 col-md-6 community">
         <a href="https://carpentries.org/">
             <img
                 class="community-logo"
