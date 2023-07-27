@@ -109,6 +109,11 @@
           Download the article
       </a>
   {%- endif -%}
+  {%- if this.read -%}
+      <a class="button" href="{{this.read.url}}">
+        {{ this.read.title }}
+      </a>
+  {%- endif -%}
 {% endblock %}
 
 {% block content %}
