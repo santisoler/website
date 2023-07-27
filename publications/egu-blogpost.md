@@ -20,11 +20,11 @@ thumbnail: /images/egu-blogs-logo.png
 
 [![Screenshot of the blogpost](/images/2023-egu-blogpost-fatiando.png)][blogpost]
 
-I was invited by [Constanza Piceda][constanza] to write a [blogpost][blogpost]
-about [Fatiando a Terra][fatiando] and the value of open-source software in the
-scientific community. She not only invited me, but also edited the blogpost,
-doing a magnificent job at improving my very formal writing and keeping it more
-casual.
+I was invited by [Constanza Rodriguez Piceda][constanza] to write
+a [blogpost][blogpost] about [Fatiando a Terra][fatiando] and the value of
+open-source software in the scientific community. She not only invited me, but
+also edited the blogpost, doing a magnificent job at improving my very formal
+writing and keeping it more casual.
 
 I invite you to [read it here][blogpost]!
 
