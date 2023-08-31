@@ -71,6 +71,9 @@ code:
 supplement:
     doi: <doi of the supplementary material (not url, just doi)>
 download: <preprint or journal>
+read: <generate a Read button>
+    title: <text that will appear in the button>
+    url: <url to which the button will lead>
 thumbnail: <path to thumbnail image (eg /image/foo.jpg)>
 citation.md: |
     Citation of the article in Markdown
