@@ -11,11 +11,6 @@ social:
     url: https://github.com/santisoler
     icon: fab fa-github
     home: true
-  - name: Twitter
-    handle: "@santirsoler"
-    url: https://twitter.com/santirsoler
-    icon: fab fa-twitter
-    home: true
   - name: Mastodon
     handle: "@santisoler@scicomm.xyz"
     url: https://scicomm.xyz/@santisoler
