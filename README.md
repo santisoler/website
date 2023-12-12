@@ -111,6 +111,7 @@ code:
     url: <url of the repository>
 thumbnail: <path to thumbnail image (eg /image/foo.jpg)>
 license: <license as defined in _site.yml (eg cc-by)>
+doi: <doi of the abstract/poster/slides (not the url, just the doi)>
 ---
 ```
 
