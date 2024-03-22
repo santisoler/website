@@ -146,7 +146,7 @@
         {%- endif -%}
     {%- endif -%}
     {%- if social.handle -%}
-      {{social.name}}:
+      {{social.name + ": " }}
       {%- if social.anchor_extras -%}
       {{ link(social.handle, social.url, title=social.name, extras=social.anchor_extras) }}
       {%- else -%}
