@@ -26,7 +26,7 @@ This talk was based on the [/presentations/gsh2021] talk.
 # Slides
 
 [![Slides of "Fatiando a Terra: Open-source tools for
-geophysics"](/images/gsh-2021.jpg)](https://www.santisoler.com/2022-ubc-fatiando)
+geophysics"](/images/2022-ubc-fatiando.png)](https://www.santisoler.com/2022-ubc-fatiando)
 
 Slides: [www.santisoler.com/2022-ubc-fatiando](
     https://www.santisoler.com/2022-ubc-fatiando
