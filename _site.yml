@@ -43,17 +43,6 @@ social:
     url: /santisoler_pub.asc
     icon: fas fa-key
     contact: true
-  - name: Telegram
-    handle: "@santisoler"
-    url: https://t.me/santisoler
-    icon: fab fa-telegram-plane
-    contact: true
-  - name: Matrix
-    handle: "@santisoler:matrix.org"
-    url: https://matrix.to/#/@santisoler:matrix.org
-    icon: fas fa-comment
-    home: true
-    contact: true
 
 keep_files: [".nojekyll", "CNAME", "script.js"]
 ignore_patterns:
