@@ -9,6 +9,9 @@ meeting:
 organizer:
     name: Software Underground
     url: https://softwareunderground.org/
+code:
+    repo: fatiando/transform21
+    url: https://github.com/fatiando/transform21
 thumbnail: /images/swung-thumbnail.png
 license: cc-by
 ---
