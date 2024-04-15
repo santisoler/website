@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Processing gravity and magnetic data with Harmonica"
+title: "Tutorial: Processing gravity data with Harmonica"
 layout: presentation
 date: 2021-04-22
 author: me, andrea, agustina
@@ -9,6 +9,9 @@ meeting:
 organizer:
     name: Software Underground
     url: https://softwareunderground.org/
+code:
+    repo: fatiando/transform21
+    url: https://github.com/fatiando/transform21
 thumbnail: /images/swung-thumbnail.png
 license: cc-by
 ---
