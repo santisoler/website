@@ -40,8 +40,9 @@ social:
     url: https://www.santisoler.com
     icon: fas fa-globe
   - name: GPG Public Key
-    url: /santisoler_pub.asc
+    url: /santisoler.asc
     icon: fas fa-key
+    handle: "<code>santisoler.asc</code>"
     contact: true
 
 keep_files: [".nojekyll", "CNAME", "script.js"]
