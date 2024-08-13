@@ -72,7 +72,7 @@ The sources for building my CV are available in
   <ul class="fa-ul">
     <li>
       <i class="fa-li fas fa-calendar" aria-hidden="true"></i>
-      April 2017 - Present
+      April 2017 - Febrary 2022
     </li>
     <li>
       <i class="fa-li fas fa-university" aria-hidden="true"></i>
