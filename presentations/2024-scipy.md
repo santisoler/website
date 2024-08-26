@@ -14,6 +14,14 @@ license: cc-by
 doi: 10.6084/m9.figshare.26312236.v1
 ---
 
+{%- from "macros.html" import youtube_video -%}
+
+
+## Watch the talk
+
+{{ youtube_video("https://www.youtube.com/watch?v=91q1Hadl9uI", thumbnail="/images/yt-thumbnails/scipy-2024.jpg") }}
+
+
 ## Abstract
 
 Pooch is a Python library that can download and locally cache files from
