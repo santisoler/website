@@ -133,9 +133,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:not(:has(img)):hover {
   color: #58b792;
-  opacity: 40%;
+  opacity: 70%;
 }
 
 dl,
